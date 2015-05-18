@@ -1,162 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Friendezvous - Organising meetings, redefined.">
-    <meta name="author" content="Harish V & Alvian Prasetya">
-
-    <title>Friendezvous - Organising meetings, redefined.</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-social.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="assets/css/heroic-features.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="assets/css/main.css" rel="stylesheet">
+<html>
     
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <head>
+        <meta name="keywords" content="Organising, Meetings, Friends">
+        <meta name="description" content="Organising meetings, redefined.">
+        <title>Friendezvous</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+        rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/main.cssm">
+    </head>
     
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,600,300,700' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Friendezvous</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html"><span class="glyphicon glyphicon-home"></span> Home </a>
-                    </li>
-                    <li>
-                        <a href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About </a>
-                    </li>
-                    <li>
-                        <a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Contact </a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer" style="background-image:url('assets/images/mockup.png');">
-            <h1><font color="white">Friendezvous</font></h1>
-            
-            <p><font color="white">Organising meetings, redefined.</font></p>
-            <p><a class="btn btn-primary btn-large">Sign up now!</a>
-            </p>
-        </header>
-
-        <hr>
-
-        <!-- Title -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Latest Features</h3>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Page Features -->
-        <div class="row text-center">
-
-            <div class="col-md-4 col-sm-8 hero-feature">
-                <div class="thumbnail">
-                    <img src="assets/images/thumb1.jpg" alt="">
-                    <div class="caption">
-                        <h3>Organise your day schedule.</h3>
-                        <p>Using our innovative calendar, choose your free slots for the day or week. Simply select busy or free at a particular timeslot and where you'll be before that.</p>
+    <body>
+        <div class="cover">
+            <div class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><span>Friendezvous</span></a>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-8 hero-feature">
-                <div class="thumbnail">
-                    <img src="assets/images/thumb2.jpg" alt="">
-                    <div class="caption">
-                        <h3>Collaborate with your friends.</h3>
-                        <p>Ask your friends or colleagues to do the same by selecting their available schedule.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-8 hero-feature">
-                <div class="thumbnail">
-                    <img src="assets/images/thumb3.jpg" alt="">
-                    <div class="caption">
-                        <h3>Meet Up!</h3>
-                        <p>Friendezvous will immediately work out the best time and place for all of your team to meet.Yes, it's that simple!</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer class="custom-footer">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p>Created & Developed by <a href="http://github.com/harishv7">Harish V</a> & <a href="https://github.com/Sn1p3r5">Alvian P</a></p>
-                </div>
-                <div class="col-g-6">
-                    <div class="text-right">
-                        <ul> <strong>QuickLinks</strong> <br>
-                            <p><a class="btn btn-social-icon btn-twitter">
-  <i class="fa fa-twitter"></i>
-</a> Facebook </p>
-</span>
+                    <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login</a>
+                            </li>
+                            <li>
+                                <a href="sign-up.html">Sign Up</a>
+                            </li>
                         </ul>
-                        
+                    </div>
+                </div>
+            </div>
+            <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228')"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="text-inverse">Friendezvous</h1>
+                        <p class="text-inverse">Organising meetings, redefined.</p>
+                        <br>
+                        <br>
+                        <a class="btn btn-lg btn-primary" href="sign-up.html">Sign up now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/images/thumb1.jpg" class="img-responsive">
+                        <h4 class="text-center">Organise your day schedule</h4>
+                        <p class="text-center">Using our innovative calendar, choose your free slots for the day or week.
+                            Simply select busy or free at a particular timeslot and where you'll be
+                            before that.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="assets/images/thumb2.jpg" class="img-responsive">
+                        <h4 contenteditable="true" class="text-center">Collaborate with your friends!</h4>
+                        <p class="text-center">Ask your friends or colleagues to do the same by selecting their available
+                            schedule.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="assets/images/thumb3.jpg" class="img-responsive">
+                        <h4 class="text-center">Meet up!</h4>
+                        <p class="text-center">Friendezvous will immediately work out the best time and place for all
+                            of your team to meet.Yes, it's that simple!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="section section-warning">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1 class="text-inverse">Friendezvous</h1>
+                        <p class="text-inverse">Organising meetings, redefined.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="text-inverse text-right">Developed &amp; Designed by
+                            <br>
+                            <br>&nbsp;
+                            <a href="https://github.com/harishv7">Harish V</a>,
+                            <a href="https://github.com/Sn1p3r5">Alvian P</a>
+                        </p>
+                        <div class="col-md-12 hidden-lg hidden-md
+                            hidden-sm text-left ">
+                            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 hidden-xs text-right">
+                            <a href="https://www.facebook.com/ProjectFriendezvous?fref=ts"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
+                            <a href="https://github.com/harishv7/friendezvous"><i class="fa fa-2x fa-fw fa-github text-inverse"></i></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 hidden-xs text-center">
+                            <a href="index.html">Home</a>-
+                            <a href="about.html">About</a>-
+                            <a href="contact.html">Contact</a>-
+                            <a href="login.html">Login</a>-
+                            <a href="sign-up.html">Sign up</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- Load all scripts -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-
-</body>
+    </body>
 
 </html>
