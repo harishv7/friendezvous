@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Merriweather|Rosario");
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Rosario|Raleway");
 /*!
  * Default theme for Pingendo 
  * Homepage: http://pingendo.com  
@@ -18,6 +18,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
 }
@@ -1086,7 +1087,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: Rosario;
+  font-family: Raleway;
   font-size: 15px;
   line-height: 1.42857143;
   color: #000000;
