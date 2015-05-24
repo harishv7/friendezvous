@@ -1,0 +1,29 @@
+.custom-btn {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+    font-family: Raleway;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: color 0.3s ease-out,
+              background-color 0.3s ease-out,
+              border-color 0.3s ease-out;
+}
+.custom-btn:hover,
+.custom-btn:active {
+  background-color: #000;
+  border-color: #fff;
+  color: #fff;
+  transition: color 0.3s ease-in,
+              background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
+
+.custom-nav{
+    font-family: Raleway;
+    
+}
