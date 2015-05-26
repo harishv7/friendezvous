@@ -8,7 +8,10 @@
 	border: 2px solid #fff;
 	text-align: center;
 	outline: none;
+<<<<<<< HEAD
 	border-radius: 6px;
+=======
+>>>>>>> origin/master
 	text-decoration: none;
 	transition: color 0.3s ease-out,
 	background-color 0.3s ease-out,
@@ -24,6 +27,7 @@
 	border-color 0.3s ease-in;
 }
 
+<<<<<<< HEAD
 .custom-btn-2 {
 	display: inline-block;
 	width: 100px;
@@ -50,6 +54,8 @@
 	border-color 0.3s ease-in;
 }
 
+=======
+>>>>>>> origin/master
 .custom-nav{
     font-family: Raleway;
     

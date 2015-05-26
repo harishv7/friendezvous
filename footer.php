@@ -13,9 +13,21 @@
 					&
 					<a href="https://github.com/Sn1p3r5">Alvian P.</a>
 				</p>
+<<<<<<< HEAD
 				<div class="col-md-12 hidden-lg hidden-md hidden-sm text-right ">
 					<a href="https://www.facebook.com/ProjectFriendezvous"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
 					<a href="https://github.com/harishv7/friendezvous"><i class="fa fa-2x fa-fw fa-github text-inverse"></i></a>
+=======
+<<<<<<< HEAD
+				<div class="col-md-12 hidden-lg hidden-md hidden-sm text-right ">
+					<a href="https://www.facebook.com/ProjectFriendezvous"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
+					<a href="https://github.com/harishv7/friendezvous"><i class="fa fa-2x fa-fw fa-github text-inverse"></i></a>
+=======
+				<div class="col-md-12 hidden-lg hidden-md hidden-sm text-left ">
+					<a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+					<a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+>>>>>>> origin/master
+>>>>>>> origin/master
 				</div>
 			</div>
 			<div class="row">
@@ -23,7 +35,15 @@
 					<a href="https://www.facebook.com/ProjectFriendezvous"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
 					<a href="https://github.com/harishv7/friendezvous"><i class="fa fa-2x fa-fw fa-github text-inverse"></i></a>
 				</div>
+<<<<<<< HEAD
 			</div>
+=======
+<<<<<<< HEAD
+			</div>
+=======
+				</div>
+>>>>>>> origin/master
+>>>>>>> origin/master
 			<div class="row">
 				<div class="col-md-12 hidden-xs text-center">
 					<a href="index.html">Home</a> -

@@ -4,12 +4,17 @@
     <?php
 		include 'head.php';
 	?>
+<<<<<<< HEAD
 	
+=======
+    
+>>>>>>> origin/master
     <body>
         <?php
 			include 'navigationBar.php';
 		?>
 		
+<<<<<<< HEAD
 		<?php
 			$name = $_SESSION['name'];
 			$email = $_SESSION['email'];
@@ -28,11 +33,14 @@
 			}
 		?>
 		
+=======
+>>>>>>> origin/master
         <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">Dashboard</h1>
+<<<<<<< HEAD
 					</div>
 				</div>
 				<form role="form" method="get" action="?">
@@ -96,10 +104,21 @@
 				</form>
 			</div>
 		</div>
+=======
+                    </div>
+                </div>
+            </div>
+        </div>
+>>>>>>> origin/master
         
 		<?php
 			include 'footer.php';
 		?>
+<<<<<<< HEAD
 	</body>
 	
+=======
+    </body>
+
+>>>>>>> origin/master
 </html>

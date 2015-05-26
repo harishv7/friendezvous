@@ -36,17 +36,44 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">The Team</h1>
+<<<<<<< HEAD
                         <p class="text-center">We are a team of two students from the National University of Singapore (NUS).</p>
+=======
+<<<<<<< HEAD
+                        <p class="text-center">We are a team of two students from the National University of Singapore (NUS).</p>
+=======
+                        <p class="text-center">We are a team of two students from the National University of Singapore
+						(NUS).</p>
+>>>>>>> origin/master
+>>>>>>> origin/master
 					</div>
 				</div>
                 <div class="row">
                     <div class="col-md-6">
+<<<<<<< HEAD
                         <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+=======
+<<<<<<< HEAD
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+=======
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+                        class="center-block img-circle img-responsive">
+>>>>>>> origin/master
+>>>>>>> origin/master
                         <h3 class="text-center">Harish Venkatesan</h3>
                         <p class="text-center">Computer Engineering Student</p>
 					</div>
                     <div class="col-md-6">
+<<<<<<< HEAD
                         <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+=======
+<<<<<<< HEAD
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+=======
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png"
+                        class="center-block img-circle img-responsive">
+>>>>>>> origin/master
+>>>>>>> origin/master
                         <h3 class="text-center">Alvian Prasetya</h3>
                         <p class="text-center">Computer Engineering Student</p>
 					</div>

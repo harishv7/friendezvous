@@ -18,6 +18,7 @@
 			$query = "INSERT INTO users (email, password, name) VALUES ('".$email."', '".$passwordHashed."','".$name."')";
 			$result = mysqli_query($connection, $query);
 			if ($result){
+<<<<<<< HEAD
 				$query = "INSERT INTO schedules (email) VALUES ('".$email."')";
 				$result = mysqli_query($connection, $query);
 				if ($result){
@@ -32,6 +33,15 @@
 			}
 			else {
 				echo 'FAILED TO INSERT TO TABLE users';
+=======
+				$_SESSION['email'] = $email;
+				$_SESSION['name'] = $name;
+				
+				header("Location: dashboard.php");
+			}
+			else {
+				echo 'FAILED';
+>>>>>>> origin/master
 			}
 		}
 		else {
