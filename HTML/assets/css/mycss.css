@@ -1,0 +1,60 @@
+.custom-btn {
+	display: inline-block;
+	width: 200px;
+	padding: 8px;
+	color: #ffffff;
+    font-family: Raleway;
+	background-color: transparent;
+	border: 2px solid #fff;
+	text-align: center;
+	outline: none;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: color 0.3s ease-out,
+	background-color 0.3s ease-out,
+	border-color 0.3s ease-out;
+}
+.custom-btn:hover,
+.custom-btn:active {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-color: #fff;
+	color: #fff;
+	transition: color 0.3s ease-in,
+	background-color 0.3s ease-in,
+	border-color 0.3s ease-in;
+}
+
+.custom-btn-2 {
+	display: inline-block;
+	width: 100px;
+	padding: 8px;
+	color: #ffffff;
+    font-family: Raleway;
+	background-color: #000000;
+	border: 0px solid #000000;
+	text-align: center;
+	outline: none;
+	border-radius: 6px;
+	text-decoration: none;
+	transition: color 0.3s ease-out,
+	background-color 0.3s ease-out,
+	border-color 0.3s ease-out;
+}
+.custom-btn-2:hover,
+.custom-btn-2:active {
+	background-color: rgba(0, 0, 0, 0.75);
+	border-color: #000000;
+	color: #ffffff;
+	transition: color 0.3s ease-in,
+	background-color 0.3s ease-in,
+	border-color 0.3s ease-in;
+}
+
+.custom-nav{
+    font-family: Raleway;
+    
+}
+
+.main-body{
+    display: none;
+}
