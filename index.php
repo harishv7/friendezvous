@@ -44,12 +44,16 @@
 
                         <h4 contenteditable="true" class="text-center">Select your friends</h4>
 
+                        <h4 contenteditable="true" class="text-center">Select your friends</h4>
+
                         <h4 contenteditable="true" class="text-center">Collaborate with your friends!</h4>
 
                         <p class="text-center">Select the friends or colleagues you want to meet up with to let them select their favoured timeslots</p>
                     </div>
                     <div class="col-md-4">
                         <img src="assets/images/thumb3.jpg" class="img-responsive">
+
+                        <h4 class="text-center">Let us do the rest!</h4>
 
                         <h4 class="text-center">Let us do the rest!</h4>
 
