@@ -8,11 +8,10 @@
 	border: 2px solid #fff;
 	text-align: center;
 	outline: none;
-	border-radius: 6px;
 	text-decoration: none;
-	transition: color 0.3s ease-out,
+	<!--transition: color 0.3s ease-out,
 	background-color 0.3s ease-out,
-	border-color 0.3s ease-out;
+	border-color 0.3s ease-out;-->
 }
 .custom-btn:hover,
 .custom-btn:active {
@@ -50,11 +49,18 @@
 	border-color 0.3s ease-in;
 }
 
-.custom-nav{
-    font-family: Raleway;
-    
+
+@media (max-width: 480px) {
+	.custom-nav{
+		font-family: Raleway;
+		background-color: #000;
+		opacity: 0.6;
+		z-index: 1;
+
+	}
 }
 
 .main-body{
     display: none;
 }
+
