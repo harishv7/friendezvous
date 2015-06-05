@@ -26,14 +26,14 @@
                         <img src="assets/images/contact-us.jpg" class="img-responsive">
                     </div>
                     <div class="col-md-6">
-                        <form role="form" class="text-left" action="contact-submit.php" method="POST">
+                        <form role="form" class="text-left">
                             <div class="form-group">
-                                <label class="control-label" for="name">Enter name:</label>
-                                <input class="form-control" id="name" placeholder="Your name" type="text">
+                                <label class="control-label" for="exampleInputEmail1">Enter name:</label>
+                                <input class="form-control" id="exampleInputEmail1" placeholder="Your name" type="text">
                             </div>
                             <div class="form-group">
-                                <label class="control-label" for="email">Enter email:</label>
-                                <input class="form-control" id="email" placeholder="Your email" type="email">
+                                <label class="control-label" for="exampleInputPassword1">Enter email:</label>
+                                <input class="form-control" id="exampleInputPassword1" placeholder="Your email" type="email">
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Enter Comments:
@@ -47,13 +47,11 @@
                 </div>
             </div>
         </div>
-
-        <!-- MailChimp Subscription Form
         <div class="section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <!-- Begin MailChimp Signup Form
+                        <!-- Begin MailChimp Signup Form -->
                         <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
                         <style type="text/css">
                             #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
@@ -81,19 +79,19 @@
                                     <div id="mce-responses" class="clear">
                                         <div class="response" id="mce-error-response" style="display:none"></div>
                                         <div class="response" id="mce-success-response" style="display:none"></div>
-                                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                     <div style="position: absolute; left: -5000px;"><input type="text" name="b_5ac2a1ef0bf760e38b4467086_902e45a1c4" tabindex="-1" value=""></div>
                                     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                                 </div>
                             </form>
                         </div>
 
-                        <!--End mc_embed_signup
+                        <!--End mc_embed_signup-->
                     </div>
                 </div>
             </div>
         </div>
-        -->
+
 
         <div class="section">
             <div class="container">
