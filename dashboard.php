@@ -14,7 +14,7 @@
 			$name = $_SESSION['name'];
 			$email = $_SESSION['email'];
 			
-			include 'dbConnect.php';
+			include 'includes/dbConnect.php';
 			
 			$query = "SELECT * FROM schedules WHERE email = '".$email."'";
 			$result = mysqli_query($connection, $query);

@@ -1,5 +1,5 @@
 <?php
-	include 'dbConnect.php';
+	include 'includes/dbConnect.php';
 	
 	$query =	'CREATE TABLE users(
 						user_id INT NOT NULL AUTO_INCREMENT, 
