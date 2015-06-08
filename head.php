@@ -15,4 +15,5 @@
 	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/application.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="assets/js/bday-picker.min.js"></script>
 </head>

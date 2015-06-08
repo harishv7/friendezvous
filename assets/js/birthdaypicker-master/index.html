@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Birthday Picker</title>
+    <meta name="author" content="Abe Coffman">
+    <meta name="description" content="Jquery Plugin for picking a birthday" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="bday-picker.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#picker1").birthdaypicker({});
+        $("#picker2").birthdaypicker({
+          futureDates: true,
+          maxYear: 2020,
+          maxAge: 75,
+          defaultDate: "10-17-1980"
+        });
+        $("#picker3").birthdaypicker({
+          dateFormat: "bigEndian",
+          monthFormat: "long",
+          placeholder: false,
+          hiddenDate: false
+        });
+        $("#picker4").birthdaypicker({
+          minAge: 13
+        });
+      });
+    </script>
+    <style type="text/css">
+      html, body { height: 100%; margin: 0; padding: 0; }
+      h1 { margin: 0; padding-top: 20px; }
+      fieldset { padding: none; border: none; }
+      #container { height: 100%; width: 600px; margin: 0 auto; padding: 0 50px; background: #eee; }
+    </style>
+</head>
+<body>
+    <div id="container">
+      <h1>Birthday Picker jQuery Plugin</h1>
+      <div id="examples">
+        <h4>Default Settings</h4>
+        <div class="picker" id="picker1"></div>
+        <h4>futureDates: true, maxYear: 2020, maxAge: 75, defaultDate: 10-17-1980</h4>
+        <div class="picker" id="picker2"></div>
+        <h4>dateFormat: bigEndian, monthFormat: long, placeholder: false, hiddenDate: false</h4>
+        <div class="picker" id="picker3"></div>
+        <h4>minAge: 13</h4>
+        <div class="picker" id="picker4"></div>
+      </div>
+      <h3>Resources</h3>
+      <ul id="link">
+        <li><a href="http://plugins.jquery.com/project/birthdaypicker">jQuery Plugin</a></li>
+        <li><a href="https://github.com/abecoffman/birthdaypicker">Github Source</a></li>
+        <li><a href="http://abecoffman.com/2011/jquery-birthday-picker/">Blog Post</a></li>
+      </div>
+    </div>
+</body>
+</html>
