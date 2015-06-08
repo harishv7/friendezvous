@@ -2,12 +2,12 @@
 <html>
     
     <?php
-		include 'head.php';
+		include 'includes/header.php';
 	?>
     
     <body>
         <?php
-			include 'navigationBar.php';
+			include 'includes/navigationBar.php';
 		?>
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -147,7 +147,7 @@
         </div>
         
 		<?php
-			include 'footer.php';
+			include 'includes/footer.php';
 		?>
     </body>
 

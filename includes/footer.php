@@ -20,7 +20,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 hidden-xs text-right">
-					<a href="https://www.facebook.com/ProjectFriendezvous"><i class="fa fa-2x fa-facebook fa-fw text-inverse"></i></a>
+					<a href="https://www.facebook.com/ProjectFriendezvous"><i class="fa fa-2x fa-facebook-square fa-fw text-inverse"></i></a>
 					<a href="https://github.com/harishv7/friendezvous"><i class="fa fa-2x fa-fw fa-github text-inverse"></i></a>
 				</div>
 			</div>
