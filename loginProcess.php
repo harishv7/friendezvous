@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	include 'dbConnect.php';
+	include 'includes/dbConnect.php';
 	
 	if (isset($_POST['login'])){
 		$email = mysqli_real_escape_string($connection, $_POST['email']);

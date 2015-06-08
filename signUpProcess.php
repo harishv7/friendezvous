@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	include 'dbConnect.php';
+	include 'includes/dbConnect.php';
 	
 	if (isset($_POST['register'])){
 		$email = mysqli_real_escape_string($connection, $_POST['email']);
@@ -64,9 +64,9 @@ Password: '.$password.'
 					
 Simply click on this link to activate your account:
 http://localhost/friendezvous/verify.php?email='.$email.'&activateHash='.$activateHash.';
-					
+
 We are looking forward to organize your first meeting on Friendezvous!
-					
+
 					
 Sincerely,
 					

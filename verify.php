@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	
-	include 'dbConnect.php';
+	include 'includes/dbConnect.php';
 	
 	if(isset($_GET['email']) && !empty($_GET['email']) && isset($_GET['activateHash']) && !empty($_GET['activateHash'])){
 		$email = mysqli_real_escape_string($connection, $_GET['email']);

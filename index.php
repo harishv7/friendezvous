@@ -2,7 +2,7 @@
 <html>
 
     <?php
-include 'includes/header.php';
+		include 'includes/header.php';
     ?>
 
     <body>
@@ -10,7 +10,7 @@ include 'includes/header.php';
         <div class="cover">
 
             <?php
-include 'includes/navigationBar.php';
+				include 'includes/navigationBar.php';
             ?>
 
             <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228')"></div>
@@ -49,16 +49,12 @@ include 'includes/navigationBar.php';
 
                         <h4 contenteditable="true" class="text-center">Select your friends</h4>
 
-                        <h4 contenteditable="true" class="text-center">Collaborate with your friends!</h4>
-
                         <p class="text-center">Select the friends or colleagues you want to meet up with to let them select their favoured timeslots</p>
                     </div>
                     <div class="col-md-4">
                         <img src="assets/images/thumb3.jpg" class="img-responsive">
 
                         <h4 class="text-center">Let us do the rest!</h4>
-
-                        <h4 class="text-center">Meet up!</h4>
 
                         <p class="text-center">Friendezvous will immediately work out the best time and place for all
                             of your team to meet.<br> Yes, it's that simple!</p>
@@ -68,7 +64,7 @@ include 'includes/navigationBar.php';
         </div>
 
         <?php
-include 'includes/footer.php';
+			include 'includes/footer.php';
         ?>
     </body>
 </html>
