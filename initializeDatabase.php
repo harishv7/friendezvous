@@ -95,7 +95,7 @@
 	$query =	'CREATE TABLE feedbacks(
 						feedback_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
 						feedback VARCHAR(255) NOT NULL, 
-						date_time DATETIME NOT NULL DEFAULT NOW(),
+						date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 						PRIMARY KEY(feedback_id)
 					) ENGINE = INNODB';
 					

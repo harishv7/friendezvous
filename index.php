@@ -1,18 +1,18 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
-
+	
     <?php
 		include 'includes/header.php';
     ?>
-
+	
     <body>
-
         <div class="cover">
-
             <?php
 				include 'includes/navigationBar.php';
             ?>
-
             <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228')"></div>
             <div class="container">
                 <div class="row">
@@ -60,7 +60,7 @@
                 </div>
             </div>
         </div>
-
+		
         <?php
 			include 'includes/footer.php';
         ?>

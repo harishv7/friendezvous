@@ -60,7 +60,7 @@ Password: '.$password.'
 -----------------------------------------------------------
 					
 Simply click on this link to activate your account:
-http://localhost/friendezvous/verify.php?email='.$email.'&activateHash='.$activateHash.';
+http://friendezvous.dx.am/verify.php?email='.$email.'&activateHash='.$activateHash.';
 
 We are looking forward to organize your first meeting on Friendezvous!
 
@@ -70,7 +70,7 @@ Sincerely,
 
 Friendezvous Team';
 
-				$headers = 'From: noreply@friendezvous.com' . "\r\n";
+				$headers = 'From: noreply@friendezvous.dx.am' . "\r\n";
 				mail($to, $subject, $message, $headers) or die("ERROR SENDING ACTIVATION EMAIL");
 					
 				header("Location: signUp.php?success=$success");
