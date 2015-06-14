@@ -29,37 +29,13 @@
 	
 	echo '<br>';
 	
-	$query =	'CREATE TABLE schedules(
-						user_id INT NOT NULL AUTO_INCREMENT, 
-						email VARCHAR(255) UNIQUE NOT NULL, 
-						mon_avail_hash INT UNSIGNED NOT NULL DEFAULT 0, 
-						tue_avail_hash INT UNSIGNED NOT NULL DEFAULT 0, 
-						wed_avail_hash INT UNSIGNED NOT NULL DEFAULT 0, 
-						thu_avail_hash INT UNSIGNED NOT NULL DEFAULT 0, 
-						fri_avail_hash INT UNSIGNED NOT NULL DEFAULT 0, 
-						sat_avail_hash INT UNSIGNED NOT NULL DEFAULT 0, 
-						sun_avail_hash INT UNSIGNED NOT NULL DEFAULT 0, 
-						PRIMARY KEY(user_id)
-					) ENGINE = INNODB';
-					
-	$result = mysqli_query($connection, $query);
-	if ($result){
-		echo 'TABLE schedules created succesfully.';
-	}
-	else {
-		echo 'Error in creating TABLE schedules.';
-		echo '<br>';
-		echo $result;
-	}
-	
-	echo '<br>';
-	
 	$query =	'CREATE TABLE meetings(
 						meeting_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
 						name VARCHAR(255) NOT NULL, 
 						description VARCHAR(255) DEFAULT NULL, 
-						location INT NOT NULL DEFAULT 0, 
-						date_time DATETIME NOT NULL, 
+						latitude FLOAT DEFAULT NULL, 
+						longitude FLOAT DEFAULT NULL, 
+						date_time DATETIME DEFAULT NULL, 
 						PRIMARY KEY(meeting_id)
 					) ENGINE = INNODB';
 					
@@ -75,21 +51,41 @@
 	
 	echo '<br>';
 	
-	$query =	'CREATE TABLE meetings_to_users(
-						mapping_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+	$query =	'CREATE TABLE meeting_users(
+						mu_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
 						meeting_id INT UNSIGNED NOT NULL, 
 						user_id INT UNSIGNED NOT NULL, 
-						confirmed BOOLEAN DEFAULT 0, 
-						user_location INT DEFAULT 0, 
-						PRIMARY KEY(mapping_id)
+						user_confirmed BOOLEAN DEFAULT 0, 
+						user_latitude FLOAT DEFAULT NULL, 
+						user_longitude FLOAT DEFAULT NULL, 
+						PRIMARY KEY(mu_id)
 					) ENGINE = INNODB';
 					
 	$result = mysqli_query($connection, $query);
 	if ($result){
-		echo 'TABLE meetings_to_users created succesfully.';
+		echo 'TABLE meeting_users created succesfully.';
 	}
 	else {
-		echo 'Error in creating TABLE meetings_to_users.';
+		echo 'Error in creating TABLE meeting_users.';
+		echo '<br>';
+		echo $result;
+	}
+	
+	echo '<br>';
+	
+	$query =	'CREATE TABLE mu_date_time(
+						mudt_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+						mu_id INT UNSIGNED NOT NULL, 
+						date_time DATETIME DEFAULT NULL, 
+						PRIMARY KEY(mudt_id)
+					) ENGINE = INNODB';
+					
+	$result = mysqli_query($connection, $query);
+	if ($result){
+		echo 'TABLE mu_date_time created succesfully.';
+	}
+	else {
+		echo 'Error in creating TABLE mu_date_time.';
 		echo '<br>';
 		echo $result;
 	}

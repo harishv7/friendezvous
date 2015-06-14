@@ -43,13 +43,10 @@
 			$query = "INSERT INTO users (email, password_hash, full_name, birth_date, gender, location, activate_hash) VALUES ('".$email."', '".$passwordHash."','".$name."', '".$birthdate."', '".$gender."', '".$location."', '".$activateHash."')";
 			$result = mysqli_query($connection, $query);
 			if ($result){
-				$query = "INSERT INTO schedules (email) VALUES ('".$email."')";
-				$result = mysqli_query($connection, $query);
-				if ($result){
 				
-					$to = $email;
-					$subject = 'Friendezvous Signup Verification';
-					$message = 
+				$to = $email;
+				$subject = 'Friendezvous Signup Verification';
+				$message = 
 
 'Hi there,
 					
@@ -67,20 +64,16 @@ http://localhost/friendezvous/verify.php?email='.$email.'&activateHash='.$activa
 
 We are looking forward to organize your first meeting on Friendezvous!
 
-					
+
 Sincerely,
-					
-					
+
+
 Friendezvous Team';
+
+				$headers = 'From: noreply@friendezvous.com' . "\r\n";
+				mail($to, $subject, $message, $headers) or die("ERROR SENDING ACTIVATION EMAIL");
 					
-					$headers = 'From: noreply@friendezvous.com' . "\r\n";
-					mail($to, $subject, $message, $headers) or die("ERROR SENDING ACTIVATION EMAIL");
-					
-					header("Location: signUp.php?success=$success");
-				}
-				else {
-					echo 'failed to insert to TABLE schedules, please contact the site administrator.';
-				}
+				header("Location: signUp.php?success=$success");
 			}
 			else {
 				echo 'failed to insert to TABLE users, please contact the site administrator.';

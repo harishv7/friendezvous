@@ -10,24 +10,6 @@
 			include 'includes/navigationBar.php';
 		?>
 		
-        <?php
-			$name = $_SESSION['name'];
-			$email = $_SESSION['email'];
-			
-			include 'includes/dbConnect.php';
-			
-			$query = "SELECT * FROM schedules WHERE email = '".$email."'";
-			$result = mysqli_query($connection, $query);
-			$numResult = mysqli_num_rows($result);
-			
-			if ($numResult == 1){
-				$row = mysqli_fetch_array($result, MYSQLI_NUM);
-			}
-			else {
-				echo 'Database error occured';
-			}
-		?>
-		
         <div class="section">
             <div class="container">
                 <div class="row">
@@ -35,65 +17,114 @@
                         <h1 class="text-center">Dashboard</h1>
 					</div>
 				</div>
-                <form role="form" method="get" action="?">
-                    <div class="row">
-                        <div class="col-md-12 form-group">
-                            <table border="1" width="100%" style="table-layout: fixed;" class="text-center">
-                                <?php
-									$curCol = 2;
-									
-									echo '<tr>';
-										echo '<td></td>';
-										echo '<td colspan="2">Mon</td>';
-										echo '<td colspan="2">Tue</td>';
-										echo '<td colspan="2">Wed</td>';
-										echo '<td colspan="2">Thu</td>';
-										echo '<td colspan="2">Fri</td>';
-										echo '<td colspan="2">Sat</td>';
-										echo '<td colspan="2">Sun</td>';
-									echo '</tr>';
-									
-									for ($i = 0; $i < 24; $i++){
-										echo '<tr>';
+                <div class="row">
+					<div class="col-md-12">
+						<h3 class="text-left">Your upcoming meetings:</h2>
+						<?php
+							$user_id = $_SESSION['user_id'];
+							$name = $_SESSION['name'];
+							$email = $_SESSION['email'];
+							
+							include 'includes/dbConnect.php';
+							
+							$query = "SELECT * FROM meeting_users WHERE user_id = '".$user_id."'";
+							$result = mysqli_query($connection, $query);
+							
+							$noMeetings = true;
+							
+							while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+								$query = "SELECT * FROM meetings WHERE meeting_id = '".$row['meeting_id']."'";
+								$meetingObj = mysqli_query($connection, $query);
+								
+								$meeting = mysqli_fetch_array($meetingObj, MYSQLI_ASSOC);
+								$meetingDate = new DateTime($meeting['date_time']);
+								$currentDate = new DateTime();
+								if ($meetingDate > $currentDate || $meeting['date_time'] == NULL){
+									if ($noMeetings){
+										echo '<table border=1 width="100%" style="table-layout: fixed;">';
+										echo '<tr align="center">';
 											echo '<td>';
-												if ($i < 10){
-													echo '0';
-												}
-												echo "$i:00";
+												echo 'Meeting Name';
 											echo '</td>';
-										
-											for ($j = 0; $j < 7; $j++){
-												$colNum = $j * 48 + $i * 2 + 2;
-												echo '<td class="dropdown">';
-													echo '<a class="dropdown-toggle" href="#" data-toggle="dropdown"> Activity </a>';
-													echo '<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px; min-width: 200px;">';
-														echo '<div class="form-group">';
-														echo '<input type="text" class="form-control" placeholder="n/a" id="activity" name="activity">';
-														echo '</div>';
-													echo '</div>';
-												echo '</td>';
-												
-												echo '<td class="btn-group" data-toggle="buttons">';
-													echo '<label class="btn btn-primary" style="background-color: #00FF00;">';
-													echo '<input type="radio" name="options" id="option1" value="available" autocomplete="off"> T';
-													echo '</label>';
-													echo '<label class="btn btn-primary active" style="background-color: #FF0000;">';
-													echo '<input type="radio" name="options" id="option2" value="busy" autocomplete="off" checked> F';
-													echo '</label>';
-												echo '</td>';
-											}
+											echo '<td>';
+												echo 'Description';
+											echo '</td>';
+											echo '<td>';
+												echo 'Latitude';
+											echo '</td>';
+											echo '<td>';
+												echo 'Longitude';
+											echo '</td>';
+											echo '<td>';
+												echo 'Date/Time';
+											echo '</td>';
 										echo '</tr>';
+										$noMeetings = false;
 									}
-								?>
-							</table>
-						</div>
+									echo '<tr>';
+										echo '<td>';
+											echo $meeting['name'];
+										echo '</td>';
+										echo '<td>';
+											if (!isset($meeting['description'])){
+												echo 'N/A';
+											}
+											else {
+												echo $meeting['description'];
+											}
+										echo '</td>';
+										echo '<td>';
+											if (!isset($meeting['latitude'])){
+												echo 'N/A';
+											}
+											else {
+												echo $meeting['latitude'];
+											}
+										echo '</td>';
+										echo '<td>';
+											if (!isset($meeting['longitude'])){
+												echo 'N/A';
+											}
+											else {
+												echo $meeting['longitude'];
+											}
+										echo '</td>';
+										echo '<td>';
+											if (!isset($meeting['date_time'])){
+												echo 'N/A';
+											}
+											else {
+												echo $meeting['date_time'];
+											}
+										echo '</td>';
+									echo '</tr>';
+								}
+							}
+							if (!$noMeetings){
+								echo '</table>';
+							}
+							else {
+								echo 'You have no upcoming meetings.';
+							}
+						?>
+						
+						<hr>
+						
+						<form role="form" method="post" action="addMeeting.php">
+							<div class="form-group">
+								<label><font color="#000000">Meeting name</font></label>
+								<input type="text" class="form-control" placeholder="Meeting name (required)" id="name" name="name" required>
+                            </div>
+							<div class="form-group">
+								<label><font color="#000000">Meeting description</font></label>
+								<input type="text" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
+                            </div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-default" value="Submit" id="submit" name="submit">
+							</div>
+						</form>
 					</div>
-					<div class="row">
-						<div class="col-md-12 text-right form-group">
-                            <input type="submit" class="btn custom-btn-2" value="Update">
-						</div>
-					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 		<?php

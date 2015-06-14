@@ -15,6 +15,7 @@
 			$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 			$passwordHashed = $row['password_hash'];
 			if (password_verify($password, $passwordHashed)){
+				$_SESSION['user_id'] = $row['user_id'];
 				$_SESSION['email'] = $row['email'];
 				$_SESSION['name'] = $row['full_name'];
 				
