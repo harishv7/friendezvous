@@ -39,17 +39,15 @@
                 <div class="row">
                     <div class="col-md-4">
                         <img src="assets/images/thumb1.jpg" class="img-responsive">
-                        <h4 class="text-center">Organise your day schedule</h4>
-                        <p class="text-center">Using our innovative calendar, choose your free slots for the day or week.
-                            Simply select busy or free at a particular timeslot and where you'll be
-                            before that.</p>
+                        <h4 class="text-center">Create a meeting</h4>
+                        <p class="text-center">Simply create a new meeting through your dashboard and select the timeslots you are available in.</p>
                     </div>
                     <div class="col-md-4">
                         <img src="assets/images/thumb2.jpg" class="img-responsive">
 
-                        <h4 contenteditable="true" class="text-center">Select your friends</h4>
+                        <h4 contenteditable="true" class="text-center">Invite your friends</h4>
 
-                        <p class="text-center">Select the friends or colleagues you want to meet up with to let them select their favoured timeslots</p>
+                        <p class="text-center">Invite your friends and colleagues you want to meet up with to let them select their favoured timeslots.</p>
                     </div>
                     <div class="col-md-4">
                         <img src="assets/images/thumb3.jpg" class="img-responsive">
@@ -57,7 +55,7 @@
                         <h4 class="text-center">Let us do the rest!</h4>
 
                         <p class="text-center">Friendezvous will immediately work out the best time and place for all
-                            of your team to meet.<br> Yes, it's that simple!</p>
+                            of you to meet.<br> Yes, it's that simple!</p>
                     </div>
                 </div>
             </div>

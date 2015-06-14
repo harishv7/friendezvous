@@ -19,7 +19,7 @@
 				</div>
                 <div class="row">
 					<div class="col-md-12">
-						<h3 class="text-left">Your upcoming meetings:</h2>
+						<h3 class="text-left">Your upcoming meetings:</h3>
 						<?php
 							$user_id = $_SESSION['user_id'];
 							$name = $_SESSION['name'];
@@ -110,13 +110,15 @@
 						
 						<hr>
 						
+						<h3 class="text-left">Create a new meeting:</h3>
+						
 						<form role="form" method="post" action="addMeeting.php">
 							<div class="form-group">
-								<label><font color="#000000">Meeting name</font></label>
+								<label><font color="#000000">Meeting name:</font></label>
 								<input type="text" class="form-control" placeholder="Meeting name (required)" id="name" name="name" required>
                             </div>
 							<div class="form-group">
-								<label><font color="#000000">Meeting description</font></label>
+								<label><font color="#000000">Meeting description:</font></label>
 								<input type="text" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
                             </div>
 							<div class="form-group">

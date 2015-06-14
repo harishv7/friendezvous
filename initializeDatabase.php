@@ -91,4 +91,23 @@
 	}
 	
 	echo '<br>';
+	
+	$query =	'CREATE TABLE feedbacks(
+						feedback_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+						feedback VARCHAR(255) NOT NULL, 
+						date_time DATETIME NOT NULL DEFAULT NOW(),
+						PRIMARY KEY(feedback_id)
+					) ENGINE = INNODB';
+					
+	$result = mysqli_query($connection, $query);
+	if ($result){
+		echo 'TABLE feedbacks created succesfully.';
+	}
+	else {
+		echo 'Error in creating TABLE feedbacks.';
+		echo '<br>';
+		echo $result;
+	}
+	
+	echo '<br>';
 ?>

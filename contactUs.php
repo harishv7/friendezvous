@@ -16,6 +16,20 @@
                     <div class="col-md-12">
                         <h1 class="text-center">Contact Us</h1>
                     </div>
+					<?php
+						if (isset($_GET['success'])){
+							echo '<div class="row">';
+								echo '<div class="col-md-12" align="center">';
+									if ($_GET['success']){
+										echo '<font color="#00FF00">Feedbacks received. Thank you for your feedbacks.</font>';
+									}
+									else {
+										echo '<font color="#FF0000">Error in retrieving your feedbacks. Please contact our administrator.</font>';
+									}
+								echo '</div>';
+							echo '</div>';
+						}
+					?>
                 </div>
             </div>
         </div>
@@ -26,22 +40,18 @@
                         <img src="assets/images/contact-us.jpg" class="img-responsive">
                     </div>
                     <div class="col-md-6">
-                        <form role="form" class="text-left">
+						<h3 class="text-center">Leave us a feedback</h3>
+                        <form role="form" method="post" action="sendFeedback.php">
                             <div class="form-group">
-                                <label class="control-label" for="exampleInputEmail1">Enter name:</label>
-                                <input class="form-control" id="exampleInputEmail1" placeholder="Your name" type="text">
+                                <label class="control-label" for="feedback">Your feedback(s):</label>
+                                <textarea class="form-control" id="feedback" name="feedback" placeholder="Enter your feedback(s) here"></textarea>
                             </div>
+							<div class="form-group">
+								<font color="#FF0000">* We will not store any credentials along with your feedback. (This feedback is anonymous)</font>
+							</div>
                             <div class="form-group">
-                                <label class="control-label" for="exampleInputPassword1">Enter email:</label>
-                                <input class="form-control" id="exampleInputPassword1" placeholder="Your email" type="email">
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Enter Comments:
-                                    <br>
-                                </label>
-                                <textarea class="form-control"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-success">Submit</button>
+								<input type="submit" class="btn btn-default" value="Submit" id="submit" name="submit">
+							</div>
                         </form>
                     </div>
                 </div>
