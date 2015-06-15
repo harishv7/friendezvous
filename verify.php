@@ -15,10 +15,10 @@
 			$query = "UPDATE users SET activated='1' WHERE email='".$email."' AND activate_hash='".$activateHash."' AND activated='0'";
 			$result = mysqli_query($connection, $query);
 			
-			header("Location: signUp.php?activatedSuccess=true");
+			header("Location: signUp.php?activatedSuccess=1");
 		}
 		else {
-			header("Location: signUp.php?activatedSuccess=false");
+			header("Location: signUp.php?activatedSuccess=0");
 		}
 	}
 	else {

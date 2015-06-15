@@ -6762,4 +6762,105 @@ body {
 .cover .cover-image.cover-image-fixed {
   background-attachment: fixed;
 }
+
+.coverCustom {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #add3e6;
+  margin-bottom: 0px !important;
+  padding: 0px 0px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+}
+.coverCustom h1,
+.coverCustom .h1 {
+  color: inherit;
+}
+.coverCustom p {
+  margin-bottom: 15px;
+  font-size: 23px;
+  font-weight: 200;
+}
+.coverCustom > hr {
+  border-top-color: #86beda;
+}
+.container .coverCustom,
+.container-fluid .coverCustom {
+  border-radius: 2.5px;
+}
+.coverCustom .container {
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .coverCustom {
+    padding: 48px 0;
+  }
+  .container .coverCustom,
+  .container-fluid .coverCustom {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .coverCustom {
+    padding: 0px;
+  }
+  .container .coverCustom,
+  .container-fluid .coverCustom {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+.coverCustom .navbar {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  border: none;
+  background-color: transparent !important;
+}
+.coverCustom .navbar .navbar-nav li.active a {
+  background-color: transparent !important;
+}
+.coverCustom .navbar .navbar-toggle {
+  border-color: transparent;
+}
+.coverCustom .navbar .navbar-toggle:hover,
+.coverCustom .navbar .navbar-toggle:focus {
+  background-color: transparent;
+}
+.coverCustom .navbar .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+.coverCustom .navbar.navbar-inverse .navbar-toggle {
+  border-color: transparent;
+}
+.coverCustom .navbar.navbar-inverse .navbar-toggle:hover,
+.coverCustom .navbar.navbar-inverse .navbar-toggle:focus {
+  background-color: transparent;
+}
+.coverCustom .navbar.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.coverCustom .coverCustom-image {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.coverCustom .coverCustom-image.background-image-fixed,
+.coverCustom .coverCustom-image.coverCustom-image-fixed {
+  background-attachment: fixed;
+}
 /* PINGENDO COMMENT DO NOT REMOVE */

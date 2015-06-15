@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <div class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">

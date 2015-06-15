@@ -18,34 +18,16 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-            
 		
-        <?php
-			$name = $_SESSION['name'];
-			$email = $_SESSION['email'];
-			
-			include 'includes/dbConnect.php';
-			
-			$query = "SELECT * FROM schedules WHERE email = '".$email."'";
-			$result = mysqli_query($connection, $query);
-			$numResult = mysqli_num_rows($result);
-			
-			if ($numResult == 1){
-				$row = mysqli_fetch_array($result, MYSQLI_NUM);
-			}
-			else {
-				echo 'Database error occured';
-			}
-		?>
-        <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center dashboard-title">Dashboard</h1>
+        <div class="cover">
+		<div class="cover-image" style="background-image: url(https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=25&amp;fm=jpg&amp;s=127f3a3ccf4356b7f79594e05f6c840e);"></div>
+        <!--<div class="section">-->
+            <div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1 class="text-center">Dashboard</h1>
 					</div>
 				</div>
-        <div class="cover">
-		<div class="cover-image dash-image" style="background-image: url(https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=25&amp;fm=jpg&amp;s=127f3a3ccf4356b7f79594e05f6c840e);"></div>
-        <div class="section">
-            <div class="container">
                 <div class="row">
                     <div class="col-md-6 dashboard-font">
                         <p>You're selecting meetings from: </p>
@@ -101,16 +83,18 @@
                         <div class="col-md-6 text-center" id="accordion">
                             <p>Your meetings:</p>
                             <div class="meeting-container text-left" >
-                                <p>Meeting 1:</p>
-                                <span>Details:</span>
-                                
+									<div class="meeting">
+										<p>aaa</p>
+									</div>
+									<div class="meeting2">
+										<p>bbbb</p>
+									</div>
                             </div>
                             <p>Your selected dates: </p>
                             <div class="selected-dates text-left">
                                 <p>Meeting 1:</p>
                                 <span>Selected Dates:</span>
                             </div>
-                            
                         </div>
 					</div>
 					<div class="row">
@@ -122,7 +106,7 @@
 			</div>
 		</div>
             
-            </div>
+        </div>
 		<?php
 			include 'includes/footer.php';
 		?>
