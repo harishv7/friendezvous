@@ -12,6 +12,9 @@
 	<link type="text/css" href="assets/css/hover-min.css" rel="stylesheet" media="all">
 	<link type="text/css" href="assets/css/mycss.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Oxygen:400,300' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href="assets/css/jquery-ui.min.css">
+    <link rel='stylesheet' href="assets/css/jquery-ui.structure.min.css">
+    <link rel='stylesheet' href="assets/css/jquery-ui.theme.min.css">
 
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -19,4 +22,6 @@
 	<script type="text/javascript" src="assets/js/application.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
 	<script type="text/javascript" src="assets/js/bday-picker.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="assets/js/dashboard.js"></script>
 </head>
