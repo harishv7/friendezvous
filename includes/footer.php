@@ -25,12 +25,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12 hidden-xs text-center">
-					<a href="index.html">Home</a> -
-					<a href="about.html">About</a> -
-					<a href="contact.html">Contact</a> -
-					<a href="login.html">Login</a> -
-					<a href="sign-up.html">Sign up</a>
+				<div class="col-md-12 hidden-xs text-center footer-text">
+					<a href="index.php">Home</a> //
+					<a href="about.php">About</a> //
+					<a href="contactUs.php">Contact</a> //
+					<a href="signUp.php">Sign up</a>
 				</div>
 			</div>
 		</div>
