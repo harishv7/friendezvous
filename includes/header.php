@@ -11,8 +11,6 @@
 	<link type="text/css" href="assets/css/main.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/hover-min.css" rel="stylesheet" media="all">
 	<link type="text/css" href="assets/css/mycss.css" rel="stylesheet">
-    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Oxygen:400,300' rel='stylesheet' type='text/css'>
 
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
