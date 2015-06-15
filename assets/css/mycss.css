@@ -27,9 +27,9 @@
 	display: inline-block;
 	width: 100px;
 	padding: 8px;
-	color: #ffffff;
+	color: blue;
     font-family: Raleway;
-	background-color: #000000;
+	background-color: #fff;
 	border: 0px solid #000000;
 	text-align: center;
 	outline: none;
@@ -41,12 +41,12 @@
 }
 .custom-btn-2:hover,
 .custom-btn-2:active {
-	background-color: rgba(0, 0, 0, 0.75);
+	
 	border-color: #000000;
-	color: #ffffff;
 	transition: color 0.3s ease-in,
 	background-color 0.3s ease-in,
 	border-color 0.3s ease-in;
+    color: #fff;
 }
 
 
@@ -64,3 +64,64 @@
     display: none;
 }
 
+.center-block{
+     float: none;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.dash-image{
+    opacity: 0.5;
+}
+
+.select-free{
+    background-color: aqua;
+    opacity: 0.5;
+}
+
+.select-free:hover{
+    background-color: bisque;
+    cursor: pointer;
+}
+
+.table-days{
+    background-color: sandybrown;
+    opacity: 0.5;
+}
+
+.dashboard-table{
+    border: 2px solid black;
+    font-family: Lato ,"Helvetica Nueue", Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    overflow: scroll;
+}
+
+.dashboard-title{
+    font-family: Oxygen, Lato, "Helvetica Nueue", Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.dashboard-font{
+    font-family: Oxygen, Lato, "Helvetica Nueue", Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+.meeting-container, .selected-dates{
+    
+}
+
+#accordion{
+    font-family: Oxygen;
+    background-color:cornflowerblue;
+    opacity: 0.5;
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+}
+
+.nav a{
+    font-family: Oxygen, Lato, "Helvetica Nueue", Arial, sans-serif;
+    color: white;
+}
