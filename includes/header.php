@@ -7,18 +7,18 @@
 	<title>Friendezvous</title>
 
 	<!-- CSS FILES -->
-	<link type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+	<link type="text/css" href="assets/css/font-awesome.min.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/main.css" rel="stylesheet">
 	<link type="text/css" href="assets/css/hover-min.css" rel="stylesheet" media="all">
 	<link type="text/css" href="assets/css/mycss.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Oxygen:400,300' rel='stylesheet' type='text/css'>
-	<link rel='stylesheet' href="assets/css/jquery-ui.min.css">
-    <link rel='stylesheet' href="assets/css/jquery-ui.structure.min.css">
-    <link rel='stylesheet' href="assets/css/jquery-ui.theme.min.css">
+    <link type='text/css' href="assets/css/google-fonts.css" rel="stylesheet">
+	<link type='text/css' href="assets/css/jquery-ui.min.css" rel="stylesheet">
+    <link type='text/css' href="assets/css/jquery-ui.structure.min.css" rel="stylesheet">
+    <link type='text/css' href="assets/css/jquery-ui.theme.min.css" rel="stylesheet">
 
 	<!-- SCRIPTS -->
-	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/application.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
 	<script type="text/javascript" src="assets/js/bday-picker.min.js"></script>

@@ -29,7 +29,6 @@
 						
 						<p>View your upcoming meetings</p>
 						<div class="meeting-container">
-							
 							<?php
 								$user_id = $_SESSION['user_id'];
 								$name = $_SESSION['name'];
