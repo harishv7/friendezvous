@@ -25,7 +25,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12 hidden-xs text-center footer-text">
+				<div class="col-md-12 hidden-xs text-center footer-text text-inverse">
 					<a href="index.php">Home</a> |
 					<a href="about.php">About</a> |
 					<a href="contactUs.php">Contact</a> |

@@ -1,9 +1,10 @@
 <?php
-	session_start();
+	include 'includes/session.php';
+	include 'includes/dbConnect.php';
 ?>
 <!DOCTYPE html>
 <html>
-    
+	
     <?php
 		include 'includes/header.php';
 	?>

@@ -1,4 +1,6 @@
 <?php
+	include 'includes/session.php';
+	include 'includes/dbConnect.php';
 /**
  * Created by IntelliJ IDEA.
  * User: HarishV

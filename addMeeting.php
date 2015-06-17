@@ -1,10 +1,5 @@
 <?php
-	session_start();
-	
-	$user_id = $_SESSION['user_id'];
-	$name = $_SESSION['name'];
-	$email = $_SESSION['email'];
-	
+	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 	
 	if (isset($_POST['submit'])){

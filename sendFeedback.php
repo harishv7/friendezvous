@@ -1,4 +1,5 @@
 <?php
+	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 	
 	if (isset($_POST['submit'])){

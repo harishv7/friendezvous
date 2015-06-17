@@ -1,4 +1,5 @@
 <?php
+	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 	
 	$query =	'CREATE TABLE users(
@@ -33,6 +34,7 @@
 						meeting_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
 						name VARCHAR(255) NOT NULL, 
 						description VARCHAR(255) DEFAULT NULL, 
+						location VARCHAR(255) DEFAULT NULL, 
 						latitude FLOAT DEFAULT NULL, 
 						longitude FLOAT DEFAULT NULL, 
 						date_time DATETIME DEFAULT NULL, 
@@ -56,8 +58,7 @@
 						meeting_id INT UNSIGNED NOT NULL, 
 						user_id INT UNSIGNED NOT NULL, 
 						user_confirmed BOOLEAN DEFAULT 0, 
-						user_latitude FLOAT DEFAULT NULL, 
-						user_longitude FLOAT DEFAULT NULL, 
+						user_location VARCHAR(255) DEFAULT NULL, 
 						PRIMARY KEY(mu_id)
 					) ENGINE = INNODB';
 					

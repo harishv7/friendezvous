@@ -1,5 +1,6 @@
 <?php
 	include 'includes/session.php';
+	include 'includes/dbConnect.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,8 +26,6 @@
 						<?php
 							
 							$meeting_id = $_GET['meeting_id'];
-							
-							include 'includes/dbConnect.php';
 							
 							$query = "SELECT * FROM meeting_users WHERE meeting_id='".$meeting_id."' && user_id='".$user_id."'";
 							$result = mysqli_query($connection, $query);

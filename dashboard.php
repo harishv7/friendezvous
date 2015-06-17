@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	include 'includes/session.php';
+	include 'includes/dbConnect.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,13 +30,7 @@
 						
 						<p>View your upcoming meetings</p>
 						<div class="meeting-container">
-							<?php
-								$user_id = $_SESSION['user_id'];
-								$name = $_SESSION['name'];
-								$email = $_SESSION['email'];
-								
-								include 'includes/dbConnect.php';
-								
+							<?php								
 								$query = "SELECT * FROM meeting_users WHERE user_id = '".$user_id."'";
 								$result = mysqli_query($connection, $query);
 								
