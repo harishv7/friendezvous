@@ -64,3 +64,12 @@
     display: none;
 }
 
+.table-days{
+	background-color: #500a6f;
+	color: white;
+	padding: 2px;
+}
+
+#accordion{
+	opacity: 0.85;
+}

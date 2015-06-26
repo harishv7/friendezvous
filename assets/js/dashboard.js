@@ -1,13 +1,3 @@
 $(document).ready(function(){
     $("#accordion").accordion();
-   $('.select-free').click(function(){
-       if($(this).hasClass("highlighted")){
-           $(this).removeClass("highlighted");
-           $(this).empty();
-       }
-       else{
-       $(this).append('<span>&#10003</span>');
-       $(this).addClass('highlighted');   
-       }
-   }); 
 });
