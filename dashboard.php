@@ -42,13 +42,24 @@
 									$meeting = mysqli_fetch_array($meetingObj, MYSQLI_ASSOC);
 									$meetingDate = new DateTime($meeting['date_time']);
 									$currentDate = new DateTime();
-									if ($meetingDate > $currentDate || $meeting['date_time'] == NULL){
+									if ($meetingDate > $currentDate){
 										if ($noMeetings){
 											$noMeetings = false;
 										}
 										echo '<a href="';
 										echo "meeting.php?meeting_id=$meeting[meeting_id]";
-										echo '">';
+										echo '" style="color:#00FF00;">';
+										echo $meeting['name'];
+										echo '</a>';
+										echo '<br>';
+									}
+									else if ($meeting['date_time'] == NULL){
+										if ($noMeetings){
+											$noMeetings = false;
+										}
+										echo '<a href="';
+										echo "meeting.php?meeting_id=$meeting[meeting_id]";
+										echo '" style="color:#000000;">';
 										echo $meeting['name'];
 										echo '</a>';
 										echo '<br>';
@@ -73,6 +84,22 @@
 								</div>
 								<div class="form-group">
 									<input type="submit" class="btn btn-default" value="Submit" id="submit" name="submit">
+								</div>
+							</form>
+						</div>
+						
+						<p>Find your friends</p>
+						<div class="add-friend-container">
+							<form role="form" method="post" action="addFriend.php" autocomplete="off">
+								<div class="form-group">Type in your friends' name to look for them:</div>
+								<div class="form-group">
+									<div class="input_container">
+										<input type="text" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
+										<ul id="user_list_id"></ul>
+									</div>
+								</div>
+								<div class="form-group" align="right">
+									<input type="submit" class="btn btn-default" value="Add as friend" id="add" name="add">
 								</div>
 							</form>
 						</div>

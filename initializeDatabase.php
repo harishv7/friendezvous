@@ -111,4 +111,22 @@
 	}
 	
 	echo '<br>';
+	
+	$query =	'CREATE TABLE friendships(
+						friendship_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+						user1_id INT NOT NULL, 
+						user2_id INT NOT NULL, 
+						date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+						PRIMARY KEY(friendship_id)
+					) ENGINE = INNODB';
+					
+	$result = mysqli_query($connection, $query);
+	if ($result){
+		echo 'TABLE friendships created succesfully.';
+	}
+	else {
+		echo 'Error in creating TABLE friendships.';
+		echo '<br>';
+		echo $result;
+	}
 ?>
