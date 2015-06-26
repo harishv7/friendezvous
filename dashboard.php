@@ -24,9 +24,6 @@
 				</div>
                 <div class="row">
 					<div class="col-md-12" id="accordion">
-						<p>View your schedule</p>
-						<div class="schedule-container">
-						</div>
 						
 						<p>View your upcoming meetings</p>
 						<div class="meeting-container">

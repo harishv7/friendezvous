@@ -43,6 +43,9 @@
 								echo '<h3 class="text-center">';
 								echo $meeting['name'];
 								echo '</h3>';
+								echo '<h4 class="text-center">';
+								echo $meeting['description'];
+								echo '<hr>';
 							}
 						?>
 					</div>
@@ -60,6 +63,8 @@
 							else {
 								while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 									echo $row['date_time'];
+									echo "<a href='removeTimeslot.php?";
+									echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]'> X </a>";
 									echo '<br>';
 								}
 							}
@@ -87,9 +92,24 @@
 							</div>
 						</form>
 						<hr>
-						<h4>Invite your friends</h4>
+						<h4>Meeting participants</h4>
 						<?php
-							if ($numResult == 0){
+							$query = "SELECT * FROM meeting_users WHERE meeting_id='".$meeting_id."'";
+							$result = mysqli_query($connection, $query);
+							while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+								$query = "SELECT * FROM users WHERE user_id='".$row['user_id']."'";
+								$result2 = mysqli_query($connection, $query);
+								$participant = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+								echo $participant['full_name'];
+							}
+						?>
+						<hr>
+						<h4>Add participants</h4>
+						<?php
+							$query = "SELECT * FROM mu_date_time WHERE mu_id='".$mu_id."'";
+							$result = mysqli_query($connection, $query);
+							$numResult = mysqli_num_rows($result);
+							if (!$numResult){
 								echo 'You have to declare at least one timeslot to invite your friend(s).';
 							}
 							else {
@@ -101,6 +121,23 @@
 									echo 'You have not added any friends into your friends list.';
 								}
 								else {
+									echo '
+									<form role="form" method="post" action="addParticipant.php" autocomplete="off">
+										<div class="form-group">
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="input_container">
+														<input type="text" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
+														<ul id="user_list_id"></ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-default" value="Add" id="add" name="add">
+										</div>
+									</form>';
+									echo '<form>';
 									while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 										if ($row['user1_id'] == $user_id){
 											$friend_id = $row['user2_id'];
@@ -111,8 +148,9 @@
 										$query = "SELECT * FROM users WHERE user_id='".$friend_id."'";
 										$result2 = mysqli_query($connection, $query);
 										$friend = mysqli_fetch_array($result2);
-										echo $friend['full_name'].'<br>';
+										echo '<input type="checkbox"> '.$friend['full_name'];
 									}
+									echo '</form>';
 								}
 							}
 						?>

@@ -15,7 +15,6 @@
 			$query = "INSERT INTO mu_date_time (mu_id, date_time) VALUES ('".$mu_id."', '".$date_time."')";
 			$result = mysqli_query($connection, $query);
 			
-			echo $date_time;
 			header("Location: meeting.php?meeting_id=$meeting_id");
 		}
 	}
