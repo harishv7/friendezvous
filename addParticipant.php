@@ -22,13 +22,11 @@
 			$query = "INSERT INTO meeting_users (meeting_id, user_id) VALUES ('".$meeting_id."', '".$target_id."')";
 			$result = mysqli_query($connection, $query);
 			if ($result){
-				echo "Succesfully added $target_email as meeting participant.";
+				header("Location: meeting.php?meeting_id=$meeting_id");
 			}
 			else {
-				echo "Failed to add $target_email as meeting participant. Please contact our system administrator.";
+				echo 'Database error occured. Please contact the system administrator.';
 			}
 		}
-		
-		header("Location: meeting.php?meeting_id=$meeting_id");
 	}
 ?>
