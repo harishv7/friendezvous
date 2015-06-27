@@ -34,6 +34,7 @@
 						meeting_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
 						name VARCHAR(255) NOT NULL, 
 						description VARCHAR(255) DEFAULT NULL, 
+						finalized BOOLEAN NOT NULL DEFAULT 0, 
 						location VARCHAR(255) DEFAULT NULL, 
 						latitude FLOAT DEFAULT NULL, 
 						longitude FLOAT DEFAULT NULL, 

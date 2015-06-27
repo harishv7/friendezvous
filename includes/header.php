@@ -28,5 +28,5 @@
     <script type="text/javascript" src="assets/js/dashboard.js"></script>
 	<script type="text/javascript" src="assets/js/moment.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
-	<script type="text/javascript" src="assets/js/autocomplete.js"></script>
+	<script type="text/javascript" src="assets/js/autocomplete-users.js"></script>
 </head>

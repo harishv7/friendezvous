@@ -4,7 +4,7 @@ function autocomplet() {
 	var keyword = $('#user_id').val();
 	if (keyword.length >= min_length) {
 		$.ajax({
-			url: 'ajax_refresh.php',
+			url: 'ajax_refresh-users.php',
 			type: 'POST',
 			data: {keyword:keyword},
 			success:function(data){

@@ -24,7 +24,7 @@
 				</div>
                 <div class="row">
 					<div class="col-md-12" id="accordion">
-						<p>View your schedule</p>
+						<!--<p>View your schedule</p>
 						<div class="schedule-container">
 							<p>Check your meetings here:</p>
 							<script>
@@ -75,7 +75,7 @@
 								}
 								?>
 							</table>
-						</div>
+						</div>-->
 						
 						<p>View your upcoming meetings</p>
 						<div class="meeting-container">
