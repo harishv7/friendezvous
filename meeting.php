@@ -74,7 +74,7 @@
 										echo $row['date_time'];
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
-										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]'>remove</a>";
+										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]&owner=$owner'>remove</a>";
 										if ($owner){
 											echo '&nbsp';
 											echo '|';
@@ -141,7 +141,7 @@
 									$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id && user_id=$owner_id";
 									$result = mysqli_query($connection, $query);
 									$owner_mu = mysqli_fetch_array($result);
-									$owner_mu_id = $owner_mu['user_id'];
+									$owner_mu_id = $owner_mu['mu_id'];
 									
 									$query = "SELECT * FROM mu_date_time WHERE mu_id=$owner_mu_id";
 									$result = mysqli_query($connection, $query);

@@ -22,6 +22,13 @@
 			$query = "INSERT INTO meeting_users (meeting_id, user_id) VALUES ('".$meeting_id."', '".$target_id."')";
 			$result = mysqli_query($connection, $query);
 			if ($result){
+				$query = "SELECT * FROM meetings WHERE meeting_id=$meeting_id";
+				$result = mysqli_query($connection, $query);
+				$meeting = mysqli_fetch_array($result);
+				
+				$query = "INSERT INTO notifications (user_id, notification_message, notification_link) VALUES ('".$target_id."', 'You have been invited to meeting $meeting[name]', 'meeting.php?meeting_id=$meeting_id')";
+				$result = mysqli_query($connection, $query);
+				
 				header("Location: meeting.php?meeting_id=$meeting_id");
 			}
 			else {

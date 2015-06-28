@@ -137,20 +137,49 @@
 							</form>
 						</div>
 						
-						<p>Find your friends</p>
-						<div class="add-friend-container">
-							<form role="form" method="post" action="addFriend.php" autocomplete="off">
-								<div class="form-group">Type in your friends' name to look for them:</div>
-								<div class="form-group">
-									<div class="input_container">
-										<input type="text" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
-										<ul id="user_list_id"></ul>
+						<p>Your friends</p>
+						<div class="row">
+							<div class="friendlist-container col-md-6">
+								Your friends list
+								<hr>
+								<?php
+									$query = "SELECT * FROM friendships WHERE user1_id=$user_id || user2_id=$user_id";
+									$result = mysqli_query($connection, $query);
+									$numResult = mysqli_num_rows($result);
+									if ($numResult == 0){
+										echo 'You have not added any friends.';
+									}
+									else {
+										while ($row = mysqli_fetch_array($result)){
+											if ($row['user1_id'] == $user_id){
+												$query = "SELECT * FROM users WHERE user_id=$row[user2_id]";
+											}
+											else {
+												$query = "SELECT * FROM users WHERE user_id=$row[user1_id]";
+											}
+											$result2 = mysqli_query($connection, $query);
+											$currentFriend = mysqli_fetch_array($result2);
+											echo "<a href='viewProfile.php?target_id=$currentFriend[user_id]'>";
+											echo $currentFriend['full_name'];
+											echo "</a>";
+										}
+									}
+								?>
+							</div>
+							<div class="add-friend-container col-md-6">
+								<form role="form" method="post" action="addFriend.php" autocomplete="off">
+									<div class="form-group">Type in your friends' name to look for them:</div>
+									<div class="form-group">
+										<div class="input_container">
+											<input type="text" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
+											<ul id="user_list_id"></ul>
+										</div>
 									</div>
-								</div>
-								<div class="form-group" align="right">
-									<input type="submit" class="btn btn-default" value="Add as friend" id="add" name="add">
-								</div>
-							</form>
+									<div class="form-group" align="right">
+										<input type="submit" class="btn btn-default" value="Add as friend" id="add" name="add">
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>

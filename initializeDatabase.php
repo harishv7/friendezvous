@@ -130,4 +130,26 @@
 		echo '<br>';
 		echo $result;
 	}
+	
+	echo '<br>';
+	
+	$query =	'CREATE TABLE notifications(
+						notification_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+						user_id INT NOT NULL, 
+						notification_message VARCHAR(255) NOT NULL, 
+						notification_link VARCHAR(255) DEFAULT NULL, 
+						notification_read BOOLEAN NOT NULL DEFAULT 0, 
+						date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+						PRIMARY KEY(notification_id)
+					) ENGINE = INNODB';
+					
+	$result = mysqli_query($connection, $query);
+	if ($result){
+		echo 'TABLE notifications created succesfully.';
+	}
+	else {
+		echo 'Error in creating TABLE notifications.';
+		echo '<br>';
+		echo $result;
+	}
 ?>

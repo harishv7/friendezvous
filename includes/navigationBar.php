@@ -16,14 +16,27 @@
                 </li>
 
                 <?php
-
-if (isset($_SESSION['name'])){
-    echo '
+					if (isset($_SESSION['name'])){
+						echo '
 						<li class="custom-nav hvr-underline-reveal">
 							<a href="dashboard.php">Dashboard</a>
 						</li>
 						';
-}
+						$query = "SELECT * FROM notifications WHERE user_id=$user_id && notification_read=0";
+						$result = mysqli_query($connection, $query);
+						$numResult = mysqli_num_rows($result);
+						echo '
+							<li class="custom-nav hvr-underline-reveal">
+								<a href="notifications.php">Notifications
+							<sup>
+						';
+						echo $numResult;
+						echo '
+							</sup>
+								</a>
+							</li>
+						';
+					}
                 ?>
                 <li class="custom-nav hvr-underline-reveal">
                     <a href="about.php">About</a>
@@ -34,8 +47,8 @@ if (isset($_SESSION['name'])){
 
 
                 <?php
-if (isset($_SESSION['name'])){
-    echo '
+					if (isset($_SESSION['name'])){
+						echo '
 							<li class="custom-nav hvr-underline-reveal">
 								<a href="profile.php">'; echo $_SESSION['name']; echo '</a>
 							</li>
@@ -43,9 +56,9 @@ if (isset($_SESSION['name'])){
 								<a href="logout.php">Logout</a>
 							</li>
 						';
-}
-else {
-    echo '
+					}
+					else {
+						echo '
 							<li class="dropdown custom-nav">
 								<a class="dropdown-toggle hvr-underline-reveal" href="#" data-toggle="dropdown"> Login </a>
 								<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px; min-width: 200px;">
@@ -73,7 +86,7 @@ else {
 								<a href="signUp.php">Sign Up</a>
 							</li>
 						';
-}
+					}
                 ?>
 
             </ul>
