@@ -4,15 +4,16 @@
 	
 	$query =	'CREATE TABLE users(
 						user_id INT NOT NULL AUTO_INCREMENT, 
+						fb_id VARCHAR(100) UNIQUE DEFAULT NULL, 
 						email VARCHAR(255) UNIQUE NOT NULL, 
-						password_hash VARCHAR(63) NOT NULL, 
+						password_hash VARCHAR(63) DEFAULT NULL, 
 						full_name VARCHAR(255) NOT NULL, 
 						birth_date DATETIME DEFAULT NULL, 
 						gender CHAR(1) DEFAULT NULL, 
 						location VARCHAR(255) DEFAULT NULL, 
 						last_login DATETIME DEFAULT NULL, 
 						activated BOOLEAN NOT NULL DEFAULT 0, 
-						activate_hash VARCHAR(63) NOT NULL, 
+						activate_hash VARCHAR(63) DEFAULT NULL, 
 						access_level INT NOT NULL DEFAULT 0, 
 						PRIMARY KEY(user_id), 
 						UNIQUE INDEX(email)

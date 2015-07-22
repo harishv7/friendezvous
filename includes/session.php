@@ -4,6 +4,9 @@
 	if (isset($_SESSION['user_id'])){
 		$user_id = $_SESSION['user_id'];
 	}
+	if (isset($_SESSION['fb_id'])){
+		$fb_id = $_SESSION['fb_id'];
+	}
 	if (isset($_SESSION['name'])){
 		$name = $_SESSION['name'];
 	}

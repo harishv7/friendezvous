@@ -59,28 +59,8 @@
 					}
 					else {
 						echo '
-							<li class="dropdown custom-nav">
-								<a class="dropdown-toggle hvr-underline-reveal" href="#" data-toggle="dropdown"> Login </a>
-								<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px; min-width: 200px;">
-
-									<form role="form" method="post" action="loginProcess.php">
-										<div class="form-group">
-											<label for="username">Email:</label>
-											<input type="email" class="form-control" placeholder="Your email" id="email" name="email">
-										</div>
-										<div class="form-group">
-											<label for="password">Password:</label>
-											<input type="password" class="form-control" placeHolder="Your password" id="password" name="password">
-										</div>
-										<div class="checkbox">
-											<label><input type="checkbox" id="remember" name="remember">Remember me</label>
-										</div>
-										<div class="form-group">
-											<input type="submit" class="btn btn-default" value="Login" id="login" name="login">
-										</div>
-									</form>
-
-								</div>
+							<li class="custom-nav hvr-underline-reveal">
+								<a href="login.php">Login</a>
 							</li>
 							<li class="custom-nav hvr-underline-reveal">
 								<a href="signUp.php">Sign Up</a>
