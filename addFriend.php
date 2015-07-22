@@ -34,6 +34,9 @@
 				}
 				$query = "INSERT INTO friendships (user1_id, user2_id) VALUES ($lower_id, $higher_id)";
 				$result = mysqli_query($connection, $query);
+				
+				$query = "INSERT INTO notifications (user_id, notification_message) VALUES ('$friend_id', '$name has added you as a friend.')";
+				$result = mysqli_query($connection, $query);
 			}
 			
 			header("Location: dashboard.php");

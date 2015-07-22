@@ -78,6 +78,9 @@
 		$_SESSION['email'] = $row['email'];
 		$_SESSION['name'] = $row['full_name'];
 		
+		$query = "UPDATE users SET last_login=NOW() WHERE user_id='$row[user_id]'";
+		$result = mysqli_query($connection, $query);
+		
 		header("Location: dashboard.php");
 	}
 ?>

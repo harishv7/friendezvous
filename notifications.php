@@ -30,7 +30,7 @@
 							$result = mysqli_query($connection, $query);
 							$numUnreadNotifications = mysqli_num_rows($result);
 							
-							$query = "SELECT * FROM notifications WHERE user_id=$user_id";
+							$query = "SELECT * FROM notifications WHERE user_id=$user_id ORDER BY date_time DESC";
 							$result = mysqli_query($connection, $query);
 							$numNotifications = mysqli_num_rows($result);
 							
@@ -43,13 +43,15 @@
 									if (!$notification['notification_read']){
 										echo '(Unread) ';
 									}
+									echo $notification['date_time'];
+									echo ' | ';
 									if (isset($notification['notification_link'])){
 										echo "<a href='$notification[notification_link]'>";
 										echo $notification['notification_message'];
 										echo "</a>";
 									}
 									else {
-										echo $notification['message'];
+										echo $notification['notification_message'];
 									}
 									echo "</li>";
 								}
