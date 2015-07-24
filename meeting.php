@@ -177,7 +177,9 @@
 									$query = "SELECT * FROM users WHERE user_id=$row[user_id]";
 									$result2 = mysqli_query($connection, $query);
 									$participant = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+									echo "<a href='viewProfile.php?target_id=$participant[user_id]'>";
 									echo $participant['full_name'];
+									echo "</a>";
 									if ($owner){
 										echo '&nbsp';
 										echo "<a href='removeParticipant.php?";
@@ -186,8 +188,6 @@
 									echo '<br>';
 								}
 								echo '<hr>';
-		
-		
 		
 								if ($owner){
 									echo '<h4>Add participants</h4>';

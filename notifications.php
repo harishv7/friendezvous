@@ -57,14 +57,15 @@
 								}
 								echo '</ul>';
 							}
-							if ($numUnreadNotifications){
-								echo '<p align="right">';
-								echo '<a href="notificationsRead.php">';
-								echo 'Mark all as read';
-								echo '</a>';
-								echo '</a>';
-								echo '</p>';
-							}
+							echo '<p align="right">';
+							echo '<a href="notificationsRead.php">';
+							echo 'Mark all as read';
+							echo '</a>';
+							echo ' | ';
+							echo '<a href="clearNotifications.php">';
+							echo 'Clear all notifications';
+							echo '</a>';
+							echo '</p>';
 						?>
 					</div>
 				</div>

@@ -24,63 +24,10 @@
 				</div>
                 <div class="row">
 					<div class="col-md-12" id="accordion">
-						<!--<p>View your schedule</p>
-						<div class="schedule-container">
-							<p>Check your meetings here:</p>
-							<script>
-								var monthNames = [
-									"January", "February", "March",
-									"April", "May", "June", "July",
-									"August", "September", "October",
-									"November", "December"
-								];
-
-								var date = new Date();
-								var day = date.getDate();
-								var monthIndex = date.getMonth();
-								var year = date.getFullYear();
-								$('.schedule-container').append(day+' ' + monthNames[monthIndex] + ' ' + year);
-							</script>
-							<table border="1" width="100%" style="table-layout: fixed;" class="text-center dashboard-table">
-								<?php
-								$curCol = 2;
-
-								echo '<tr class="table-days">';
-								echo '<td></td>';
-								echo '<td colspan="1">Mon</td>';
-								echo '<td colspan="1">Tue</td>';
-								echo '<td colspan="1">Wed</td>';
-								echo '<td colspan="1">Thu</td>';
-								echo '<td colspan="1">Fri</td>';
-								echo '<td colspan="1">Sat</td>';
-								echo '<td colspan="1">Sun</td>';
-								echo '</tr>';
-
-								for ($i = 0; $i < 24; $i++){
-									echo '<tr>';
-									echo '<td class="table-days">';
-									if ($i < 10){
-										echo '0';
-									}
-									echo "$i:00";
-									echo '</td>';
-
-									for ($j = 0; $j < 7; $j++){
-										$colNum = $j * 48 + $i * 2 + 2;
-
-										echo '<td colspan="1" class="table-cells">';
-										echo '</td>';
-									}
-									echo '</tr>';
-								}
-								?>
-							</table>
-						</div>-->
-						
 						<p>View your upcoming meetings</p>
 						<div class="meeting-container">
 							<?php								
-								$query = "SELECT * FROM meeting_users WHERE user_id = '".$user_id."'";
+								$query = "SELECT * FROM meeting_users WHERE user_id = '".$user_id."' ORDER BY meeting_id DESC";
 								$result = mysqli_query($connection, $query);
 								
 								$noMeetings = true;
@@ -117,6 +64,7 @@
 								if ($noMeetings) {
 									echo 'You have no upcoming meetings.';
 								}
+								echo '<hr>* Meetings in <font color="#00FF00">green</font> are finalized.';
 							?>
 						</div>
 					

@@ -17,6 +17,7 @@
     <link type='text/css' href="assets/css/jquery-ui.theme.min.css" rel="stylesheet">
 	<link type='text/css' href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link type='text/css' href="assets/css/autocomplete.css" rel="stylesheet">
+	<link type='text/css' href="assets/css/maps.css" rel="stylesheet">
 
 	<!-- SCRIPTS -->
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>

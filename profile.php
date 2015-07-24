@@ -33,43 +33,71 @@
 							$query = "SELECT * FROM users WHERE user_id='$user_id'";
 							$result = mysqli_query($connection, $query);
 							$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-							echo 'Full name: ';
-							echo '<br><b>';
-							echo $row['full_name'];
-							echo '</b><br>';
-							echo '<br>';
-							
-							echo 'Email: ';
-							echo '<br><b>';
-							echo $row['email'];
-							echo '</b><br>';
-							echo '<br>';
-							
-							echo 'Birth date: ';
-							echo '<br><b>';
-							$birthdate = date_create($row['birth_date']);
-							echo date_format($birthdate, 'jS F Y');
-							echo '</b><br>';
-							echo '<br>';
-							
-							echo 'Gender: ';
-							echo '<br><b>';
-							echo $row['gender'];
-							echo '</b><br>';
-							echo '<br>';
-							
-							echo 'Location: ';
-							echo '<br><b>';
-							echo $row['location'];
-							echo '</b><br>';
-							echo '<br>';
-							
-							echo 'Last login: ';
-							echo '<br><b>';
-							echo $row['last_login'];
-							echo '</b><br>';
-							echo '<br>';
 						?>
+						<form role="form" method="post" action="updateProfile.php">
+						Full name:
+						<br>
+						<b>
+						<input type="text" name="full_name" size="32" style="border: 0" value="<?php echo $row['full_name']; ?>" readonly required />
+						<input name="Edit" class="btn btn-default" type="button" value="Edit">
+						</b>
+						<br>
+						<br>
+						
+						Email:
+						<br>
+						<b>
+						<input type="text" name="email" size="32" style="border: 0; background: none;" value="<?php echo $row['email']; ?>" disabled />
+						</b>
+						<br>
+						<br>
+						
+						Birth date:
+						<br>
+						<b>
+						<input type="text" name="birth_date" size="32" style="border: 0; background: none;" value="<?php echo date_format(date_create($row['birth_date']), 'jS F Y'); ?>" disabled />
+						</b>
+						<br>
+						<br>
+						
+						Gender:
+						<br>
+						<b>
+						<input type="text" name="gender" size="32" style="border: 0" value="<?php echo $row['gender']; ?>" readonly required />
+						<input name="Edit" class="btn btn-default" type="button" value="Edit">
+						</b>
+						<br>
+						<br>
+						
+						Location:
+						<br>
+						<b>
+						<input type="text" name="location" size="32" style="border: 0" value="<?php echo $row['location']; ?>" readonly required />
+						<input name="Edit" class="btn btn-default" type="button" value="Edit">
+						</b>
+						<br>
+						<br>
+						
+						Last login:
+						<br>
+						<b>
+						<input type="text" name="last_login" size="32" style="border: 0; background: none;" value="<?php echo $row['last_login']; ?>" disabled />
+						</b>
+						<br>
+						<br>
+						
+						<script type="text/javascript">
+							$('[name="Edit"]').on('click', function() {
+								var prev = $(this).prev('input'),
+									ro   = prev.prop('readonly');
+								prev.prop('readonly', !ro).focus();
+								$(this).val(ro ? 'Save' : 'Edit');
+							});
+						</script>
+						<input type="submit" class="btn btn-default" name="update" value="Save Changes">
+						<button onclick="window.location.href='profile.php'" class="btn btn-default" name="cancel">Cancel</button>
+						
+						</form>
 					</div>
 				</div>
 			</div>
