@@ -61,6 +61,8 @@
 						user_id INT UNSIGNED NOT NULL, 
 						user_confirmed BOOLEAN DEFAULT 0, 
 						user_location VARCHAR(255) DEFAULT NULL, 
+						user_latitude FLOAT DEFAULT NULL, 
+						user_longitude FLOAT DEFAULT NULL, 
 						PRIMARY KEY(mu_id)
 					) ENGINE = INNODB';
 					
@@ -70,6 +72,50 @@
 	}
 	else {
 		echo 'Error in creating TABLE meeting_users.';
+		echo '<br>';
+		echo $result;
+	}
+	
+	echo '<br>';
+	
+	$query =	'CREATE TABLE meeting_locations(
+						ml_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+						meeting_id INT UNSIGNED NOT NULL, 
+						location_id INT UNSIGNED NOT NULL, 
+						num_votes INT UNSIGNED DEFAULT 1, 
+						proposed_user_id INT UNSIGNED NOT NULL, 
+						PRIMARY KEY(ml_id)
+					) ENGINE = INNODB';
+					
+	$result = mysqli_query($connection, $query);
+	if ($result){
+		echo 'TABLE meeting_locations created succesfully.';
+	}
+	else {
+		echo 'Error in creating TABLE meeting_locations.';
+		echo '<br>';
+		echo $result;
+	}
+	
+	echo '<br>';
+	
+	$query =	'CREATE TABLE locations(
+						location_id INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+						name VARCHAR(255) NOT NULL, 
+						description VARCHAR(255) DEFAULT NULL, 
+						latitude FLOAT DEFAULT NULL, 
+						longitude FLOAT DEFAULT NULL, 
+						rating FLOAT DEFAULT 0, 
+						num_rating INT DEFAULT 0, 
+						PRIMARY KEY(location_id)
+					) ENGINE = INNODB';
+					
+	$result = mysqli_query($connection, $query);
+	if ($result){
+		echo 'TABLE locations created succesfully.';
+	}
+	else {
+		echo 'Error in creating TABLE locations.';
 		echo '<br>';
 		echo $result;
 	}

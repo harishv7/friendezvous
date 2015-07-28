@@ -226,7 +226,30 @@
 											</form>';
 										}
 									}
+									echo '<hr>';
 								}
+								
+								echo '<h4>Suggest meeting locations</h4>';
+								$query = "SELECT * FROM meeting_locations WHERE meeting_id='$meeting_id'";
+								$result = mysqli_query($connection, $query);
+								$numResult = mysqli_num_rows($result);
+								if (!$numResult){
+									echo 'No meeting locations have been suggested.';
+								}
+								else {
+									while ($meeting_location = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+										$location_id = $meeting_location['location_id'];
+										$query = "SELECT * FROM locations WHERE location_id='$location_id'";
+										$result2 = mysqli_query($connection, $query);
+										$location = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+										echo "<a href='viewLocation.php?location_id=$location_id'>";
+										echo $location['name'];
+										echo "</a>";
+										echo '<br>';
+									}
+								}
+								echo '<br>';
+								echo "<a href='addLocation.php?meeting_id=$meeting_id'>Suggest a new location</a>";
 							}
 							else {
 								echo "This meeting has been finalized and scheduled to take place on <b>$meeting[date_time]</b>.";

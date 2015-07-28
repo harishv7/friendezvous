@@ -108,13 +108,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">
-							Maps
+							Add Location
 						</h1>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<form method="post" action="addLocation.php?meeting_id=<?php echo $meeting_id; ?>">
+						<form method="post" action="addLocationProcess.php?meeting_id=<?php echo $meeting_id; ?>">
 							<input id="pac-input" class="controls" type="text" name="location" placeholder="Enter a location">
 							<input type="hidden" id="latitude" name="latitude">
 							<input type="hidden" id="longitude" name="longitude">
