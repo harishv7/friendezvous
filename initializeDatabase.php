@@ -60,9 +60,7 @@
 						meeting_id INT UNSIGNED NOT NULL, 
 						user_id INT UNSIGNED NOT NULL, 
 						user_confirmed BOOLEAN DEFAULT 0, 
-						user_location VARCHAR(255) DEFAULT NULL, 
-						user_latitude FLOAT DEFAULT NULL, 
-						user_longitude FLOAT DEFAULT NULL, 
+						user_location_id INT UNSIGNED DEFAULT NULL, 
 						PRIMARY KEY(mu_id)
 					) ENGINE = INNODB';
 					

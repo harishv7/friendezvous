@@ -12,13 +12,22 @@
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
 		<script>
 			function initialize() {
-			  var myLatlng = new google.maps.LatLng(1.296451, 103.77631);
+			  var latitude = document.getElementById("latitude").value;
+			  var longitude = document.getElementById("longitude").value;
+			  var myLatlng = new google.maps.LatLng(latitude, longitude);
+
 			  var mapOptions = {
 				center: myLatlng,
-				zoom: 15
+				zoom: 17
 			  };
 			  var map = new google.maps.Map(document.getElementById('map-canvas'),
 				mapOptions);
+			var marker = new google.maps.Marker({
+				  position: myLatlng,
+				  map: map,
+				  title: 'Meeting Location'
+			});
+
 				
 			google.maps.event.addListener(map, "center_changed", function(){ 
 				document.getElementById("latitude").value = map.getCenter().lat(); 
@@ -40,7 +49,7 @@
 				map: map,
 				anchorPoint: new google.maps.Point(0, -29)
 			  });
-			  
+
 			  google.maps.event.addListener(autocomplete, 'place_changed', function() {
 				infowindow.close();
 				marker.setVisible(false);
@@ -99,9 +108,9 @@
 		</script>
 	</head>
 	<body>
-        <?php
+		<?php
 			include 'includes/navigationBar.php';
-			$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
+			$location_id = mysqli_real_escape_string($connection, $_GET['location_id']);
 		?>
 		
 		<div class="section">
@@ -109,35 +118,21 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">
-							Add Location
+							<?php
+								$query = "SELECT * FROM locations WHERE location_id='$location_id'";
+								$result = mysqli_query($connection, $query);
+								$location = mysqli_fetch_array($result, MYSQLI_ASSOC);
+								echo $location['name'];
+							?>
 						</h1>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<form method="post" action="addLocationProcess.php?meeting_id=<?php echo $meeting_id; ?>">
-							<input id="pac-input" class="controls" type="text" name="location" placeholder="Enter a location">
-							<input type="hidden" id="latitude" name="latitude">
-							<input type="hidden" id="longitude" name="longitude">
-							<div id="type-selector" class="controls2">
-								<div>
-									<input type="radio" name="type" id="changetype-all" checked="checked">
-									<label for="changetype-all">All</label>
-									<input type="radio" name="type" id="changetype-establishment">
-									<label for="changetype-establishment">Establishments</label>
-
-									<input type="radio" name="type" id="changetype-address">
-									<label for="changetype-address">Addresses</label>
-
-									<input type="radio" name="type" id="changetype-geocode">
-									<label for="changetype-geocode">Geocodes</label>
-								</div>
-								<div align="center">
-									<input type="submit" name="add" class="btn btn-default" style="height: 28px; padding-top: 3px; border-radius: 5px;" value="Add Selection">
-								</div>
-							</div>
-							<div id="map-canvas"></div>
-						</form>
+						<input type="hidden" id="location" name="location" value="<?php echo $location['name']; ?>">
+						<input type="hidden" id="latitude" name="latitude" value="<?php echo $location['latitude']; ?>">
+						<input type="hidden" id="longitude" name="longitude" value="<?php echo $location['longitude']; ?>">
+						<div id="map-canvas"></div>
 					</div>
 				</div>
 			</div>
@@ -147,4 +142,3 @@
 		?>
 	</body>
 </html>
-

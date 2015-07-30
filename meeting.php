@@ -229,7 +229,17 @@
 									echo '<hr>';
 								}
 								
-								echo '<h4>Suggest meeting locations</h4>';
+								echo '<h4>Proposed meeting locations</h4>';
+								$query = "SELECT * FROM meeting_users WHERE meeting_id='$meeting_id' && user_id='$user_id'";
+								$result = mysqli_query($connection, $query);
+								$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+								if (isset($row['user_location_id'])){
+									$user_location_declared = true;
+								}
+								else {
+									$user_location_declared = false;
+								}
+								
 								$query = "SELECT * FROM meeting_locations WHERE meeting_id='$meeting_id'";
 								$result = mysqli_query($connection, $query);
 								$numResult = mysqli_num_rows($result);
@@ -245,11 +255,21 @@
 										echo "<a href='viewLocation.php?location_id=$location_id'>";
 										echo $location['name'];
 										echo "</a>";
+										echo " --> ";
+										echo "$meeting_location[num_votes] person(s) voted this.";
+										
+										if (!$user_location_declared){
+											echo " <a href='voteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
+											echo "vote";
+											echo "</a>";
+										}
 										echo '<br>';
 									}
 								}
 								echo '<br>';
-								echo "<a href='addLocation.php?meeting_id=$meeting_id'>Suggest a new location</a>";
+								if (!$user_location_declared){
+									echo "<a href='addLocation.php?meeting_id=$meeting_id'>Suggest a new location</a>";
+								}
 							}
 							else {
 								echo "This meeting has been finalized and scheduled to take place on <b>$meeting[date_time]</b>.";
