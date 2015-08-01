@@ -1,4 +1,4 @@
-<footer class="section section-info">
+<footer class="section">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">

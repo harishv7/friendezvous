@@ -109,3 +109,15 @@
 	background-color: DarkSlateBlue ;
 	border: 0px;
 }
+
+footer{
+	background-color: DarkSlateBlue;
+}
+
+footer a{
+	color: white;
+}
+
+footer a:hover{
+	color:beige;
+}
