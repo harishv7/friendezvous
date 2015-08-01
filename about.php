@@ -45,12 +45,12 @@
 				</div>
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+                        <img src="assets/images/harish.png" class="center-block img-circle img-responsive">
                         <h3 class="text-center">Harish Venkatesan</h3>
                         <p class="text-center">Computer Engineering Student</p>
 					</div>
                     <div class="col-md-6">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive">
+                        <img src="assets/images/alvian.png" class="center-block img-circle img-responsive">
                         <h3 class="text-center">Alvian Prasetya</h3>
                         <p class="text-center">Computer Engineering Student</p>
 					</div>
