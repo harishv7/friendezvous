@@ -26,41 +26,44 @@
 		?>
         <div class="cover">
             <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?q=75&amp;fm=jpg&amp;s=478a9a2196033db7c0bf3c8ba3707f4d')"></div>
-            <div class="container" style="background:rgba(0, 0, 0, 0.5);";>
+            <div class="container" style="background:#fff;opacity:0.8;border-radius:30px;">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="text-inverse">Login</h1>
-                        <p class="text-inverse">Begin organising your meetings with Friendezvous!</p>
+                        <h1 >Login</h1>
+                        <p >Begin organising your meetings with Friendezvous!</p>
                         <br>
-                        <br>
+                        
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 text-left">
                         <form role="form" method="post" action="loginProcess.php">
                             <div class="form-group">
-								<label><font color="#ffffff">Email</font></label>
+								<label><font color="#000">Email</font></label>
 								<input type="email" class="form-control" placeholder="Email (required)" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-								<label><font color="#ffffff">Password</font></label>
+								<label><font color="#000">Password</font></label>
                                 <input type="password" class="form-control" placeholder="Password (required)" id="password" name="password" required>
                             </div>
-							<div class="checkbox">
-								<label><input type="checkbox" id="agree" name="agree" value="agree"><font color="#ffffff">Remember me</font></label>
-							</div>
+							
 							<div class="form-group">
-								<input type="submit" class="custom-btn btn-default" value="Login" id="login" name="login">
+								<input type="submit" class="custom-btn3 btn-default hvr-grow" value="Login" id="login" name="login">
 							</div>
                         </form>
 						<hr>
 						<div class="form-group" align="center">
-							<font color="#ffffff">Or</font><br>
+							<font color="#000"><strong>OR</strong></font><br>
 						</div>
-						<div class="form-group" align="center">
+						<div class="form-group facebook-login" align="center">
 							<?php
-								echo '<a href="' . $loginUrl . '" class="custom-btn btn-default" id="fblogin" name="fblogin">Login with Facebook</a>';
+								echo '<a href="' . $loginUrl . '" id="fblogin" name="fblogin"><p class="custom-btn3 btn-default hvr-grow"> Login with Facebook</p></a>';
 							?>
+							<style>
+							.facebook-login p{
+								font-size: 15px;
+							}
+							</style>
 						</div>
                     </div>
                 </div>

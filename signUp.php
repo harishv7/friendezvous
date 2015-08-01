@@ -24,13 +24,13 @@
 		
         <div class="cover">
             <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?q=75&amp;fm=jpg&amp;s=478a9a2196033db7c0bf3c8ba3707f4d')"></div>
-            <div class="container" style="background:rgba(0, 0, 0, 0.5);";>
+            <div class="container" style="background:#fff;opacity:0.8;border-radius:30px;";>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="text-inverse">Sign Up</h1>
-                        <p class="text-inverse">Begin organising your meetings with Friendezvous!</p>
+                        <h1>Sign Up</h1>
+                        <p>Begin organising your meetings with Friendezvous!</p>
                         <br>
-                        <br>
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -108,38 +108,38 @@
 								}
 							?>
                             <div class="form-group">
-								<label><font color="#ffffff">Email</font></label>
+								<label><font color="#000">Email</font></label>
 								<input type="email" class="form-control" placeholder="Email (required)" id="email" name="email" required>
                             </div>
                             <div class="form-group">
-								<label><font color="#ffffff">Password</font></label>
+								<label><font color="#000">Password</font></label>
                                 <input type="password" class="form-control" placeholder="Password (required)" id="password" name="password" required>
                             </div>
 							<div class="form-group">
-								<label><font color="#ffffff">Confirm password</font></label>
+								<label><font color="#000">Confirm password</font></label>
                                 <input type="password" class="form-control" placeholder="Confirm password (required)" id="passwordConfirm" name="passwordConfirm" required>
                             </div>
 							<div class="form-group">
-								<label><font color="#ffffff">Full name</font></label>
+								<label><font color="#000">Full name</font></label>
                                 <input type="text" class="form-control" placeholder="Full name (required)" id="name" name="name" required>
                             </div>
 							<div class="form-group">
-								<label><font color="#ffffff">Birthdate</font></label>
+								<label><font color="#000">Birthdate</font></label>
 								<div class="picker" id="picker"></div>
 							</div>
 							<div class="form-group">
-								<label><font color="#ffffff">Gender</font></label>
+								<label><font color="#000">Gender</font></label>
 								<br>
-								<input type="radio" name="gender" value="M"><font color="#ffffff"> Male</font></input> &nbsp &nbsp
-								<input type="radio" name="gender" value="F"><font color="#ffffff"> Female</font></input> &nbsp &nbsp
-								<input type="radio" name="gender" value="" checked="yes"><font color="#ffffff"> Do not specify</font></input>
+								<input type="radio" name="gender" value="M"><font color="#000"> Male</font></input> &nbsp &nbsp
+								<input type="radio" name="gender" value="F"><font color="#000"> Female</font></input> &nbsp &nbsp
+								<input type="radio" name="gender" value="" checked="yes"><font color="#000"> Do not specify</font></input>
 							</div>
 							<div class="form-group">
-								<label><font color="#ffffff">Location</font></label>
+								<label><font color="#000">Location</font></label>
                                 <input type="text" class="form-control" placeholder="Location (optional)" id="location" name="location">
                             </div>
 							<div class="checkbox">
-								<label><input type="checkbox" id="agree" name="agree" value="agree"><font color="#ffffff">I have read and agreed with Friendezvous' <a href="tc.php">terms & conditions<font></a></label>
+								<label><input type="checkbox" id="agree" name="agree" value="agree"><font color="#000">I have read and agreed with Friendezvous' <a href="tc.php">terms & conditions<font></a></label>
 							</div>
 							<div class="form-group">
 								<input type="submit" class="btn btn-default" value="Register" id="register" name="register">
