@@ -22,7 +22,6 @@
 	background-color 0.3s ease-in,
 	border-color 0.3s ease-in;
 }
-
 .custom-btn-2 {
 	display: inline-block;
 	width: 100px;
@@ -49,6 +48,37 @@
 	border-color 0.3s ease-in;
 }
 
+.custom-btn3 {
+	display: inline-block;
+	width: 200px;
+	padding: 8px;
+	color: #000;
+    font-family: Raleway;
+	background-color: transparent;
+	border: 2px solid #000;
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	<!--transition: color 0.3s ease-out,
+	background-color 0.3s ease-out,
+	border-color 0.3s ease-out;-->
+}
+.custom-btn3:hover,
+.custom-btn3:active {
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+	transition: color 0.3s ease-in,
+	background-color 0.3s ease-in,
+	border-color 0.3s ease-in;
+}
+
+.color-box{
+	background-color: lavender;
+	opacity: 0.7;
+	padding: 50px;
+	border-radius: 70px;
+}
 
 @media (max-width: 480px) {
 	.custom-nav{

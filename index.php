@@ -14,17 +14,24 @@
             <?php
 				include 'includes/navigationBar.php';
             ?>
-            <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228')"></div>
-            <div class="container">
+            <!-- Original Image: https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228 -->
+            <div class="cover-image" style="background-image : url('https://s3.amazonaws.com/StartupStockPhotos/uploads/38.jpg')"></div>
+            <div class="container color-box">
                 <div class="row">
                     <div class="col-md-12 text-center">
 
                         <p align="center"><img src="assets/images/logo.png" class="img-responsive"></p>
 
-                        <p class="text-inverse">Organising meetings, redefined.</p>
+                        <p class="">Organising meetings, redefined.</p>
                         <br>
                         <br>
-                        <button type="button" class="custom-btn hvr-grow-shadow hvr-grow-shadow">KNOW MORE</button>
+                        
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <a href="login.php"><p class="custom-btn3 hvr-grow-shadow hvr-grow-shadow">Login</p></a>
+                        <span> &nbsp &nbsp </span>
+                        <a href="signUp.php"><p class="custom-btn3 hvr-grow-shadow hvr-grow-shadow">Sign Up</p></a> <br>
+                        <button type="button" class="custom-btn3 hvr-grow-shadow hvr-grow-shadow">Know more...</button>
                     </div>
                 </div>
             </div>
@@ -57,6 +64,13 @@
 
                         <p class="text-center">Friendezvous will immediately work out the best time and place for all
                             of you to meet.<br> Yes, it's that simple!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="login.php"><p class="custom-btn3 hvr-grow-shadow hvr-grow-shadow">Login</p></a>
+                        <span> &nbsp &nbsp </span>
+                        <a href="signUp.php"><p class="custom-btn3 hvr-grow-shadow hvr-grow-shadow">Sign Up</p></a>
                     </div>
                 </div>
             </div>
