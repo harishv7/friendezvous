@@ -9,15 +9,37 @@
 		include 'includes/header.php';
     ?>
 	
+	<script type="text/javascript">
+		$('#container img').hide();
+		
+		var isFirstIteration = true;
+		
+		function roll() {
+			$("#container img").first().appendTo('#container').fadeOut(5000);
+			$("#container img").first().fadeIn(5000);
+			
+			if (isFirstIteration){
+				isFirstIteration = false;
+				setTimeout(roll, 5000);
+			}
+			else {
+				setTimeout(roll, 10000);
+			}
+		}
+		roll();
+	</script>
     <body>
         <div class="cover">
+		
             <?php
 				include 'includes/navigationBar.php';
             ?>
-            <!-- Original Image: https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228 
-                https://s3.amazonaws.com/StartupStockPhotos/uploads/38.jpg
-            -->
-            <div class="cover-image" style="background-image : url('assets/images/Agreement.jpg')"></div>
+			
+			<div id="container">
+				<img src="assets/images/Agreement.jpg" class="cover-image">
+				<img src="https://s3.amazonaws.com/StartupStockPhotos/uploads/38.jpg" class="cover-image" style="display: none;">
+				<img src="https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228" class="cover-image" style="display: none;">
+			</div>
             <div class="container color-box">
                 <div class="row">
                     <div class="col-md-12 text-center">
