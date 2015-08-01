@@ -15,7 +15,7 @@
 		?>
 
 		<div class="dashboard">
-		<div class="dashboard-image" style="background-image: url(assets/images/bg.jpg);"></div>
+		<div class="dashboard-image" style="background-image: url(assets/images/2.jpg);"></div>
             <div class="container" style="margin-top: 35px;">
                 <div class="row">
                     <div class="col-md-12">
@@ -80,7 +80,7 @@
 									<input type="text" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
 								</div>
 								<div class="form-group">
-									<input type="submit" class="btn btn-default" value="Submit" id="submit" name="submit">
+									<input type="submit" class="custom-btn3 btn-default" value="Submit" id="submit" name="submit">
 								</div>
 							</form>
 						</div>
@@ -126,7 +126,7 @@
 										</div>
 									</div>
 									<div class="form-group" align="right">
-										<input type="submit" class="btn btn-default" value="Add as friend" id="add" name="add">
+										<input type="submit" class="custom-btn3 btn-default" value="Add as friend" id="add" name="add">
 									</div>
 								</form>
 							</div>

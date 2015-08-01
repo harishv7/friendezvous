@@ -13,9 +13,13 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		
-		<div class="section">
-			<div class="container">
+		<style type="text/css">
+		.profile{
+			color:;
+		}
+		</style>
+		<div class="section profile " style="background-image: url(assets/images/paper.jpg);">
+			<div class="container color-box">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">
@@ -94,8 +98,8 @@
 								$(this).val(ro ? 'Save' : 'Edit');
 							});
 						</script>
-						<input type="submit" class="btn btn-default" name="update" value="Save Changes">
-						<button onclick="window.location.href='profile.php'" class="btn btn-default" name="cancel">Cancel</button>
+						<input type="submit" class="custom-btn3 btn-default" name="update" value="Save Changes">
+						<button onclick="window.location.href='profile.php'" class="custom-btn3 btn-default" name="cancel">Cancel</button>
 						
 						</form>
 					</div>
