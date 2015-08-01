@@ -55,7 +55,7 @@
 						Birth date:
 						<br>
 						<b>
-						<input type="text" name="birth_date" size="32" style="border: 0; background: none;" value="<?php echo date_format(date_create($row['birth_date']), 'jS F Y'); ?>" disabled />
+						<input type="text" name="birth_date" size="32" style="border: 0; background: none;" value="<?php if (isset($row['birth_date'])) echo date_format(date_create($row['birth_date']), 'jS F Y'); ?>" disabled />
 						</b>
 						<br>
 						<br>
