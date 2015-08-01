@@ -14,8 +14,10 @@
             <?php
 				include 'includes/navigationBar.php';
             ?>
-            <!-- Original Image: https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228 -->
-            <div class="cover-image" style="background-image : url('https://s3.amazonaws.com/StartupStockPhotos/uploads/38.jpg')"></div>
+            <!-- Original Image: https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228 
+                https://s3.amazonaws.com/StartupStockPhotos/uploads/38.jpg
+            -->
+            <div class="cover-image" style="background-image : url('assets/images/Agreement.jpg')"></div>
             <div class="container color-box">
                 <div class="row">
                     <div class="col-md-12 text-center">
