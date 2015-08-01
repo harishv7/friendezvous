@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="assets/images/contact-us.jpg" class="img-responsive">
+                        <img src="assets/images/contact.png" class="img-responsive">
                     </div>
                     <div class="col-md-6">
 						<h3 class="text-center">Leave us a feedback</h3>
@@ -79,11 +79,11 @@
                         <h3>Find us on Github!</h3>
                         <p></p>
                         <p>Contact us via
-                            <a href="https://github.com/harishv7/friendezvous">Github</a>. Our project is hosted there, so feel free to take a look!</p>
+                            <a href="https://github.com/harishv7/friendezvous">Github</a>. Friendezvous is hosted there, so feel free to take a look!</p>
                         <p></p>
                     </div>
                     <div class="col-md-6">
-                        <img src="assets/images/social.jpg" class="img-responsive">
+                        <img src="assets/images/social.png" class="img-responsive">
                     </div>
                 </div>
             </div>
