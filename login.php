@@ -50,7 +50,7 @@
 								<label><input type="checkbox" id="agree" name="agree" value="agree"><font color="#ffffff">Remember me</font></label>
 							</div>
 							<div class="form-group">
-								<input type="submit" class="btn btn-default" value="Login" id="login" name="login">
+								<input type="submit" class="custom-btn btn-default" value="Login" id="login" name="login">
 							</div>
                         </form>
 						<hr>
@@ -59,7 +59,7 @@
 						</div>
 						<div class="form-group" align="center">
 							<?php
-								echo '<a href="' . $loginUrl . '" class="btn btn-default" id="fblogin" name="fblogin">Login with Facebook</a>';
+								echo '<a href="' . $loginUrl . '" class="custom-btn btn-default" id="fblogin" name="fblogin">Login with Facebook</a>';
 							?>
 						</div>
                     </div>
