@@ -36,9 +36,11 @@
             ?>
 			
 			<div id="container">
-				<img src="assets/images/Agreement.jpg" class="cover-image">
-				<img src="https://s3.amazonaws.com/StartupStockPhotos/uploads/38.jpg" class="cover-image" style="display: none;">
-				<img src="https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228" class="cover-image" style="display: none;">
+				<img src="assets/images/bg/Agreement.jpg" class="cover-image">
+				<img src="assets/images/bg/38.jpg" class="cover-image" style="display: none;">
+				<img src="assets/images/bg/beach.jpeg" class="cover-image" style="display: none;">
+                <img src="assets/images/bg/76.jpg" class="cover-image" style="display: none;">
+                <img src="assets/images/bg/52.jpg" class="cover-image" style="display: none;">
 			</div>
             <div class="container color-box">
                 <div class="row">
