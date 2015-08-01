@@ -58,7 +58,6 @@
 	border: 2px solid #000;
 	text-align: center;
 	outline: none;
-	border-radius: 10px;
 	text-decoration: none;
 	<!--transition: color 0.3s ease-out,
 	background-color 0.3s ease-out,
@@ -78,7 +77,7 @@
 	background-color: lavender;
 	opacity: 0.7;
 	padding: 50px;
-	border-radius: 70px;
+	border-radius: 50px;
 }
 
 @media (max-width: 480px) {
@@ -103,4 +102,9 @@
 
 #accordion{
 	opacity: 0.85;
+}
+
+.navbar{
+	background-color: DarkSlateBlue ;
+	border: 0px;
 }

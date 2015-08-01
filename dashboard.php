@@ -13,13 +13,13 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		
+
 		<div class="dashboard">
-		<div class="dashboard-image" style="background-image: url(https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=25&amp;fm=jpg&amp;s=127f3a3ccf4356b7f79594e05f6c840e);"></div>
+		<div class="dashboard-image" style="background-image: url(assets/images/bg.jpg);"></div>
             <div class="container" style="margin-top: 35px;">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center">Dashboard</h1>
+                        <h1 class="text-center" style="color:#fff">Dashboard</h1>
 					</div>
 				</div>
                 <div class="row">
@@ -107,9 +107,11 @@
 											}
 											$result2 = mysqli_query($connection, $query);
 											$currentFriend = mysqli_fetch_array($result2);
+
 											echo "<a href='viewProfile.php?target_id=$currentFriend[user_id]'>";
 											echo $currentFriend['full_name'];
 											echo "</a>";
+											echo "&nbsp";
 										}
 									}
 								?>

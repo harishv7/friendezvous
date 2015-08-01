@@ -24,15 +24,15 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		
         <div class="cover">
             <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?q=75&amp;fm=jpg&amp;s=478a9a2196033db7c0bf3c8ba3707f4d')"></div>
-            <div class="container" style="background:#fff; opacity:0.8; border-radius:30px;">
+            <div class="container" style="background:#fff;opacity:0.8;border-radius:30px;">
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h1 >Login</h1>
                         <p >Begin organising your meetings with Friendezvous!</p>
                         <br>
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -47,7 +47,7 @@
                                 <input type="password" class="form-control" placeholder="Password (required)" id="password" name="password" required>
                             </div>
 							
-							<div class="form-group" align="center">
+							<div class="form-group">
 								<input type="submit" class="custom-btn3 btn-default hvr-grow" value="Login" id="login" name="login">
 							</div>
                         </form>
@@ -57,7 +57,7 @@
 						</div>
 						<div class="form-group facebook-login" align="center">
 							<?php
-								echo '<a href="' . $loginUrl . '" id="fblogin" name="fblogin"><p class="custom-btn3 btn-default hvr-grow">Login with Facebook</p></a>';
+								echo '<a href="' . $loginUrl . '" id="fblogin" name="fblogin"><p class="custom-btn3 btn-default hvr-grow"> Login with Facebook</p></a>';
 							?>
 							<style>
 							.facebook-login p{

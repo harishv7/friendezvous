@@ -13,7 +13,6 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("#picker").birthdaypicker({
@@ -22,14 +21,16 @@
 			});
 		</script>
 		
+		
         <div class="cover">
             <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?q=75&amp;fm=jpg&amp;s=478a9a2196033db7c0bf3c8ba3707f4d')"></div>
-            <div class="container" style="background:#fff; opacity:0.8; border-radius:30px;">
+            <div class="container" style="background:#fff;opacity:0.8;border-radius:30px;";>
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h1>Sign Up</h1>
                         <p>Begin organising your meetings with Friendezvous!</p>
                         <br>
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -129,19 +130,19 @@
 							<div class="form-group">
 								<label><font color="#000">Gender</font></label>
 								<br>
-								<input type="radio" name="gender" value="M"><font color="#000"> Male</font>&nbsp &nbsp
-								<input type="radio" name="gender" value="F"><font color="#000"> Female</font>&nbsp &nbsp
-								<input type="radio" name="gender" value="" checked="yes"><font color="#000"> Do not specify</font>
+								<input type="radio" name="gender" value="M"><font color="#000"> Male</font></input> &nbsp &nbsp
+								<input type="radio" name="gender" value="F"><font color="#000"> Female</font></input> &nbsp &nbsp
+								<input type="radio" name="gender" value="" checked="yes"><font color="#000"> Do not specify</font></input>
 							</div>
 							<div class="form-group">
 								<label><font color="#000">Location</font></label>
                                 <input type="text" class="form-control" placeholder="Location (optional)" id="location" name="location">
                             </div>
 							<div class="checkbox">
-								<label><input type="checkbox" id="agree" name="agree" value="agree"><font color="#000">I have read and agreed with Friendezvous' <a href="tc.php">terms & conditions</a></font></label>
+								<label><input type="checkbox" id="agree" name="agree" value="agree"><font color="#000">I have read and agreed with Friendezvous' <a href="tc.php">terms & conditions<font></a></label>
 							</div>
-							<div class="form-group" align="center">
-								<input type="submit" class="custom-btn3 btn-default hvr-grow" value="Register" id="register" name="register">
+							<div class="form-group">
+								<input type="submit" class="btn btn-default" value="Register" id="register" name="register">
 							</div>
                         </form>
                     </div>
