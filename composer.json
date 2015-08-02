@@ -2,6 +2,7 @@
   "require": {
     "php": ">=5.5.0", 
 	"ext-mbstring": "*", 
-	"sendgrid/sendgrid": "~3.2"
+	"sendgrid/sendgrid": "~3.2", 
+	"sendgrid/smtpapi": "~0.5"
   }
 }
