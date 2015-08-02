@@ -1,11 +1,12 @@
 <?php
 	include 'includes/session.php';
+	include 'includes/dbCredentials.php';
 	// PDO connect *********
-	function connect() {
-		return new PDO('mysql:host=localhost;dbname=friendezvous', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES latin1"));
+	function connect($db_host, $db_name, $db_user, $db_pass) {
+		return new PDO("mysql:host=$db_host;dbname=$db_name", "$db_user", "$db_pass", array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES latin1"));
 	}
 
-	$pdo = connect();
+	$pdo = connect($db_host, $db_name, $db_user, $db_pass);
 	$keyword = '%'.$_POST['keyword'].'%';
 	$sql = "SELECT * FROM users WHERE full_name LIKE (:keyword) && user_id != $user_id ORDER BY user_id ASC LIMIT 0, 10";
 	$query = $pdo->prepare($sql);
