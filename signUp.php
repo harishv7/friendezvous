@@ -64,7 +64,7 @@
 									else {
 										echo '
 											<div class="form-group">
-												<label><font color="#00ff00">
+												<label><font color="DarkSlateBlue">
 													<ul>
 										';
 										echo '<li>You have registered succesfully.</li>';
