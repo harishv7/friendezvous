@@ -48,7 +48,7 @@
                         <form role="form" method="post" action="sendFeedback.php">
                             <div class="form-group">
                                 <label class="control-label" for="feedback">Your feedback(s):</label>
-                                <textarea class="form-control" id="feedback" name="feedback" placeholder="Enter your feedback(s) here"></textarea>
+                                <textarea class="form-control" style="color:black;" id="feedback" name="feedback" placeholder="Enter your feedback(s) here"></textarea>
                             </div>
 							<div class="form-group">
 								<font color="#FF0000">* We will not store any credentials along with your feedback. (This feedback is anonymous)</font>
