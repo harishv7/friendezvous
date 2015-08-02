@@ -54,7 +54,7 @@
 								<font color="#FF0000">* We will not store any credentials along with your feedback. (This feedback is anonymous)</font>
 							</div>
                             <div class="form-group">
-								<input type="submit" class="btn btn-default" value="Submit" id="submit" name="submit">
+								<input type="submit" class="custom-btn3 hvr-grow-shadow btn-default" value="Submit" id="submit" name="submit">
 							</div>
                         </form>
                     </div>
