@@ -40,15 +40,15 @@
                         <form role="form" method="post" action="loginProcess.php">
                             <div class="form-group">
 								<label><font color="#000">Email</font></label>
-								<input type="email" class="form-control" placeholder="Email (required)" id="email" name="email" required>
+								<input type="email" class="form-control" style="color:black;" placeholder="Email (required)" id="email" name="email" required>
                             </div>
                             <div class="form-group">
 								<label><font color="#000">Password</font></label>
-                                <input type="password" class="form-control" placeholder="Password (required)" id="password" name="password" required>
+                                <input type="password" class="form-control" style="color:black;" placeholder="Password (required)" id="password" name="password" required>
                             </div>
 							
 							<div class="form-group" align="center">
-								<input type="submit" class="custom-btn3 btn-default hvr-grow" value="Login" id="login" name="login">
+								<input type="submit" class="custom-btn3 btn-default hvr-grow" style="color:black;" value="Login" id="login" name="login">
 							</div>
                         </form>
 						<hr>

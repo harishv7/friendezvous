@@ -109,19 +109,19 @@
 							?>
                             <div class="form-group">
 								<label><font color="#000">Email</font></label>
-								<input type="email" class="form-control" placeholder="Email (required)" id="email" name="email" required>
+								<input type="email" class="form-control" style="color:black;" placeholder="Email (required)" id="email" name="email" required>
                             </div>
                             <div class="form-group">
 								<label><font color="#000">Password</font></label>
-                                <input type="password" class="form-control" placeholder="Password (required)" id="password" name="password" required>
+                                <input type="password" class="form-control" style="color:black;" placeholder="Password (required)" id="password" name="password" required>
                             </div>
 							<div class="form-group">
 								<label><font color="#000">Confirm password</font></label>
-                                <input type="password" class="form-control" placeholder="Confirm password (required)" id="passwordConfirm" name="passwordConfirm" required>
+                                <input type="password" class="form-control" style="color:black;" placeholder="Confirm password (required)" id="passwordConfirm" name="passwordConfirm" required>
                             </div>
 							<div class="form-group">
 								<label><font color="#000">Full name</font></label>
-                                <input type="text" class="form-control" placeholder="Full name (required)" id="name" name="name" required>
+                                <input type="text" class="form-control" style="color:black;" placeholder="Full name (required)" id="name" name="name" required>
                             </div>
 							<div class="form-group">
 								<label><font color="#000">Birthdate</font></label>
@@ -136,7 +136,7 @@
 							</div>
 							<div class="form-group">
 								<label><font color="#000">Location</font></label>
-                                <input type="text" class="form-control" placeholder="Location (optional)" id="location" name="location">
+                                <input type="text" class="form-control" style="color:black;"  placeholder="Location (optional)" id="location" name="location">
                             </div>
 							<div class="checkbox">
 								<label><input type="checkbox" id="agree" name="agree" value="agree"><font color="#000">I have read and agreed with Friendezvous' <a href="tc.php">terms & conditions</a></font></label>
