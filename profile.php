@@ -13,12 +13,8 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		<style type="text/css">
-		.profile{
-			color:;
-		}
-		</style>
-		<div class="section profile " style="background-image: url(assets/images/try.jpg);">
+
+		<div class="section" style="background-image: url(assets/images/try.jpg);">
 			<div class="container overlay-profile-box">
                 <div class="row">
                     <div class="col-md-12">
