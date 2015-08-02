@@ -80,7 +80,7 @@
 									<input type="text" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
 								</div>
 								<div class="form-group">
-									<input type="submit" class="custom-btn3 btn-default" value="Submit" id="submit" name="submit">
+									<input type="submit" class="custom-btn3 hvr-grow-shadow" value="Create" id="submit" name="submit">
 								</div>
 							</form>
 						</div>
@@ -126,7 +126,7 @@
 										</div>
 									</div>
 									<div class="form-group" align="right">
-										<input type="submit" class="custom-btn3 btn-default" value="Add as friend" id="add" name="add">
+										<input type="submit" class="custom-btn3 hvr-grow-shadow" value="Add as friend" id="add" name="add">
 									</div>
 								</form>
 							</div>
