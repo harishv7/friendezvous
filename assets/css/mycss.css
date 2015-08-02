@@ -114,6 +114,13 @@
 	border-radius: 50px;
 }
 
+.overlay-general{
+	background-color: white;
+	opacity: 0.9;
+	padding: 50px;
+	border-radius: 50px;
+}
+
 .overlay-profile-box{
 	background-color: white;
 	border-radius: 50px;

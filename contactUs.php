@@ -13,9 +13,9 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		
+		<div style="background-image: url(assets/images/try.jpg);">
         <div class="section">
-            <div class="container">
+            <div class="container overlay-general">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">Contact Us</h1>
@@ -35,35 +35,26 @@
 						}
 					?>
                 </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="container">
                 <div class="row">
                     <div class="col-md-6">
                         <img src="assets/images/contact.png" class="img-responsive">
                     </div>
                     <div class="col-md-6">
-						<h3 class="text-center">Leave us a feedback</h3>
+                        <h3 class="text-center">Leave us a feedback</h3>
                         <form role="form" method="post" action="sendFeedback.php">
                             <div class="form-group">
                                 <label class="control-label" for="feedback">Your feedback(s):</label>
                                 <textarea class="form-control" style="color:black;" id="feedback" name="feedback" placeholder="Enter your feedback(s) here"></textarea>
                             </div>
-							<div class="form-group">
-								<font color="#FF0000">* We will not store any credentials along with your feedback. (This feedback is anonymous)</font>
-							</div>
                             <div class="form-group">
-								<input type="submit" class="custom-btn3 hvr-grow-shadow btn-default" value="Submit" id="submit" name="submit">
-							</div>
+                                <font color="#FF0000">* We will not store any credentials along with your feedback. (This feedback is anonymous)</font>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="custom-btn3 hvr-grow-shadow btn-default" value="Submit" id="submit" name="submit">
+                            </div>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
                 <div class="row">
                     <div class="col-md-2">
                         <img src="assets/images/Facebook_logo_(square).png" class="img-responsive img-rounded">
@@ -88,8 +79,7 @@
                 </div>
             </div>
         </div>
-
-
+        
         
 		<?php
 			include 'includes/footer.php';
