@@ -6,3 +6,5 @@ examples/*
 dist/
 .env*
 smtpapi-php.php
+vendor/
+/vendor/

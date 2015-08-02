@@ -25,3 +25,5 @@ phing/build.properties
 
 docs/_build
 docs/*.pyc
+vendor/
+/vendor/
