@@ -1,6 +1,6 @@
 <?php
 	session_start() ;
-	require_once __DIR__ . '/src/Facebook/autoload.php';
+	require_once 'src/Facebook/autoload.php';
 	include 'includes/dbConnect.php';
 
 	# login-callback.php
