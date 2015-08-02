@@ -44,7 +44,7 @@
 										}
 										echo '<a href="';
 										echo "meeting.php?meeting_id=$meeting[meeting_id]";
-										echo '" style="color:#00FF00;">';
+										echo '" style="color:ForestGreen;">';
 										echo $meeting['name'];
 										echo '</a>';
 										echo '<br>';
@@ -64,7 +64,7 @@
 								if ($noMeetings) {
 									echo 'You have no upcoming meetings.';
 								}
-								echo '<hr>* Meetings in <font color="#00FF00">green</font> are finalized.';
+								echo '<hr>* Meetings in <font color="ForestGreen ">green</font> are finalized.';
 							?>
 						</div>
 					
