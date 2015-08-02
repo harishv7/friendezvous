@@ -15,7 +15,7 @@
 		?>
 
 		<div class="dashboard">
-		<div class="dashboard-image" style="background-image: url(assets/images/2.jpg);"></div>
+			<div class="dashboard-image" style="background-image: url(assets/images/2.jpg);"></div>
             <div class="container" style="margin-top: 35px;">
                 <div class="row">
                     <div class="col-md-12">

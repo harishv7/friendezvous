@@ -1,125 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-<?php
-include 'includes/header.php';
-?>
-</head>
-<body>
 	<?php
-	include 'includes/navigationBar.php';
+		include 'includes/header.php';
 	?>
+	<head>
+		<link type="text/css" href="assets/css/error-page.css" rel="stylesheet">
+	</head>
+	<body>
+		<?php
+			include 'includes/navigationBar.php';
+		?>
 
-	<div class="cover">
-            <!-- Original Image: https://unsplash.imgix.net/photo-1422405153578-4bd676b19036?q=75&amp;fm=jpg&amp;s=5ecc4c704ea97d85ea550f84a1499228 
-                https://s3.amazonaws.com/StartupStockPhotos/uploads/38.jpg
-            -->
-            <div class="cover-image" style="background-image : url('assets/images/errorbg.jpg')"></div>
-            <div class="section">
-            	<div class="container">
-            		<div class="col-md-12 text-center text-inverse">
-            			<h1>Oops...</h1>
-            			<h2><i>That's an error!</i></h2>
-            		</div>
-            		<div class="col-md-12 text-center text-inverse">
-            		<h5>Let us know when this error happened through the contact us form. <br> <br> We'll do our best to fix it! </h5>
-
-            		<form role="form">
-            		</div>
-            	</div>
-            </div>
-        </div>
-    </body>
-    <style type="text/css">
-    	.wrap{
-    		margin:0 auto;
-    		width:1000px;
-    	}
-    	.title{
-    		margin-bottom: 40px;
-    	}	
-    	.title h1{
-    		font-size:100px;
-    		color:yellow;
-    		text-align:center;
-    		margin-top:100px;
-    		text-shadow:6px 1px 6px #333;
-    		font-family: 'Fjalla One', sans-serif;
-    	}
-    	.title h2{
-    		font-size:100px;
-    		color:yellow;
-    		text-align:center;
-    		margin-bottom:1px;
-    		text-shadow:6px 1px 6px #333;
-    		font-family: 'Fjalla One', sans-serif;
-    		margin-top: -20px;
-    	}		
-    	.logo p{
-    		color:white;
-    		font-size:25px;
-    		margin-top:1px;
-    		font-family: 'Fjalla One', sans-serif;
-    	}	
-    	.gray {
-    		margin-bottom: 20px;
-    		background: rgba(12, 52, 77, 0.34);
-    		text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
-    		border-radius: 4px;
-    		-webkit-border-radius: 4px;
-    		-moz-border-radius: 4px;
-    		-o-border-radius: 4px;
-    		color:yellow;
-    		text-decoration:none;
-    		padding:30px 30px;
-    		font-size: 20px;
-    		font-weight:bold;
-    		font-family: 'Fjalla One', sans-serif;
-    		text-align: center;
-    	}	
-    	.ag-3d_button.orange {
-    		box-shadow: rgba(155, 142, 50, 0.98) 0 3px 0px, rgba(0, 0, 0, 0.3) 0 3px 3px;
-    	}
-    	.ag-3d_button {
-    		vertical-align: top;
-    		border-radius: 4px;
-    		border: none;
-    		padding: 10px 25px 12px;
-    	}
-    	.orange {
-    		background: #fdde02;
-    		background: -moz-linear-gradient(top,  #fdde02 0%, #dec829 99%);
-    		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdde02), color-stop(99%,#dec829));
-    		background: -webkit-linear-gradient(top,  #fdde02 0%,#dec829 99%);
-    		background: -o-linear-gradient(top,  #fdde02 0%,#dec829 99%);
-    		background: -ms-linear-gradient(top,  #fdde02 0%,#dec829 99%);
-    		background: linear-gradient(to bottom,  #fdde02 0%,#dec829 99%);
-    		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdde02', endColorstr='#dec829',GradientType=0 );
-    		color:#fff;
-    		text-shadow:1px 1px 3px rgba(155, 142, 50, 0.98);
-    		border: 1px solid rgba(155, 142, 50, 0.98);
-    		text-decoration: none;
-    	}
-    	.orange:hover {
-    		background: #dec829;
-    		background: -moz-linear-gradient(top,  #dec829 1%, #fdde02 100%);
-    		background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#dec829), color-stop(100%,#fdde02));
-    		background: -webkit-linear-gradient(top,  #dec829 1%,#fdde02 100%);
-    		background: -o-linear-gradient(top,  #dec829 1%,#fdde02 100%);
-    		background: -ms-linear-gradient(top,  #dec829 1%,#fdde02 100%);
-    		background: linear-gradient(to bottom,  #dec829 1%,#fdde02 100%);
-    		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dec829', endColorstr='#fdde02',GradientType=0 );
-    	}
-    	.footer{
-    		color:white;
-    		position:absolute;
-    		right:10px;
-    		bottom:10px;
-    	}	
-    	.footer a{
-    		color:yellow;
-    	}	
-    </style>
-</style>
+		<div class="cover">
+			<div class="cover-image" style="background-image : url('assets/images/errorbg.jpg')"></div>
+			<div class="container error">
+				<div class="col-md-12 text-center text-inverse">
+					<h1>Oops...</h1>
+					<h2><i>That's an error!</i></h2>
+				</div>
+				<div class="col-md-12 text-center text-inverse">
+					<h5>Let us know when this error happened through the <a href="contactUs.php">contact us form</a>.</h5>
+					<h5>We'll do our best to fix it!</h5>
+					<form role="form">
+				</div>
+			</div>
+		</div>
+		
+		<?php
+			include 'includes/footer.php';
+		?>
+	</body>
 </html>
 
