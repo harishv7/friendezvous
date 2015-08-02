@@ -25,7 +25,7 @@
 			include 'includes/navigationBar.php';
 		?>
         <div class="cover">
-            <div class="cover-image" style="background-image : url('https://unsplash.imgix.net/photo-1418479631014-8cbf89db3431?q=75&amp;fm=jpg&amp;s=478a9a2196033db7c0bf3c8ba3707f4d')"></div>
+            <div class="cover-image" style="background-image : url('assets/images/image1.jpeg')"></div>
             <div class="container" style="background:#fff; opacity:0.8; border-radius:30px;">
                 <div class="row">
                     <div class="col-md-12 text-center">
