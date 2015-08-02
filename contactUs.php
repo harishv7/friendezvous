@@ -13,7 +13,7 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		<div style="background-image: url(assets/images/try.jpg);">
+		<div style="background-image: url(https://unsplash.it/2000/3000?image=179);">
         <div class="section">
             <div class="container overlay-general">
                 <div class="row">
