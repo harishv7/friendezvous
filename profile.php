@@ -38,7 +38,7 @@
 						<h4>Full name:</h4>
 						<b>
 						<input type="text" name="full_name" size="32" style="border: 0" value="<?php echo $row['full_name']; ?>" readonly required />
-						<input name="Edit" class="btn btn-default" type="button" value="Edit">
+						<input name="Edit" class="custom-btn5 hvr-bob btn-default" type="button" value="Edit">
 						</b>
 						<br>
 						<hr>
@@ -60,7 +60,7 @@
 						<h4>Gender:</h4>
 						<b>
 						<input type="text" name="gender" size="32" style="border: 0" value="<?php echo $row['gender']; ?>" readonly required />
-						<input name="Edit" class="btn btn-default" type="button" value="Edit">
+						<input name="Edit" class="custom-btn5 hvr-bob btn-default" type="button" value="Edit">
 						</b>
 						<br>
 						<hr>
@@ -68,7 +68,7 @@
 						<h4>Location:</h4>
 						<b>
 						<input type="text" name="location" size="32" style="border: 0" value="<?php echo $row['location']; ?>" readonly required />
-						<input name="Edit" class="btn btn-default" type="button" value="Edit">
+						<input name="Edit" class="custom-btn5 hvr-bob btn-default" type="button" value="Edit">
 						</b>
 						<br>
 						<hr>
@@ -88,8 +88,8 @@
 								$(this).val(ro ? 'Save' : 'Edit');
 							});
 						</script>
-						<input type="submit" class="custom-btn3 btn-default" name="update" value="Save Changes">
-						<button onclick="window.location.href='profile.php'" class="custom-btn3 btn-default" name="cancel">Cancel</button>
+						<input type="submit" class="custom-btn3 hvr-float btn-default" name="update" value="Save Changes">
+						<button onclick="window.location.href='profile.php'" class="custom-btn3 hvr-float btn-default" name="cancel">Cancel</button>
 						
 						</form>
 
