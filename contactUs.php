@@ -18,7 +18,7 @@
             <div class="container overlay-general">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center">Contact Us</h1>
+                        <h1 class="text-center custom-heading">Contact Us</h1>
                     </div>
 					<?php
 						if (isset($_GET['success'])){

@@ -145,6 +145,12 @@
 
 }
 
+@media screen and (min-width: 768px){
+.custom-heading{
+	font-size: 67.5px;
+}
+}
+
 .table-days{
 	background-color: #500a6f;
 	color: white;
