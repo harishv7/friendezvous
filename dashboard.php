@@ -16,10 +16,10 @@
 
 		<div class="dashboard">
 			<div class="dashboard-image" style="background-image: url(https://unsplash.it/1080/1920?image=667);"></div>
-            <div class="container" style="margin-top: 35px;">
+            <div class="container overlay-general" style="margin-top: 35px;">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center" style="color:#fff">Dashboard</h1>
+                        <h1 class="text-center">Dashboard</h1>
 					</div>
 				</div>
                 <div class="row">
