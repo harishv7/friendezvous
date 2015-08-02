@@ -29,7 +29,7 @@
             <div class="container" style="background:#fff; opacity:0.8; border-radius:30px;">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 >Login</h1>
+                        <h1>Login</h1>
                         <p >Begin organising your meetings with Friendezvous!</p>
                         <br>
                         
