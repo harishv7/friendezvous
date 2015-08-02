@@ -21,7 +21,7 @@
 			  -----------------------------------------------------------<br><br>
 			  
 			  Simply click on this link to activate your account:<br>
-			  http://polar-gorge-5952.herokuapp.com/verify.php?email='.$email.'&activateHash='.$activateHash.';<br><br>
+			  http://friendezvous.herokuapp.com/verify.php?email='.$email.'&activateHash='.$activateHash.';<br><br>
 			  
 			  We are looking forward to organize your first meeting on Friendezvous!<br><br><br>
 			  
