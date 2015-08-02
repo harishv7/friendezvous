@@ -11,7 +11,7 @@
 
 	$helper = $fb->getRedirectLoginHelper();
 	$permissions = ['email', 'public_profile']; // optional
-	$loginUrl = $helper->getLoginUrl('http://friendezvous.atwebpages.com/login-callback.php', $permissions);
+	$loginUrl = $helper->getLoginUrl('http://localhost/friendezvous/login-callback.php', $permissions);
 ?>
 <!DOCTYPE html>
 <html>
