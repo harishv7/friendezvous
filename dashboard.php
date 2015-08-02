@@ -73,14 +73,14 @@
 							<form role="form" method="post" action="addMeeting.php">
 								<div class="form-group">
 									<label><font color="#000000">Meeting name:</font></label>
-									<input type="text" class="form-control" placeholder="Meeting name (required)" id="name" name="name" required>
+									<input type="text" style="color:black;" class="form-control" placeholder="Meeting name (required)" id="name" name="name" required>
 								</div>
 								<div class="form-group">
 									<label><font color="#000000">Meeting description:</font></label>
-									<input type="text" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
+									<input type="text" style="color:black;" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
 								</div>
 								<div class="form-group">
-									<input type="submit" class="custom-btn3 hvr-grow-shadow" value="Create" id="submit" name="submit">
+									<input type="submit" style="color:black;" class="custom-btn3 hvr-grow-shadow" value="Create" id="submit" name="submit">
 								</div>
 							</form>
 						</div>
@@ -121,7 +121,7 @@
 									<div class="form-group">Type in your friends' name to look for them:</div>
 									<div class="form-group">
 										<div class="input_container">
-											<input type="text" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
+											<input type="text" style="color:black;" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
 											<ul id="user_list_id"></ul>
 										</div>
 									</div>
