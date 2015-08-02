@@ -1,7 +1,7 @@
 <?php
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
-	require_once __DIR__ . 'src/Facebook/autoload.php';
+	require_once 'src/Facebook/autoload.php';
 
 	$fb = new Facebook\Facebook([
 	  'app_id' => '702074069897274',
@@ -11,7 +11,7 @@
 
 	$helper = $fb->getRedirectLoginHelper();
 	$permissions = ['email', 'public_profile']; // optional
-	$loginUrl = $helper->getLoginUrl('http://polar-gorge-5952.herokuapp.com/login-callback.php', $permissions);
+	//$loginUrl = $helper->getLoginUrl('http://polar-gorge-5952.herokuapp.com/login-callback.php', $permissions);
 ?>
 <!DOCTYPE html>
 <html>
