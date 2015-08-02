@@ -25,7 +25,7 @@
 							echo '<div class="row">';
 								echo '<div class="col-md-12" align="center">';
 									if ($_GET['success']){
-										echo '<font color="#00FF00">Feedbacks received. Thank you for your feedbacks.</font>';
+										echo '<font color="ForestGreen">Feedbacks received. Thank you for your feedbacks.</font>';
 									}
 									else {
 										echo '<font color="#FF0000">Error in retrieving your feedbacks. Please contact our administrator.</font>';

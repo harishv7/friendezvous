@@ -64,7 +64,7 @@
 								if ($noMeetings) {
 									echo 'You have no upcoming meetings.';
 								}
-								echo '<hr>* Meetings in <font color="ForestGreen ">green</font> are finalized.';
+								echo '<hr>* Meetings in <font color="ForestGreen">green</font> are finalized.';
 							?>
 						</div>
 					
