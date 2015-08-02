@@ -94,9 +94,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <a href="login.php"><p class="custom-btn3 hvr-grow-shadow">Login</p></a>
+                        <a href="login.php"><p class="custom-btn4 hvr-grow-shadow">Login</p></a>
                         <span>&nbsp&nbsp</span>
-                        <a href="signUp.php"><p class="custom-btn3 hvr-grow-shadow">Sign Up</p></a>
+                        <a href="signUp.php"><p class="custom-btn4 hvr-grow-shadow">Sign Up</p></a>
                     </div>
                 </div>
             </div>
