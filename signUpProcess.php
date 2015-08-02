@@ -59,7 +59,7 @@ Password: '.$password.'
 -----------------------------------------------------------
 					
 Simply click on this link to activate your account:
-http://friendezvous.atwebpages.com/verify.php?email='.$email.'&activateHash='.$activateHash.';
+http://friendezvous.dx.am/verify.php?email='.$email.'&activateHash='.$activateHash.';
 
 We are looking forward to organize your first meeting on Friendezvous!
 
