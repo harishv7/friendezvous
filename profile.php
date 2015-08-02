@@ -18,11 +18,11 @@
 			color:;
 		}
 		</style>
-		<div class="section profile " style="background-image: url(assets/images/paper.jpg);">
-			<div class="container color-box">
+		<div class="section profile " style="background-image: url(assets/images/try.jpg);">
+			<div class="container overlay-profile-box">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center">
+                        <h1 class="text-center" style="color:#000;">
 							<?php
 								echo $name;
 								echo "'s ";
@@ -38,57 +38,51 @@
 							$result = mysqli_query($connection, $query);
 							$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 						?>
-						<form role="form" method="post" action="updateProfile.php">
-						Full name:
-						<br>
+						<form role="form" method="post" class="profile-form" action="updateProfile.php" style="float: none;margin-left: auto;margin-right: auto;">
+						<h4>Full name:</h4>
 						<b>
 						<input type="text" name="full_name" size="32" style="border: 0" value="<?php echo $row['full_name']; ?>" readonly required />
 						<input name="Edit" class="btn btn-default" type="button" value="Edit">
 						</b>
 						<br>
-						<br>
+						<hr>
 						
-						Email:
-						<br>
+						<h4>Email:</h4>
 						<b>
 						<input type="text" name="email" size="32" style="border: 0; background: none;" value="<?php echo $row['email']; ?>" disabled />
 						</b>
 						<br>
-						<br>
+						<hr>
 						
-						Birth date:
-						<br>
+						<h4>Birth date:</h4>
 						<b>
 						<input type="text" name="birth_date" size="32" style="border: 0; background: none;" value="<?php if (isset($row['birth_date'])) echo date_format(date_create($row['birth_date']), 'jS F Y'); ?>" disabled />
 						</b>
 						<br>
-						<br>
+						<hr>
 						
-						Gender:
-						<br>
+						<h4>Gender:</h4>
 						<b>
 						<input type="text" name="gender" size="32" style="border: 0" value="<?php echo $row['gender']; ?>" readonly required />
 						<input name="Edit" class="btn btn-default" type="button" value="Edit">
 						</b>
 						<br>
-						<br>
+						<hr>
 						
-						Location:
-						<br>
+						<h4>Location:</h4>
 						<b>
 						<input type="text" name="location" size="32" style="border: 0" value="<?php echo $row['location']; ?>" readonly required />
 						<input name="Edit" class="btn btn-default" type="button" value="Edit">
 						</b>
 						<br>
-						<br>
+						<hr>
 						
-						Last login:
-						<br>
+						<h4>Last login:</h4>
 						<b>
 						<input type="text" name="last_login" size="32" style="border: 0; background: none;" value="<?php echo $row['last_login']; ?>" disabled />
 						</b>
 						<br>
-						<br>
+						<hr>
 						
 						<script type="text/javascript">
 							$('[name="Edit"]').on('click', function() {
@@ -102,7 +96,9 @@
 						<button onclick="window.location.href='profile.php'" class="custom-btn3 btn-default" name="cancel">Cancel</button>
 						
 						</form>
+
 					</div>
+
 				</div>
 			</div>
 		</div>

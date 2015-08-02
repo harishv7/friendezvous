@@ -22,8 +22,9 @@
 			if ($owner_id == $user_id) $owner = true;
 			else $owner = false;
 		?>
-		<div class="section">
-			<div class="container">
+
+		<div class="section" style="background-image: url(assets/images/try.jpg);">
+			<div class="container overlay-meeting">
 				<div class="row">
 					<div class="col-md-12">
 						<h1 class="text-center">Organize Meeting</h1>
@@ -120,7 +121,7 @@
 												<label><font color="#000000">Date/Time:</font></label><br>
 												<div class="row">
 													<div class="col-sm-6">
-														<input type="text" class="form-control" id="datetimepicker4" name="date_time">
+														<input type="text" class="form-control" id="datetimepicker4" name="date_time" style="color:#000;">
 													</div>
 													<script type="text/javascript">
 														$(function () {
