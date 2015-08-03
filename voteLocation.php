@@ -14,6 +14,9 @@
 		header("Location: error.php");
 	}
 	else {
+		$query = "UPDATE meeting_users SET user_location_id='$location_id' WHERE meeting_id='$meeting_id' && user_id='$user_id'";
+		$result = mysqli_query($connection, $query);
+		
 		$query = "UPDATE meeting_locations SET num_votes=num_votes+1 WHERE meeting_id='$meeting_id' && location_id='$location_id'";
 		$result = mysqli_query($connection, $query);
 		

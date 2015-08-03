@@ -19,8 +19,9 @@
 					<h2><i>That's an error!</i></h2>
 				</div>
 				<div class="col-md-12 text-center text-inverse">
-					<h5>Let us know when this error happened through the <a href="contactUs.php">contact us form</a>.</h5>
-					<h5>We'll do our best to fix it!</h5>
+					<h4>We are sorry for the inconvenience.</h4>
+					<h4>Please let us know when this error happened through the <a href="contactUs.php">contact us form</a>.</h4>
+					<h4>We will do our best to fix it!</h4>
 					<form role="form">
 				</div>
 			</div>
