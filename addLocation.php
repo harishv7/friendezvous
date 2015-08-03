@@ -8,6 +8,7 @@
     <?php
 		include 'includes/header.php';
 	?>
+	
 	<head>
 		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
 		<script>
@@ -102,6 +103,13 @@
         <?php
 			include 'includes/navigationBar.php';
 			$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
+			
+			$query = "SELECT * FROM meeting_users WHERE meeting_id='$meeting_id' && user_id='$user_id'";
+			$result = mysqli_query($connection, $query);
+			$numResult = mysqli_num_rows($result);
+			if (!$result || !$numResult){
+				header("Location: error.php");
+			}
 		?>
 		
 		<div class="section" style="background-image: url(assets/images/map.jpg);">
