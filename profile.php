@@ -91,7 +91,6 @@
 						<input type="text" name="last_login" size="32" style="border: 0; background: none;" value="<?php echo $row['last_login']; ?>" disabled />
 						</b>
 						<br>
-						<hr>
 						
 						<script type="text/javascript">
 							$('[name="Edit"]').on('click', function() {
@@ -104,8 +103,6 @@
 								}
 							});
 						</script>
-						<input type="submit" class="custom-btn3 hvr-float btn-default" name="update" value="Save Changes">
-						<button onclick="window.location.href='profile.php'" class="custom-btn3 hvr-float btn-default" name="cancel">Cancel</button>
 						
 						</form>
 
