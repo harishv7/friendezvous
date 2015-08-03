@@ -104,8 +104,8 @@
 			$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
 		?>
 		
-		<div class="section">
-			<div class="container">
+		<div class="section" style="background-image: url(assets/images/map.jpg);">
+			<div class="container overlay-general" style="opacity:0.95;">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">
