@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-md-12 text-center">
 						<?php
-							if (isset($_SESSION['user_id'])){
+							if (!isset($_SESSION['user_id'])){
 								echo '
 									<a href="login.php"><p class="custom-btn3 hvr-grow-shadow">Login</p></a>
 									<span>&nbsp</span>
@@ -101,7 +101,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
 						<?php
-							if (isset($_SESSION['user_id'])){
+							if (!isset($_SESSION['user_id'])){
 								echo '
 									<a href="login.php"><p class="custom-btn4 hvr-grow-shadow">Login</p></a>
 									<span>&nbsp</span>
