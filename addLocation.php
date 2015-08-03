@@ -105,7 +105,7 @@
 		?>
 		
 		<div class="section" style="background-image: url(assets/images/map.jpg);">
-			<div class="container overlay-general" style="opacity:0.95;">
+			<div class="container overlay-general">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">
