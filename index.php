@@ -54,9 +54,13 @@
                         
                     </div>
                     <div class="col-md-12 text-center">
-                        <a href="login.php"><p class="custom-btn3 hvr-grow-shadow">Login</p></a>
-						<span>&nbsp</span>
-                        <a href="signUp.php"><p class="custom-btn3 hvr-grow-shadow">Sign Up</p></a> <br>
+						if (isset($_SESSION['user_id'])){
+							echo '
+								<a href="login.php"><p class="custom-btn3 hvr-grow-shadow">Login</p></a>
+								<span>&nbsp</span>
+								<a href="signUp.php"><p class="custom-btn3 hvr-grow-shadow">Sign Up</p></a> <br>
+							';
+						}
                         <button type="button" class="custom-btn3 hvr-grow-shadow">Know More...</button>
                     </div>
                 </div>
@@ -94,9 +98,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <a href="login.php"><p class="custom-btn4 hvr-grow-shadow">Login</p></a>
-						<span>&nbsp</span>
-                        <a href="signUp.php"><p class="custom-btn4 hvr-grow-shadow">Sign Up</p></a>
+						if (isset($_SESSION['user_id'])){
+							echo '
+								<a href="login.php"><p class="custom-btn4 hvr-grow-shadow">Login</p></a>
+								<span>&nbsp</span>
+								<a href="signUp.php"><p class="custom-btn4 hvr-grow-shadow">Sign Up</p></a>
+							';
+						}
                     </div>
                 </div>
             </div>
