@@ -13,6 +13,12 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
+		
+		<?php
+			if (!isset($_SESSION['user_id'])){
+				header("Location: error.php");
+			}
+		?>
 
 		<div class="dashboard">
 			<div class="dashboard-image" style="background-image: url(https://unsplash.it/1080/1920?image=667);"></div>
