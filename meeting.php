@@ -133,7 +133,7 @@
 												</div>
 											</div>
 											<div class="form-group">
-												<input type="submit" class="btn btn-default" value="Declare" id="declare" name="declare">
+												<input type="submit" class="custom-btn5 hvr-grow-shadow btn-default" value="Declare" id="declare" name="declare">
 											</div>
 										</form>
 									';
@@ -215,7 +215,7 @@
 													<div class="row">
 														<div class="col-sm-6">
 															<div class="input_container">
-																<input type="text" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
+																<input type="text" style="color:#000;" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
 																<ul id="user_list_id"></ul>
 															</div>
 														</div>
@@ -269,7 +269,7 @@
 								}
 								echo '<br>';
 								if (!$user_location_declared){
-									echo "<a href='addLocation.php?meeting_id=$meeting_id'>Suggest a new location</a>";
+									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a>";
 								}
 							}
 							else {
