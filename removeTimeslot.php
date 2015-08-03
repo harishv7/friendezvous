@@ -9,18 +9,14 @@
 	$result = mysqli_query($connection, $query);
 	$owner = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if ($owner['user_id'] != $user_id || !$result){
-		echo 'in';
 		header("Location: error.php");
 	}
-	
-	echo 'pass';
 	
 	$query = "SELECT * FROM meeting_users WHERE meeting_id='".$meeting_id."' && user_id='".$user_id."'";
 	$result = mysqli_query($connection, $query);
 	if ($result){
 		$mu = mysqli_fetch_array($result, MYSQLI_ASSOC);
 		$mu_id = $mu['mu_id'];
-		
 		
 		$query = "SELECT * FROM mu_date_time WHERE mu_id=$mu_id && mudt_id=$mudt_id";
 		$result = mysqli_query($connection, $query) OR DIE(mysqli_error($connection));
