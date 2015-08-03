@@ -41,4 +41,7 @@
 		
 		header("Location: meeting.php?meeting_id=$meeting_id");
 	}
+	else {
+		header("Location: error.php");
+	}
 ?>
