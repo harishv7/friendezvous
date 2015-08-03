@@ -83,7 +83,7 @@
 										echo $row['date_time'];
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
-										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]&owner=$owner'>remove</a>";
+										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]'>remove</a>";
 										if ($owner){
 											echo '&nbsp';
 											echo '|';
