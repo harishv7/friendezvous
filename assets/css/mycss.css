@@ -48,6 +48,8 @@
 	border-color 0.3s ease-in;
 }
 
+
+/* Standard btn */
 .custom-btn3 {
 	display: inline-block;
 	width: 200px;
@@ -74,6 +76,7 @@
 	border-color 0.3s ease-in;
 }
 
+/* Blue fade in */
 .custom-btn4 {
 	display: inline-block;
 	width: 200px;
@@ -100,9 +103,37 @@
 	border-color 0.3s ease-in;
 }
 
+/*Edit buttons on dashboard and meeting.php */
 .custom-btn5 {
 	display: inline-block;
 	width: 75px;
+	padding: 8px;
+	color: #000;
+    font-family: Raleway;
+	background-color: transparent;
+	border: 1px solid #000;
+	text-align: center;
+	outline: none;
+	border-radius: 10px;
+	text-decoration: none;
+	<!--transition: color 0.3s ease-out,
+	background-color 0.3s ease-out,
+	border-color 0.3s ease-out;-->
+}
+.custom-btn5:hover,
+.custom-btn5:active {
+	background-color: #fff;
+	border-color: #000;
+	color: #000;
+	transition: color 0.3s ease-in,
+	background-color 0.3s ease-in,
+	border-color 0.3s ease-in;
+}
+
+/*Suggest new meeting */
+.custom-btn6 {
+	display: inline-block;
+	width: 200px;
 	padding: 8px;
 	color: #000;
     font-family: Raleway;
