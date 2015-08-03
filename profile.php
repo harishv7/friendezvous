@@ -99,7 +99,7 @@
 									ro   = prev.prop('readonly');
 								prev.prop('readonly', !ro).focus();
 								$(this).val(ro ? 'Save' : 'Edit');
-								if (ro){
+								if (!ro){
 									$(".profile-form").submit();
 								}
 							});
