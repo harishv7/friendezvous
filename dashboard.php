@@ -110,6 +110,9 @@
 
 											echo "<a href='viewProfile.php?target_id=$currentFriend[user_id]'>";
 											echo $currentFriend['full_name'];
+											echo ' (';
+											echo $currentFriend['email'];
+											echo ')';
 											echo "</a>";
 											echo "<br>";
 										}
