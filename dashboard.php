@@ -16,10 +16,10 @@
 
 		<div class="dashboard">
 			<div class="dashboard-image" style="background-image: url(https://unsplash.it/1080/1920?image=667);"></div>
-            <div class="container" style="margin-top: 35px;">
+            <div class="container overlay-general" style="margin-top: 35px;">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center" style="color:#fff">Dashboard</h1>
+                        <h1 class="text-center">Dashboard</h1>
 					</div>
 				</div>
                 <div class="row">
@@ -44,7 +44,7 @@
 										}
 										echo '<a href="';
 										echo "meeting.php?meeting_id=$meeting[meeting_id]";
-										echo '" style="color:#00FF00;">';
+										echo '" style="color:ForestGreen;">';
 										echo $meeting['name'];
 										echo '</a>';
 										echo '<br>';
@@ -64,7 +64,7 @@
 								if ($noMeetings) {
 									echo 'You have no upcoming meetings.';
 								}
-								echo '<hr>* Meetings in <font color="#00FF00">green</font> are finalized.';
+								echo '<hr>* Meetings in <font color="ForestGreen">green</font> are finalized.';
 							?>
 						</div>
 					
@@ -73,14 +73,14 @@
 							<form role="form" method="post" action="addMeeting.php">
 								<div class="form-group">
 									<label><font color="#000000">Meeting name:</font></label>
-									<input type="text" class="form-control" placeholder="Meeting name (required)" id="name" name="name" required>
+									<input type="text" style="color:black;" class="form-control" placeholder="Meeting name (required)" id="name" name="name" required>
 								</div>
 								<div class="form-group">
 									<label><font color="#000000">Meeting description:</font></label>
-									<input type="text" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
+									<input type="text" style="color:black;" class="form-control" placeholder="Meeting description (optional)" id="description" name="description">
 								</div>
 								<div class="form-group">
-									<input type="submit" class="custom-btn3 hvr-grow-shadow" value="Create" id="submit" name="submit">
+									<input type="submit" style="color:black;" class="custom-btn3 hvr-grow-shadow" value="Create" id="submit" name="submit">
 								</div>
 							</form>
 						</div>
@@ -110,8 +110,6 @@
 
 											echo "<a href='viewProfile.php?target_id=$currentFriend[user_id]'>";
 											echo $currentFriend['full_name'];
-											echo ' '; // intentional space
-											echo "($currentFriend['email'])";
 											echo "</a>";
 											echo "<br>";
 										}
@@ -123,7 +121,7 @@
 									<div class="form-group">Type in your friends' name to look for them:</div>
 									<div class="form-group">
 										<div class="input_container">
-											<input type="text" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
+											<input type="text" style="color:black;" class="form-control" id="user_id" name="target_email" onkeyup="autocomplet()">
 											<ul id="user_list_id"></ul>
 										</div>
 									</div>
