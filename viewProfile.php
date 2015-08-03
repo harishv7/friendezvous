@@ -41,7 +41,7 @@
 							$target_fb = mysqli_fetch_array($target, MYSQLI_ASSOC);
 							$target_fb_id = $target_fb['fb_id'];
 							if (isset($target_fb_id)){
-								echo "<img src='http://graph.facebook.com/$target_fb_id/picture?type=large&width=200&height=200'";
+								echo "<img src='http://graph.facebook.com/$target_fb_id/picture?type=large&width=200&height=200'>";
 							}
 							else {
 								echo "<img src='assets/images/empty-profile-picture.jpg' width=200 height=200>";
