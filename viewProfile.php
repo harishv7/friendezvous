@@ -14,8 +14,8 @@
 			include 'includes/navigationBar.php';
 		?>
 		
-		<div class="section">
-			<div class="container">
+		<div class="section" style="background-image: url(assets/images/try.jpg);">
+			<div class="container overlay-profile-box">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">
