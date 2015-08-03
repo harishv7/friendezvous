@@ -99,9 +99,9 @@
 									ro   = prev.prop('readonly');
 								prev.prop('readonly', !ro).focus();
 								$(this).val(ro ? 'Save' : 'Edit');
-							});
-							$('[value="Save"]').on('click', function() {
-								$(".profile-form").submit();
+								if (ro){
+									$(".profile-form").submit();
+								}
 							});
 						</script>
 						<input type="submit" class="custom-btn3 hvr-float btn-default" name="update" value="Save Changes">
