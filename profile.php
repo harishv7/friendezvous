@@ -39,7 +39,10 @@
 						<h4>Profile picture:</h4>
 						<?php
 							if (isset($fb_id)){
-								echo "<img src='http://graph.facebook.com/$fb_id/picture?type=large'";
+								echo "<img src='http://graph.facebook.com/$fb_id/picture?type=large&width=200&height=200'";
+							}
+							else {
+								echo "<img src='assets/images/empty-profile-picture.jpg' width=200 height=200>";
 							}
 						?>
 						<br>

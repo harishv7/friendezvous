@@ -35,14 +35,18 @@
 					<div class="col-md-12">
 						<?php
 							echo 'Profile picture: ';
+							echo '<br>';
 							$query = "SELECT fb_id FROM users WHERE user_id='$target_id'";
 							$target = mysqli_query($connection, $query);
 							$target_fb = mysqli_fetch_array($target, MYSQLI_ASSOC);
 							$target_fb_id = $target_fb['fb_id'];
 							if (isset($target_fb_id)){
-								echo "<img src='http://graph.facebook.com/$target_fb_id/picture?type=large'";
+								echo "<img src='http://graph.facebook.com/$target_fb_id/picture?type=large&width=200&height=200'";
 							}
-							echo '<br>';
+							else {
+								echo "<img src='assets/images/empty-profile-picture.jpg' width=200 height=200>";
+							}
+							echo '<br><br>';
 						
 							echo 'Full name: ';
 							echo '<br><b>';
