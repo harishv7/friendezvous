@@ -34,7 +34,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<?php
-							echo 'Profile picture: ';
+							echo '<h4>Profile picture: ';
 							echo '<br>';
 							$query = "SELECT fb_id FROM users WHERE user_id='$target_id'";
 							$target = mysqli_query($connection, $query);
@@ -48,19 +48,19 @@
 							}
 							echo '<br><br>';
 						
-							echo 'Full name: ';
+							echo '<h4>Full name: </h4>';
 							echo '<br><b>';
 							echo $row['full_name'];
 							echo '</b><br>';
 							echo '<br>';
 							
-							echo 'Email: ';
+							echo '<h4>Email: </h4>';
 							echo '<br><b>';
 							echo $row['email'];
 							echo '</b><br>';
 							echo '<br>';
 							
-							echo 'Birth date: ';
+							echo '<h4>Birth date: </h4>';
 							echo '<br><b>';
 							if (isset($row['birth_date'])){
 								$birthdate = date_create($row['birth_date']);
@@ -69,19 +69,19 @@
 							echo '</b><br>';
 							echo '<br>';
 							
-							echo 'Gender: ';
+							echo '<h4>Gender: </h4>';
 							echo '<br><b>';
 							echo $row['gender'];
 							echo '</b><br>';
 							echo '<br>';
 							
-							echo 'Location: ';
+							echo '<h4>Location: </h4>';
 							echo '<br><b>';
 							echo $row['location'];
 							echo '</b><br>';
 							echo '<br>';
 							
-							echo 'Last login: ';
+							echo '<h4>Last login: </h4>';
 							echo '<br><b>';
 							echo $row['last_login'];
 							echo '</b><br>';
