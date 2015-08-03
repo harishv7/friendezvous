@@ -111,7 +111,7 @@
 											echo "<a href='viewProfile.php?target_id=$currentFriend[user_id]'>";
 											echo $currentFriend['full_name'];
 											echo "</a>";
-											echo "&nbsp";
+											echo "<br>";
 										}
 									}
 								?>
