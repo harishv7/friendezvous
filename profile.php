@@ -34,7 +34,17 @@
 							$result = mysqli_query($connection, $query);
 							$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 						?>
+						
 						<form role="form" method="post" class="profile-form" action="updateProfile.php" style="float: none;margin-left: auto;margin-right: auto;">
+						<h4>Profile picture:</h4>
+						<?php
+							if (isset($fb_id)){
+								echo "<img src='http://graph.facebook.com/$fb_id/picture'";
+							}
+						?>
+						<br>
+						<hr>
+						
 						<h4>Full name:</h4>
 						<b>
 						<input type="text" name="full_name" size="32" style="border: 0" value="<?php echo $row['full_name']; ?>" readonly required />
