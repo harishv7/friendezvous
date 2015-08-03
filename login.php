@@ -24,6 +24,13 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
+		
+		<?php
+			if (isset($_SESSION['user_id'])){
+				header("Location: error.php");
+			}
+		?>
+		
         <div class="cover">
             <div class="cover-image" style="background-image : url('assets/images/image1.jpeg')"></div>
             <div class="container" style="background:#fff; opacity:0.8; border-radius:30px;">
