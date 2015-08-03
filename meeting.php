@@ -222,7 +222,7 @@
 													</div>
 												</div>
 												<div class="form-group">
-													<input type="submit" class="custom-btn5 btn-default" value="Add" id="add" name="add">
+													<input type="submit" class="custom-btn5 hvr-grow-shadow btn-default" value="Add" id="add" name="add">
 												</div>
 											</form>';
 										}

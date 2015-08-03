@@ -17,7 +17,7 @@
 	while ($participant = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 		$participant_id = $participant['user_id'];
 		$query = "INSERT INTO notifications (user_id, notification_message, notification_link) VALUES ('$participant_id', 'Meeting $meeting[name] has been finalized.', 'meeting.php?meeting_id=$meeting_id')";
-		$result = mysqli_query($connection, $query);
+		$result2 = mysqli_query($connection, $query);
 	}
 	
 	header("Location: meeting.php?meeting_id=$meeting_id");
