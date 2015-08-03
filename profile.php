@@ -27,6 +27,25 @@
 						</h1>
 					</div>
 				</div>
+				<?php
+					if (isset($_GET['errorCode'])){
+						$errorCode = mysqli_real_escape_string($connection, $_GET['errorCode']);
+						echo '<div class="row">';
+							echo '<div class="col-md-12">';
+								echo '<font color="#ff0000">';
+								echo '<ul>';
+								if (strpos($errorCode, 'n') !== false){
+									echo '<li>Your name can not be less than 2 characters long.</li>';
+								}
+								else if (strpos($errorCode, 'g') !== false){
+									echo '<li>Gender can only be M (male) or F (female).</li>';
+								}
+								echo '</ul>';
+								echo '</font>';
+							echo '</div>';
+						echo '</div>';
+					}
+				?>
 				<div class="row">
 					<div class="col-md-12">
 						<?php
