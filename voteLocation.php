@@ -12,6 +12,7 @@
 	
 	if (!$numResult || isset($row['user_location_id'])){
 		header("Location: error.php");
+		exit;
 	}
 	else {
 		$query = "UPDATE meeting_users SET user_location_id='$location_id' WHERE meeting_id='$meeting_id' && user_id='$user_id'";

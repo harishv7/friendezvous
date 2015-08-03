@@ -5,6 +5,14 @@
 	$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
 	$date_time = mysqli_real_escape_string($connection, $_GET['date_time']);
 	
+	$query = "SELECT * FROM meeting_users WHERE meeting_id='$meeting_id'";
+	$result = mysqli_query($connection, $query);
+	$owner = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	if ($owner['user_id'] != $user_id || !$result){
+		header("Location: error.php");
+		exit;
+	}
+	
 	$query = "UPDATE meetings SET finalized=1, date_time='$date_time' WHERE meeting_id=$meeting_id";
 	$result = mysqli_query($connection, $query);
 	

@@ -7,6 +7,7 @@
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if (!$result || $row['access_level'] < 2){
 		header("Location: error.php");
+		exit;
 	}
 	
 	$query = "DROP TABLE users";

@@ -10,6 +10,7 @@
 	$owner = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if ($owner['user_id'] != $user_id || !$result){
 		header("Location: error.php");
+		exit;
 	}
 	
 	$query = "SELECT * FROM meeting_users WHERE meeting_id='".$meeting_id."' && user_id='".$user_id."'";

@@ -109,6 +109,7 @@
 			$numResult = mysqli_num_rows($result);
 			if (!$result || !$numResult){
 				header("Location: error.php");
+				exit;
 			}
 		?>
 		

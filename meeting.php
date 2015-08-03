@@ -28,6 +28,7 @@
 			
 			if (!$numResult){
 				header("Location: error.php");
+				exit;
 			}
 		?>
 
