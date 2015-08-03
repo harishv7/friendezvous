@@ -14,6 +14,12 @@
 			include 'includes/navigationBar.php';
 		?>
 		
+		<?php
+			if (!isset($_SESSION['user_id'])){
+				header("Location: error.php");
+			}
+		?>
+		
 		<div class="section">
 			<div class="container">
                 <div class="row">
