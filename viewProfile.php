@@ -20,7 +20,8 @@
                     <div class="col-md-12">
                         <h1 class="text-center">
 							<?php
-								$query = "SELECT * FROM users WHERE user_id='$_GET[target_id]'";
+								$target_id = mysqli_real_escape_string($connection, $_GET['target_id']);
+								$query = "SELECT * FROM users WHERE user_id='$target_id'";
 								$result = mysqli_query($connection, $query);
 								$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 								echo $row['full_name'];
@@ -33,6 +34,16 @@
 				<div class="row">
 					<div class="col-md-12">
 						<?php
+							echo 'Profile picture: ';
+							$query = "SELECT fb_id FROM users WHERE user_id='$target_id'";
+							$target = mysqli_query($connection, $query);
+							$target_fb = mysqli_fetch_array($target, MYSQLI_ASSOC);
+							$target_fb_id = $target_fb['fb_id'];
+							if (isset($target_fb_id)){
+								echo "<img src='http://graph.facebook.com/$target_fb_id/picture?type=large'";
+							}
+							echo '<br>';
+						
 							echo 'Full name: ';
 							echo '<br><b>';
 							echo $row['full_name'];

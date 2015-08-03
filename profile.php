@@ -39,7 +39,7 @@
 						<h4>Profile picture:</h4>
 						<?php
 							if (isset($fb_id)){
-								echo "<img src='http://graph.facebook.com/$fb_id/picture'";
+								echo "<img src='http://graph.facebook.com/$fb_id/picture?type=large'";
 							}
 						?>
 						<br>
