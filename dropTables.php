@@ -2,32 +2,44 @@
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 
-	$query = "DROP TABLE users";
+	$query = "SELECT * FROM users WHERE user_id='$user_id'";
 	$result = mysqli_query($connection, $query);
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	if (!$result || $row['access_level'] < 2){
+		header("Location: error.php");
+	}
+	
+	$query = "DROP TABLE users";
+	$result1 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE meetings";
-	$result = mysqli_query($connection, $query);
+	$result2 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE meeting_users";
-	$result = mysqli_query($connection, $query);
+	$result3 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE meeting_locations";
-	$result = mysqli_query($connection, $query);
+	$result4 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE locations";
-	$result = mysqli_query($connection, $query);
+	$result5 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE mu_date_time";
-	$result = mysqli_query($connection, $query);
+	$result6 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE feedbacks";
-	$result = mysqli_query($connection, $query);
+	$result7 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE friendships";
-	$result = mysqli_query($connection, $query);
+	$result8 = mysqli_query($connection, $query);
 	
 	$query = "DROP TABLE notifications";
-	$result = mysqli_query($connection, $query);
+	$result9 = mysqli_query($connection, $query);
 	
-	echo "Dropped all tables succesfully";
+	if ($result1 && $result2 && $result3 && $result4 && $result5 && $result6 && $result7 && $result8 && $result9){
+		echo "Dropped all tables succesfully";
+	}
+	else {
+		echo "Failed to drop one or more table(s)."
+	}
 ?>

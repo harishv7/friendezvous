@@ -2,6 +2,13 @@
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 	
+	$query = "SELECT * FROM users WHERE user_id='$user_id'";
+	$result = mysqli_query($connection, $query);
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+	if (!$result || $row['access_level'] < 2){
+		header("Location: error.php");
+	}
+	
 	$query =	'CREATE TABLE users(
 						user_id INT NOT NULL AUTO_INCREMENT, 
 						fb_id VARCHAR(100) UNIQUE DEFAULT NULL, 
