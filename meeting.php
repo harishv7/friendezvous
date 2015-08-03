@@ -21,6 +21,14 @@
 			$owner_id = $owner['user_id'];
 			if ($owner_id == $user_id) $owner = true;
 			else $owner = false;
+			
+			$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id && user_id=$user_id";
+			$result = mysqli_query($connection, $query);
+			$numResult = mysqli_num_rows($result);
+			
+			if (!$numResult){
+				header("Location: error.php");
+			}
 		?>
 
 		<div class="section" style="background-image: url(assets/images/try.jpg);">
