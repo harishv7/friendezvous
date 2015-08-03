@@ -14,7 +14,7 @@
 		?>
 		
 		<?php
-			$meeting_id = $_GET['meeting_id'];
+			$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
 			$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id";
 			$result = mysqli_query($connection, $query);
 			$owner = mysqli_fetch_array($result);
