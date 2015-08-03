@@ -8,7 +8,7 @@
 	$query = "SELECT * FROM meeting_users WHERE meeting_id='$meeting_id'";
 	$result = mysqli_query($connection, $query);
 	$owner = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	if ($owner['user_id'] != $user_id){
+	if ($owner['user_id'] != $user_id || !$result){
 		header("Location: error.php");
 	}
 	
