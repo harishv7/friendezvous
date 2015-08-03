@@ -100,6 +100,9 @@
 								prev.prop('readonly', !ro).focus();
 								$(this).val(ro ? 'Save' : 'Edit');
 							});
+							$('[value="Save"]').on('click', function() {
+								$(".profile-form").submit();
+							});
 						</script>
 						<input type="submit" class="custom-btn3 hvr-float btn-default" name="update" value="Save Changes">
 						<button onclick="window.location.href='profile.php'" class="custom-btn3 hvr-float btn-default" name="cancel">Cancel</button>
