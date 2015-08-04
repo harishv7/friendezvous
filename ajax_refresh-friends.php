@@ -17,6 +17,6 @@
 		// put in bold the written text
 		$full_name = str_replace($_POST['keyword'], '<b>'.$_POST['keyword'].'</b>', $rs['full_name']);
 		// add new option
-		echo '<li id="selectUser" onclick="set_item(\''.str_replace("'", "\'", $rs['email']).'\')">'.$full_name.'<br><font color=#808080>&nbsp'.$rs['email'].'</font></li>';
+		echo '<li onclick="set_item(\''.str_replace("'", "\'", $rs['email']).'\'); addParticipant.submit();">'.$full_name.'<br><font color=#808080>&nbsp'.$rs['email'].'</font></li>';
 	}
 ?>
