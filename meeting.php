@@ -84,14 +84,11 @@
 										echo $row['date_time'];
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
-										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]'>Remove</a>";
+										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
 										if ($owner){
-											echo '&nbsp';
-											echo '|';
-											echo '&nbsp';
 											echo "<a href='finalizeMeeting.php?";
 											$encoded_date_time = urlencode($row['date_time']);
-											echo "meeting_id=$meeting_id&date_time=$encoded_date_time'>Finalize</a>";
+											echo "meeting_id=$meeting_id&date_time=$encoded_date_time' class='custom-btn5 hvr-grow-shadow'>finalize</a>";
 											echo ' --> ';
 											$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id";
 											$participant_list = mysqli_query($connection, $query);
@@ -135,8 +132,7 @@
 													<script type="text/javascript">
 														$(function () {
 															$("#datetimepicker4").datetimepicker({
-																format: "YYYY-MM-DD HH:mm", 
-																sideBySide: true
+																format: "YYYY-MM-DD HH:mm:ss"
 															});
 														});
 													</script>
@@ -189,12 +185,14 @@
 									$result2 = mysqli_query($connection, $query);
 									$participant = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 									echo "<a href='viewProfile.php?target_id=$participant[user_id]'>";
+									echo "<b>";
 									echo $participant['full_name'];
+									echo "</b>";
 									echo "</a>";
 									if ($owner){
 										echo '&nbsp';
 										echo "<a href='removeParticipant.php?";
-										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]'>Remove</a>";
+										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]' class='custom-btn5'>remove</a>";
 									}
 									echo '<br>';
 								}
@@ -246,7 +244,6 @@
 								$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 								if (isset($row['user_location_id'])){
 									$user_location_declared = true;
-									$user_location_id = $row['user_location_id'];
 								}
 								else {
 									$user_location_declared = false;
@@ -271,11 +268,11 @@
 										echo "$meeting_location[num_votes] person(s) voted this.";
 										
 										if (!$user_location_declared){
-											echo " ";
-											echo "<a href='voteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
-											echo "Vote";
+											echo " <a href='voteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
+											echo "vote";
 											echo "</a>";
 										}
+<<<<<<< Updated upstream
 										if ($user_location_declared && $user_location_id == $location['location_id']){
 											echo "You voted this.";
 											echo " ";
@@ -283,18 +280,29 @@
 											echo "Unvote";
 											echo "</a>";
 										}
+=======
+>>>>>>> Stashed changes
 										echo '<br>';
 									}
 								}
 								echo '<br>';
 								if (!$user_location_declared){
 									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a> 
+<<<<<<< Updated upstream
 										<style>
 											a:hover {
 												text-decoration: none;
 												color:#000;
 											}
 										</style>";
+=======
+									<style>
+																	a:hover {
+																		text-decoration: none;
+																		color:#000;
+																}
+																</style>";
+>>>>>>> Stashed changes
 								}
 							}
 							else {
