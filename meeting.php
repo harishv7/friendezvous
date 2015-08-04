@@ -219,7 +219,7 @@
 										}
 										else {
 											echo '
-											<form role="form" method="post" action="addParticipant.php?meeting_id=';
+											<form id="addParticipant" role="form" method="post" action="addParticipant.php?meeting_id=';
 											echo $meeting_id;
 											echo '" autocomplete="off">
 												<div class="form-group">
@@ -232,10 +232,13 @@
 														</div>
 													</div>
 												</div>
-												<div class="form-group">
-													<input type="submit" class="custom-btn5 hvr-grow-shadow btn-default" value="Add" id="add" name="add">
-												</div>
 											</form>';
+											
+											echo "<script type='text/javascript'>";
+												echo "$('#selectUser').on('click', function() {";
+												echo "$('#addParticipant').submit()";
+												echo "})";
+											echo "</script>"
 										}
 									}
 									echo '<hr>';
