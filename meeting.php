@@ -246,6 +246,7 @@
 								$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 								if (isset($row['user_location_id'])){
 									$user_location_declared = true;
+									$user_location_id = $row['user_location_id'];
 								}
 								else {
 									$user_location_declared = false;
@@ -275,7 +276,7 @@
 											echo "Vote";
 											echo "</a>";
 										}
-										if ($user_location_declared && $user_location_id == $location['location_id']){
+										else if ($user_location_declared && $user_location_id == $location['location_id']){
 											echo " ";
 											echo "You voted this.";
 											echo " ";
@@ -290,11 +291,11 @@
 								if (!$user_location_declared){
 									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a> 
 									<style>
-																	a:hover {
-																		text-decoration: none;
-																		color:#000;
-																}
-																</style>";
+										a:hover {
+											text-decoration: none;
+											color:#000;
+										}
+									</style>";
 								}
 							}
 							else {
