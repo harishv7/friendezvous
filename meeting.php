@@ -134,7 +134,8 @@
 													<script type="text/javascript">
 														$(function () {
 															$("#datetimepicker4").datetimepicker({
-																format: "YYYY-MM-DD HH:mm:ss"
+																format: "YYYY-MM-DD HH:mm", 
+																sideBySide: true
 															});
 														});
 													</script>
