@@ -58,7 +58,7 @@
 							if (!isset($_SESSION['user_id'])){
 								echo '
 									<a href="login.php"><p class="custom-btn3 hvr-grow-shadow">Login</p></a>
-									<span>&nbsp</span>
+									
 									<a href="signUp.php"><p class="custom-btn3 hvr-grow-shadow">Sign Up</p></a> <br>
 								';
 							}
