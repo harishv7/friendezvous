@@ -277,7 +277,7 @@
 											echo "</a>";
 										}
 										if ($user_location_id == $location['location_id']){
-											echo "You voted this."
+											echo "You voted this.";
 											echo " ";
 											echo "<a href='unvoteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
 											echo "Unvote";
