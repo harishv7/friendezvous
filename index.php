@@ -36,11 +36,15 @@
             ?>
 			
 			<div id="container">
-				<img src="assets/images/bg/Agreement.jpg" class="cover-image">
-				<img src="assets/images/bg/38.jpg" class="cover-image" style="display: none;">
-				<img src="assets/images/bg/beach.jpeg" class="cover-image" style="display: none;">
-                <img src="assets/images/bg/76.jpg" class="cover-image" style="display: none;">
-                <img src="assets/images/bg/52.jpg" class="cover-image" style="display: none;">
+				<?php
+					$bgImages = array("Agreement.jpg", "38.jpg", "beach.jpeg", "76.jpg", "52.jpg");
+					shuffle($bgImages);
+				?>
+				<img src="assets/images/bg/<?php echo $bgImages[0]; ?>" class="cover-image">
+				<img src="assets/images/bg/<?php echo $bgImages[1]; ?>" class="cover-image" style="display: none;">
+				<img src="assets/images/bg/<?php echo $bgImages[2]; ?>" class="cover-image" style="display: none;">
+                <img src="assets/images/bg/<?php echo $bgImages[3]; ?>" class="cover-image" style="display: none;">
+                <img src="assets/images/bg/<?php echo $bgImages[4]; ?>" class="cover-image" style="display: none;">
 			</div>
             <div class="container color-box">
                 <div class="row">
