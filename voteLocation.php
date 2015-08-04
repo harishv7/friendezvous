@@ -26,6 +26,7 @@
 		}
 		else {
 			header("Location: error.php");
+			exit;
 		}
 	}
 ?>
