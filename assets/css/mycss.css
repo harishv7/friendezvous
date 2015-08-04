@@ -82,6 +82,7 @@
 	display: inline-block;
 	width: 200px;
 	padding: 8px;
+	margin: 7px;
 	color: #000;
     font-family: Raleway;
 	background-color: transparent;
@@ -110,6 +111,7 @@
 	width: 75px;
 	padding: 8px;
 	color: #000;
+	margin: 7px;
     font-family: Raleway;
 	background-color: transparent;
 	border: 1px solid #000;
@@ -136,6 +138,7 @@
 	display: inline-block;
 	width: 200px;
 	padding: 8px;
+	margin: 7px;
 	color: #000;
     font-family: Raleway;
 	background-color: transparent;
