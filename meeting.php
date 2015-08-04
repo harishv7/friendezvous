@@ -276,12 +276,12 @@
 											echo "Vote";
 											echo "</a>";
 										}
-										if ($user_location_id == $location['location_id']){
+										if ($user_location_declared && $user_location_id == $location['location_id']){
 											echo "You voted this.";
 											echo " ";
 											echo "<a href='unvoteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
 											echo "Unvote";
-											echo "</a>';"
+											echo "</a>";
 										}
 										echo '<br>';
 									}
@@ -289,12 +289,12 @@
 								echo '<br>';
 								if (!$user_location_declared){
 									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a> 
-									<style>
-										a:hover {
-											text-decoration: none;
-											color:#000;
-										}
-									</style>";
+										<style>
+											a:hover {
+												text-decoration: none;
+												color:#000;
+											}
+										</style>";
 								}
 							}
 							else {
