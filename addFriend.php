@@ -19,9 +19,13 @@
 			
 			if ($numResult){
 				echo 'You are both already friends.';
+				header("Location: error.php");
+				exit;
 			}
 			else if ($user_id == $friend_id){
 				echo 'You can not add yourself as a friend.';
+				header("Location: error.php");
+				exit;
 			}
 			else {
 				if ($user_id < $friend_id){
@@ -43,6 +47,8 @@
 		}
 		else {
 			echo 'Not found';
+			header("Location: error.php");
+			exit;
 		}
 	}
 ?>
