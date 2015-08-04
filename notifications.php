@@ -13,7 +13,6 @@
         <?php
 			include 'includes/navigationBar.php';
 		?>
-		
 		<?php
 			if (!isset($_SESSION['user_id'])){
 				header("Location: error.php");
