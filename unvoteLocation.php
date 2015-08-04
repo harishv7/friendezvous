@@ -10,7 +10,7 @@
 	$numResult = mysqli_num_rows($result);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	
-	if (!$numResult || isset($row['user_location_id'])){
+	if (!$numResult || !isset($row['user_location_id']) || $row['user_location_id'] != $location_id){
 		header("Location: error.php");
 		exit;
 	}
