@@ -234,11 +234,11 @@
 												</div>
 											</form>';
 											
-											echo "<script type='text/javascript'>";
-												echo "$('#selectUser').on('click', function() {";
-												echo "$('#addParticipant').submit()";
-												echo "})";
-											echo "</script>"
+											echo "<script type='text/javascript'>
+														$('#selectUser').on('click', function() {
+															$('#addParticipant').submit()
+														})
+													 </script>";
 										}
 									}
 									echo '<hr>';
