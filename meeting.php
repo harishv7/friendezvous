@@ -235,7 +235,7 @@
 											</form>';
 											
 											echo "<script type='text/javascript'>
-														$('#selectUser').on('click', function() {
+														$('.selectUser').on('click', function() {
 															$('#addParticipant').submit()
 														})
 													 </script>";
