@@ -6,6 +6,12 @@
 		$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
 		$date_time = mysqli_real_escape_string($connection, $_POST['date_time']);
 		
+		if (new DateTime($date_time) < new DateTime()){
+			echo "Can't declare a past timeslot.";
+			header("Location: error.php");
+			exit;
+		}
+		
 		$query = "SELECT * FROM meeting_users WHERE meeting_id='".$meeting_id."' && user_id='".$user_id."'";
 		$result = mysqli_query($connection, $query);
 		if ($result){
