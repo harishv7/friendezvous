@@ -77,11 +77,13 @@
 								$result = mysqli_query($connection, $query);
 								$numResult = mysqli_num_rows($result);
 								if (!$numResult){
-									echo 'You have no declared timeslots for this meeting.';
+									echo '<b>You have no declared timeslots for this meeting.</b>';
 								}
 								else {
 									while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+										echo "<b>";
 										echo $row['date_time'];
+										echo "</b>";
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
 										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
@@ -272,37 +274,18 @@
 											echo "vote";
 											echo "</a>";
 										}
-<<<<<<< Updated upstream
-										if ($user_location_declared && $user_location_id == $location['location_id']){
-											echo "You voted this.";
-											echo " ";
-											echo "<a href='unvoteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
-											echo "Unvote";
-											echo "</a>";
-										}
-=======
->>>>>>> Stashed changes
 										echo '<br>';
 									}
 								}
 								echo '<br>';
 								if (!$user_location_declared){
 									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a> 
-<<<<<<< Updated upstream
-										<style>
-											a:hover {
-												text-decoration: none;
-												color:#000;
-											}
-										</style>";
-=======
 									<style>
 																	a:hover {
 																		text-decoration: none;
 																		color:#000;
 																}
 																</style>";
->>>>>>> Stashed changes
 								}
 							}
 							else {
