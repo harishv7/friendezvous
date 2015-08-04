@@ -32,7 +32,7 @@
 			}
 		?>
 
-		<div class="section" style="background-image: url(assets/images/try.jpg);">
+		<div class="section" style="background-image: url(assets/images/pattern.jpg);">
 			<div class="container overlay-meeting">
 				<div class="row">
 					<div class="col-md-12">
