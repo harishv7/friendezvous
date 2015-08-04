@@ -32,7 +32,7 @@
 			}
 		?>
 
-		<div class="section" style="background-image: url(assets/images/try.jpg);">
+		<div class="section" style="background-image: url(assets/images/pattern.jpg);">
 			<div class="container overlay-meeting">
 				<div class="row">
 					<div class="col-md-12">
@@ -77,21 +77,20 @@
 								$result = mysqli_query($connection, $query);
 								$numResult = mysqli_num_rows($result);
 								if (!$numResult){
-									echo 'You have no declared timeslots for this meeting.';
+									echo '<b>You have no declared timeslots for this meeting.</b>';
 								}
 								else {
 									while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+										echo "<b>";
 										echo $row['date_time'];
+										echo "</b>";
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
-										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]'>Remove</a>";
+										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
 										if ($owner){
-											echo '&nbsp';
-											echo '|';
-											echo '&nbsp';
 											echo "<a href='finalizeMeeting.php?";
 											$encoded_date_time = urlencode($row['date_time']);
-											echo "meeting_id=$meeting_id&date_time=$encoded_date_time'>Finalize</a>";
+											echo "meeting_id=$meeting_id&date_time=$encoded_date_time' class='custom-btn5 hvr-grow-shadow'>finalize</a>";
 											echo ' --> ';
 											$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id";
 											$participant_list = mysqli_query($connection, $query);
@@ -135,8 +134,7 @@
 													<script type="text/javascript">
 														$(function () {
 															$("#datetimepicker4").datetimepicker({
-																format: "YYYY-MM-DD HH:mm", 
-																sideBySide: true
+																format: "YYYY-MM-DD HH:mm:ss"
 															});
 														});
 													</script>
@@ -189,12 +187,14 @@
 									$result2 = mysqli_query($connection, $query);
 									$participant = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 									echo "<a href='viewProfile.php?target_id=$participant[user_id]'>";
+									echo "<b>";
 									echo $participant['full_name'];
+									echo "</b>";
 									echo "</a>";
 									if ($owner){
 										echo '&nbsp';
 										echo "<a href='removeParticipant.php?";
-										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]'>Remove</a>";
+										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
 									}
 									echo '<br>';
 								}
@@ -246,7 +246,6 @@
 								$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 								if (isset($row['user_location_id'])){
 									$user_location_declared = true;
-									$user_location_id = $row['user_location_id'];
 								}
 								else {
 									$user_location_declared = false;
@@ -290,12 +289,12 @@
 								echo '<br>';
 								if (!$user_location_declared){
 									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a> 
-										<style>
-											a:hover {
-												text-decoration: none;
-												color:#000;
-											}
-										</style>";
+									<style>
+																	a:hover {
+																		text-decoration: none;
+																		color:#000;
+																}
+																</style>";
 								}
 							}
 							else {
