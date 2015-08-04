@@ -30,7 +30,7 @@
 		while ($currentUser = mysqli_fetch_array($result)){
 			$current_mu_id = $currentUser['mu_id'];
 			if ($current_mu_id != $mu_id){
-				$query = "DELETE FROM mu_Date_time WHERE mu_id=$current_mu_id && date_time='$date_time'";
+				$query = "DELETE FROM mu_Date_time WHERE mu_id='$current_mu_id' && date_time='$date_time'";
 				$result2 = mysqli_query($connection, $query) OR DIE(mysqli_error($connection));
 			}
 		}
@@ -43,5 +43,6 @@
 	}
 	else {
 		header("Location: error.php");
+		exit;
 	}
 ?>

@@ -10,9 +10,10 @@
 	$owner = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if ($owner['user_id'] != $user_id || !$result){
 		header("Location: error.php");
+		exit;
 	}
 	
-	$query = "SELECT * FROM meeting_users WHERE meeting_id='".$meeting_id."' && user_id='".$participant_id."'";
+	$query = "SELECT * FROM meeting_users WHERE meeting_id='$meeting_id' && user_id='$participant_id'";
 	$result = mysqli_query($connection, $query);
 	$mu = mysqli_fetch_array($result);
 	$mu_id = $mu['mu_id'];
@@ -20,7 +21,7 @@
 	$query = "DELETE FROM mu_date_time WHERE mu_id=$mu_id";
 	$result = mysqli_query($connection, $query);
 	
-	$query = "DELETE FROM meeting_users WHERE meeting_id='".$meeting_id."' && user_id='".$participant_id."'";
+	$query = "DELETE FROM meeting_users WHERE meeting_id='$meeting_id' && user_id='$participant_id'";
 	$result = mysqli_query($connection, $query);
 	
 	header("Location: meeting.php?meeting_id=$meeting_id");
