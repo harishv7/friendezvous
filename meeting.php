@@ -84,14 +84,14 @@
 										echo $row['date_time'];
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
-										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]'>remove</a>";
+										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]'>Remove</a>";
 										if ($owner){
 											echo '&nbsp';
 											echo '|';
 											echo '&nbsp';
 											echo "<a href='finalizeMeeting.php?";
 											$encoded_date_time = urlencode($row['date_time']);
-											echo "meeting_id=$meeting_id&date_time=$encoded_date_time'>finalize</a>";
+											echo "meeting_id=$meeting_id&date_time=$encoded_date_time'>Finalize</a>";
 											echo ' --> ';
 											$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id";
 											$participant_list = mysqli_query($connection, $query);
@@ -194,7 +194,7 @@
 									if ($owner){
 										echo '&nbsp';
 										echo "<a href='removeParticipant.php?";
-										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]'>remove</a>";
+										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]'>Remove</a>";
 									}
 									echo '<br>';
 								}
@@ -246,6 +246,7 @@
 								$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 								if (isset($row['user_location_id'])){
 									$user_location_declared = true;
+									$user_location_id = $row['user_location_id'];
 								}
 								else {
 									$user_location_declared = false;
@@ -270,9 +271,17 @@
 										echo "$meeting_location[num_votes] person(s) voted this.";
 										
 										if (!$user_location_declared){
-											echo " <a href='voteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
-											echo "vote";
+											echo " ";
+											echo "<a href='voteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
+											echo "Vote";
 											echo "</a>";
+										}
+										if ($user_location_id == $location['location_id']){
+											echo "You voted this."
+											echo " ";
+											echo "<a href='unvoteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
+											echo "Unvote";
+											echo "</a>';"
 										}
 										echo '<br>';
 									}
@@ -281,11 +290,11 @@
 								if (!$user_location_declared){
 									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a> 
 									<style>
-																	a:hover {
-																		text-decoration: none;
-																		color:#000;
-																}
-																</style>";
+										a:hover {
+											text-decoration: none;
+											color:#000;
+										}
+									</style>";
 								}
 							}
 							else {
