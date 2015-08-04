@@ -21,8 +21,8 @@
 			}
 		?>
 		
-		<div class="section">
-			<div class="container">
+		<div class="section" style="background-image : url('assets/images/image1.jpeg')">
+			<div class="container overlay-general">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">
@@ -65,15 +65,20 @@
 								echo '</ul>';
 							}
 							echo '<p align="right">';
-							echo '<a href="notificationsRead.php">';
+							echo '<a href="notificationsRead.php" class="custom-btn6 hvr-grow-shadow">';
 							echo 'Mark all as read';
 							echo '</a>';
-							echo ' | ';
-							echo '<a href="clearNotifications.php">';
+							echo '<a href="clearNotifications.php" class="custom-btn6 hvr-grow-shadow">';
 							echo 'Clear all notifications';
 							echo '</a>';
 							echo '</p>';
 						?>
+						<style>
+							a:hover{
+								text-decoration: none;
+								color: #000;
+							}
+						</style>
 					</div>
 				</div>
 			</div>
