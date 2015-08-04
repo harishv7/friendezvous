@@ -194,7 +194,7 @@
 									if ($owner){
 										echo '&nbsp';
 										echo "<a href='removeParticipant.php?";
-										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]' class='custom-btn5'>remove</a>";
+										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
 									}
 									echo '<br>';
 								}
