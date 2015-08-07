@@ -1,0 +1,1 @@
+function autocomplet(){var min_length=2;var keyword=$('#user_id').val();if(keyword.length>=min_length){$.ajax({url:'ajax_refresh-users.php',type:'POST',data:{keyword:keyword},success:function(data){$('#user_list_id').show();$('#user_list_id').html(data);}});}else{$('#user_list_id').hide();}}function set_item(item){$('#user_id').val(item);$('#user_list_id').hide();}
