@@ -1,0 +1,5 @@
+*{margin:0;padding:0;}
+.input_container ul{width:20em;border:1px solid #eaeaea;position:absolute;z-index:9;background:#f3f3f3;list-style:none;border-radius:5px;}
+.input_container ul li{padding:2px 12px 2px;}
+.input_container ul li:hover{background:#eaeaea;}
+#user_list_id{display:none;}
