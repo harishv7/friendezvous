@@ -28,7 +28,7 @@
                             meetings where we have to accomodate to everyone's schedule. To solve that,
                             we developed Friendezvous.
                             <br>
-                            <br>Friendezvous was developed particularly for the Orbital 2015 project,
+                            <br>Friendezvous was developed particularly for the <a href="http://orbital.comp.nus.edu.sg/">Orbital</a> 2015 project,
                             under Project Gemini Level. Orbital is a independent work module undertaken
 						at the National University of Singapore (NUS).</p>
 					</div>
