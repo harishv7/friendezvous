@@ -2,6 +2,32 @@
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 	include 'includes/library.php';
+	
+	// login only area
+	if (!isLoggedIn()){
+		header("Location: error.php");
+		exit;
+	}
+	
+	// do meeting ownership check
+	$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
+	$owner_id = getMeetingOwnerID($connection, $meeting_id);
+	if ($user_id == $owner_id){
+		$owner = true;
+	}
+	else {
+		$owner = false;
+	}
+
+	// do meeting participant check
+	if (!isMeetingParticipant($connection, $meeting_id, $user_id)){
+		header("Location: error.php?errorCode=authError");
+		exit;
+	}
+	else {
+		$meeting = getMeetingFields($connection, $meeting_id);
+		$mu = getMeetingUserFields($connection, $meeting_id, $user_id);
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,28 +38,6 @@
 	<body>
 		<?php
 			include 'includes/navigationBar.php';
-		?>
-		
-		<?php
-			// do meeting ownership check
-			$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
-			$owner_id = getMeetingOwnerID($connection, $meeting_id);
-			if ($user_id == $owner_id){
-				$owner = true;
-			}
-			else {
-				$owner = false;
-			}
-			
-			// do meeting participant check
-			if (!isMeetingParticipant($connection, $meeting_id, $user_id)){
-				header("Location: error.php?errorCode=authError");
-				exit;
-			}
-			else {
-				$meeting = getMeetingFields($connection, $meeting_id);
-				$mu = getMeetingUserFields($connection, $meeting_id, $user_id);
-			}
 		?>
 
 		<div class="section" style="background-image: url(assets/images/pattern.jpg);">
@@ -106,7 +110,6 @@
 						
 								// declare new timeslots
 								echo '<h4>Declare a new timeslot</h4>';
-								// allow to declare new timeslots if not owner
 								if ($owner){
 									echo '<form role="form" method="post" action="declareTimeslot.php?meeting_id=';
 									echo $meeting_id;
@@ -134,7 +137,6 @@
 										</form>
 									';
 								}
-								// only allow to accept timeslots if not owner
 								else {
 									$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id && user_id=$owner_id";
 									$result = mysqli_query($connection, $query);
@@ -166,7 +168,8 @@
 								}
 								echo '<hr>';
 						
-								// list of meeting participants
+
+						
 								echo '<h4>Meeting participants</h4>';
 								$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id";
 								$result = mysqli_query($connection, $query);
@@ -188,7 +191,6 @@
 								}
 								echo '<hr>';
 		
-								// allow owner to add participants
 								if ($owner){
 									echo '<h4>Add participants</h4>';
 									$query = "SELECT * FROM mu_date_time WHERE mu_id=$mu_id";
@@ -226,7 +228,6 @@
 									echo '<hr>';
 								}
 								
-								// list the proposed meeting locations, allow user to suggest OR accept a meeting location
 								echo '<h4>Proposed meeting locations</h4>';
 								$query = "SELECT * FROM meeting_users WHERE meeting_id='$meeting_id' && user_id='$user_id'";
 								$result = mysqli_query($connection, $query);
@@ -275,7 +276,6 @@
 									}
 								}
 								echo '<br>';
-								// allow user to suggest new location if hasn't voted
 								if (!$user_location_declared){
 									echo "<a href='addLocation.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Suggest a new location</a> 
 									<style>

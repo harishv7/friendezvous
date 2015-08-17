@@ -1,6 +1,13 @@
 <?php
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
+	include 'includes/library.php';
+	
+	// login only area
+	if (!isLoggedIn()){
+		header("Location: error.php");
+		exit;
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,16 +16,9 @@
 		include 'includes/header.php';
 	?>
 	
-    <body>
-        <?php
-			include 'includes/navigationBar.php';
-		?>
-		
+    <body>		
 		<?php
-			if (!isset($_SESSION['user_id'])){
-				header("Location: error.php");
-				exit;
-			}
+			include 'includes/navigationBar.php';
 		?>
 
 		<div class="dashboard">
