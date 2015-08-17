@@ -154,12 +154,7 @@
 										if (!$exist){
 											echo $row['date_time'];
 											echo '&nbsp';
-											echo '<a href="acceptTimeslot.php?meeting_id=';
-											echo $meeting_id;
-											echo '&date_time=';
-											$encoded_date_time = urlencode($row['date_time']);
-											echo $encoded_date_time;
-											echo '">';
+											echo "<a href='acceptTimeslot.php?meeting_id=$meeting_id&mudt_id=$row[mudt_id]'>";
 											echo 'accept';
 											echo '</a>';
 											echo '<br>';

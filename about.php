@@ -1,6 +1,7 @@
 <?php
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
+	include 'includes/library.php';
 ?>
 <!DOCTYPE html>
 <html>
