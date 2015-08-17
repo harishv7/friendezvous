@@ -17,7 +17,8 @@
 		<?php
 			// do meeting ownership check
 			$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
-			if ($user_id == getMeetingOwner($meeting_id)){
+			$owner_id = getMeetingOwnerID($connection, $meeting_id);
+			if ($user_id == $owner_id){
 				$owner = true;
 			}
 			else {
@@ -25,12 +26,13 @@
 			}
 			
 			// do meeting participant check
-			if (!isMeetingParticipant($meeting_id)){
+			if (!isMeetingParticipant($connection, $meeting_id, $user_id)){
 				header("Location: error.php?errorCode=authError");
 				exit;
 			}
 			else {
-				$meeting = getMeetingFields($meeting_id);
+				$meeting = getMeetingFields($connection, $meeting_id);
+				$mu = getMeetingUserFields($connection, $meeting_id, $user_id);
 			}
 		?>
 
@@ -64,6 +66,7 @@
 								// declared timeslots
 								echo '<h4>Your declared timeslots</h4>';
 								
+								$mu_id =  $mu['mu_id'];
 								$query = "SELECT * FROM mu_date_time WHERE mu_id=$mu_id";
 								$timeslot_list = mysqli_query($connection, $query);
 								$numResult = mysqli_num_rows($timeslot_list);
@@ -84,11 +87,10 @@
 										// add finalize option for owner
 										if ($owner){
 											echo "<a href='finalizeMeeting.php?";
-											$encoded_date_time = urlencode($timeslot['date_time']);
-											echo "meeting_id=$meeting_id&date_time=$encoded_date_time' class='custom-btn5 hvr-grow-shadow'>finalize</a>";
+											echo "meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>finalize</a>";
 											
 											echo ' --> ';
-											echo getNumAttending($meeting_id, $timeslot['date_time']);
+											echo getNumAttending($connection, $meeting_id, $timeslot['date_time']);
 											echo ' person(s) attending';
 										}
 										
@@ -176,7 +178,7 @@
 									echo $participant['full_name'];
 									echo "</b>";
 									echo "</a>";
-									if ($owner){
+									if ($owner && $participant['user_id'] != $owner_id){
 										echo '&nbsp';
 										echo "<a href='removeParticipant.php?";
 										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
