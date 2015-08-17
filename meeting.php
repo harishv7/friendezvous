@@ -1,6 +1,7 @@
 <?php
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
+	include 'includes/library.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,21 +15,22 @@
 		?>
 		
 		<?php
+			// do meeting ownership check
 			$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
-			$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id";
-			$result = mysqli_query($connection, $query);
-			$owner = mysqli_fetch_array($result);
-			$owner_id = $owner['user_id'];
-			if ($owner_id == $user_id) $owner = true;
-			else $owner = false;
+			if ($user_id == getMeetingOwner($meeting_id)){
+				$owner = true;
+			}
+			else {
+				$owner = false;
+			}
 			
-			$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id && user_id=$user_id";
-			$result = mysqli_query($connection, $query);
-			$numResult = mysqli_num_rows($result);
-			
-			if (!$numResult){
-				header("Location: error.php");
+			// do meeting participant check
+			if (!isMeetingParticipant($meeting_id)){
+				header("Location: error.php?errorCode=authError");
 				exit;
+			}
+			else {
+				$meeting = getMeetingFields($meeting_id);
 			}
 		?>
 
@@ -39,77 +41,60 @@
 						<h1 class="text-center">Organize Meeting</h1>
 					</div>
 				</div>
+				<!-- Meeting Title and Description -->
 				<div class="row">
 					<div class="col-md-12">
 						<?php
-							$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id && user_id=$user_id";
-							$result = mysqli_query($connection, $query);
-							$numResult = mysqli_num_rows($result);
-							
-							if (!$numResult){
-								echo '<h3 class="text-center">You are not authorized.</h3>';
-							}
-							else {
-								$mu = mysqli_fetch_array($result, MYSQLI_ASSOC);
-								$mu_id = $mu['mu_id'];
-							
-								$query = "SELECT * FROM meetings WHERE meeting_id=$meeting_id";
-								$result = mysqli_query($connection, $query);
-								$meeting = mysqli_fetch_array($result, MYSQLI_ASSOC);
-								
-								echo '<h3 class="text-center">';
-								echo $meeting['name'];
-								echo '</h3>';
-								echo '<h4 class="text-center">';
-								echo $meeting['description'];
-								echo '</h4>';
-								echo '<hr>';
-							}
+							echo '<h3 class="text-center">';
+							echo $meeting['name'];
+							echo '</h3>';
+							echo '<h4 class="text-center">';
+							echo $meeting['description'];
+							echo '</h4>';
+							echo '<hr>';
 						?>
 					</div>
 				</div>
+				<!-- Meeting Preferences -->
 				<div class="row">
 					<div class="col-md-12">
 						<?php
+							// if the meeting hasn't been finalized
 							if (!$meeting['finalized']){
+								// declared timeslots
 								echo '<h4>Your declared timeslots</h4>';
+								
 								$query = "SELECT * FROM mu_date_time WHERE mu_id=$mu_id";
-								$result = mysqli_query($connection, $query);
-								$numResult = mysqli_num_rows($result);
+								$timeslot_list = mysqli_query($connection, $query);
+								$numResult = mysqli_num_rows($timeslot_list);
+								
 								if (!$numResult){
 									echo '<b>You have no declared timeslots for this meeting.</b>';
+									echo '<br>';
 								}
 								else {
-									while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+									while ($timeslot = mysqli_fetch_array($timeslot_list, MYSQLI_ASSOC)){
 										echo "<b>";
-										echo $row['date_time'];
+										echo $timeslot['date_time'];
 										echo "</b>";
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
-										echo "meeting_id=$meeting_id&mudt_id=$row[mudt_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
+										echo "meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
+										
+										// add finalize option for owner
 										if ($owner){
 											echo "<a href='finalizeMeeting.php?";
-											$encoded_date_time = urlencode($row['date_time']);
+											$encoded_date_time = urlencode($timeslot['date_time']);
 											echo "meeting_id=$meeting_id&date_time=$encoded_date_time' class='custom-btn5 hvr-grow-shadow'>finalize</a>";
+											
 											echo ' --> ';
-											$query = "SELECT * FROM meeting_users WHERE meeting_id=$meeting_id";
-											$participant_list = mysqli_query($connection, $query);
-											
-											$numAttending = 0;
-											
-											while ($participant = mysqli_fetch_array($participant_list)){
-												$participant_mu_id = $participant['mu_id'];
-												$query = "SELECT * FROM mu_date_time WHERE mu_id=$participant_mu_id && date_time='$row[date_time]'";
-												$result2 = mysqli_query($connection, $query);
-												$isAttending = mysqli_num_rows($result2);
-												if ($isAttending) $numAttending++;
-											}
-											
-											echo $numAttending;
+											echo getNumAttending($meeting_id, $timeslot['date_time']);
 											echo ' person(s) attending';
 										}
+										
 										echo '<br>';
 									}
+									// add finalize warning message for owner
 									if ($owner){
 										echo '<br>';
 										echo '<font color="red">* Participants will not be able to change their accepted timeslots once you finalize the meeting.</font>';
@@ -117,14 +102,13 @@
 								}
 								echo '<hr>';
 						
-						
-						
+								// declare new timeslots
 								echo '<h4>Declare a new timeslot</h4>';
 								if ($owner){
+									echo '<form role="form" method="post" action="declareTimeslot.php?meeting_id=';
+									echo $meeting_id;
+									echo '">';
 									echo '
-										<form role="form" method="post" action="declareTimeslot.php?meeting_id=';
-										echo $meeting_id;
-										echo '">
 											<div class="form-group">
 												<label><font color="#000000">Date/Time:</font></label><br>
 												<div class="row">
