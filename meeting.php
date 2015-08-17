@@ -86,12 +86,12 @@
 										echo "</b>";
 										echo '&nbsp';
 										echo "<a href='removeTimeslot.php?";
-										echo "meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
+										echo "meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>Remove</a>";
 										
 										// add finalize option for owner
 										if ($owner){
 											echo "<a href='finalizeMeeting.php?";
-											echo "meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>finalize</a>";
+											echo "meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>Finalize</a>";
 											
 											echo ' --> ';
 											echo getNumAttending($connection, $meeting_id, $timeslot['date_time']);
@@ -177,10 +177,16 @@
 									echo $participant['full_name'];
 									echo "</b>";
 									echo "</a>";
-									if ($owner && $participant['user_id'] != $owner_id){
-										echo '&nbsp';
-										echo "<a href='removeParticipant.php?";
-										echo "meeting_id=$meeting_id&participant_id=$participant[user_id]' class='custom-btn5 hvr-grow-shadow'>remove</a>";
+									if ($owner){
+										if ($participant['user_id'] != $owner_id){
+											echo '&nbsp';
+											echo "<a href='removeParticipant.php?";
+											echo "meeting_id=$meeting_id&participant_id=$participant[user_id]' class='custom-btn5 hvr-grow-shadow'>Remove</a>";
+										}
+										else {
+											echo '&nbsp';
+											echo "<a class='custom-btn5 hvr-grow-shadow'>Owner</a>";
+										}
 									}
 									echo '<br>';
 								}
