@@ -18,7 +18,7 @@
             <div class="container overlay-general">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="https://unsplash.it/800/500?image=0" class="img-responsive">
+                        <img src="assets/images/mockup1.jpg" class="img-responsive">
 					</div>
                     <div class="col-md-6">
                         <h1>Friendezvous</h1>
