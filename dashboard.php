@@ -45,7 +45,7 @@
 									$meeting = mysqli_fetch_array($meetingObj, MYSQLI_ASSOC);
 									$meetingDate = new DateTime($meeting['date_time']);
 									$currentDate = new DateTime();
-									if ($meetingDate > $currentDate){
+									if ($meeting['finalized'] == 1 && $meetingDate > $currentDate){
 										if ($noMeetings){
 											$noMeetings = false;
 										}
@@ -56,7 +56,7 @@
 										echo '</a>';
 										echo '<br>';
 									}
-									else if ($meeting['date_time'] == NULL){
+									else if ($meeting['finalized'] == 0 || $meeting['date_time'] == NULL){
 										if ($noMeetings){
 											$noMeetings = false;
 										}

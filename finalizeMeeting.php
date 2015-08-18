@@ -4,19 +4,21 @@
 	include 'includes/library.php';
 	
 	$meeting_id = mysqli_real_escape_string($connection, $_GET['meeting_id']);
-	$mudt_id = mysqli_real_escape_string($connection, $_GET['mudt_id']);
 	
+	// check if user is owner
 	if ($user_id != getMeetingOwnerID($connection, $meeting_id)){
-		header("Location: error.php");
+		header("Location: error.php?errorCode=authError");
 		exit;
 	}
 	
-	$query = "SELECT * FROM mu_date_time WHERE mudt_id='$mudt_id'";
-	$result = mysqli_query($connection, $query);
-	$mudt = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	$date_time = $mudt['date_time'];
+	$meeting = getMeetingFields($connection, $meeting_id);
 	
-	$query = "UPDATE meetings SET finalized=1, date_time='$date_time' WHERE meeting_id=$meeting_id";
+	if (!isset($meeting['date_time']) || !isset($meeting['location'])){
+		header("Location: error.php?errorCode=finalizeError");
+		exit;
+	}
+	
+	$query = "UPDATE meetings SET finalized=1 WHERE meeting_id=$meeting_id";
 	$result = mysqli_query($connection, $query);
 	
 	$query = "SELECT * FROM meetings WHERE meeting_id=$meeting_id";

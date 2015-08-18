@@ -81,6 +81,12 @@
 								}
 								else {
 									while ($timeslot = mysqli_fetch_array($timeslot_list, MYSQLI_ASSOC)){
+										if ($owner && $meeting['date_time'] == $timeslot['date_time']){
+											echo "<div style='background-color: #DAFF91'>";
+										}
+										else {
+											echo "<div>";
+										}
 										echo "<b>";
 										echo $timeslot['date_time'];
 										echo "</b>";
@@ -90,15 +96,18 @@
 										
 										// add finalize option for owner
 										if ($owner){
-											echo "<a href='finalizeMeeting.php?";
-											echo "meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>Finalize</a>";
+											echo "<a href='setActiveTimeslot.php?meeting_id=$meeting_id&mudt_id=$timeslot[mudt_id]' class='custom-btn5 hvr-grow-shadow'>Select</a>";
 											
 											echo ' --> ';
 											echo getNumAttending($connection, $meeting_id, $timeslot['date_time']);
 											echo ' person(s) attending';
+											
+											echo '&nbsp';
+											if ($meeting['date_time'] == $timeslot['date_time']){
+												echo '--> Selected';
+											}
 										}
-										
-										echo '<br>';
+										echo "</div>";
 									}
 									// add finalize warning message for owner
 									if ($owner){
@@ -185,7 +194,7 @@
 										}
 										else {
 											echo '&nbsp';
-											echo "<a class='custom-btn5 hvr-grow-shadow'>Owner</a>";
+											echo "<a href='#' class='custom-btn5 hvr-grow-shadow'>Owner</a>";
 										}
 									}
 									echo '<br>';
@@ -229,6 +238,7 @@
 									echo '<hr>';
 								}
 								
+								// Meeting locations
 								echo '<h4>Proposed meeting locations</h4>';
 								$query = "SELECT * FROM meeting_users WHERE meeting_id='$meeting_id' && user_id='$user_id'";
 								$result = mysqli_query($connection, $query);
@@ -253,6 +263,12 @@
 										$query = "SELECT * FROM locations WHERE location_id='$location_id'";
 										$result2 = mysqli_query($connection, $query);
 										$location = mysqli_fetch_array($result2, MYSQLI_ASSOC);
+										if ($owner && $meeting['location'] == $location['name']){
+											echo "<div style='background-color: #DAFF91'>";
+										}
+										else {
+											echo "<div>";
+										}
 										echo "<a href='viewLocation.php?location_id=$location_id'>";
 										echo $location['name'];
 										echo "</a>";
@@ -269,11 +285,18 @@
 											echo " ";
 											echo "You voted this.";
 											echo " ";
-											echo "<a href='unvoteLocation.php?meeting_id=$meeting_id&location_id=$location_id'>";
+											echo "<a href='unvoteLocation.php?meeting_id=$meeting_id&location_id=$location_id' class='custom-btn5 hvr-grow-shadow'>";
 											echo "Unvote";
 											echo "</a>";
 										}
-										echo '<br>';
+										if ($owner){
+											echo "<a href='setActiveLocation.php?meeting_id=$meeting_id&location_id=$location_id' class='custom-btn5 hvr-grow-shadow'>Select</a>";
+											if ($meeting['location'] == $location['name']){
+												echo '&nbsp';
+												echo '--> Selected';
+											}
+										}
+										echo '</div>';
 									}
 								}
 								echo '<br>';
@@ -286,9 +309,17 @@
 										}
 									</style>";
 								}
+								
+								if ($owner){
+									echo '<hr>';
+									echo "<a href='finalizeMeeting.php?meeting_id=$meeting_id' class='custom-btn6 hvr-grow-shadow'>Finalize Meeting</a>";
+								}
 							}
 							else {
-								echo "This meeting has been finalized and scheduled to take place on <b>$meeting[date_time]</b>.";
+								$query = "SELECT location_id FROM locations WHERE name='$meeting[location]'";
+								$result = mysqli_query($connection, $query);
+								$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+								echo "This meeting has been finalized and scheduled to take place on <b>$meeting[date_time]</b> at <b><a href='viewLocation.php?location_id=$row[location_id]'>$meeting[location]</a></b>";
 							}
 						?>
 					</div>
