@@ -1,4 +1,5 @@
 <?php
+	/* Done by HARISH & Alvian */
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 ?>
