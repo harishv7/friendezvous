@@ -1,5 +1,5 @@
 <?php
-	/* Done by HARISH & Alvian */
+	/* Done by HARISH & ALVIAN */
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
 ?>
