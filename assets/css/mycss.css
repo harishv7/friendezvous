@@ -26,7 +26,7 @@ border-color 0.3s ease-out;-->}
 .custom-btn4:active{background-color:DarkSlateBlue;border-color:White;color:#fff;transition:color 0.3s ease-in,
 background-color 0.3s ease-in,
 border-color 0.3s ease-in;}
-.custom-btn5{display:inline-block;width:75px;padding:8px;color:#000;margin:7px;font-family:Raleway;background-color:transparent;border:1px solid #000;text-align:center;outline:none;border-radius:10px;text-decoration:none;<!--transition:color 0.3s ease-out,
+.custom-btn5{display:inline-block;width:75px;padding:6px;color:#000;margin:7px;font-family:Raleway;background-color:transparent;border:1px solid #000;text-align:center;outline:none;border-radius:10px;text-decoration:none;<!--transition:color 0.3s ease-out,
 background-color 0.3s ease-out,
 border-color 0.3s ease-out;-->}
 .custom-btn5:hover,
