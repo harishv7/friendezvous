@@ -1,6 +1,12 @@
 <?php
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
+	include 'includes/library.php';
+	
+	if (isset($_SESSION['user_id'])){
+		header("Location: error.php");
+		exit;
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,13 +18,6 @@
     <body>
         <?php
 			include 'includes/navigationBar.php';
-		?>
-		
-		<?php
-			if (isset($_SESSION['user_id'])){
-				header("Location: error.php");
-				exit;
-			}
 		?>
 		
 		<script type="text/javascript">

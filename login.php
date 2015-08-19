@@ -1,6 +1,13 @@
 <?php
 	include 'includes/session.php';
 	include 'includes/dbConnect.php';
+	include 'includes/library.php';
+	
+	if (isset($_SESSION['user_id'])){
+		header("Location: error.php");
+		exit;
+	}
+			
 	require_once 'src/Facebook/autoload.php';
 
 	$fb = new Facebook\Facebook([
@@ -23,13 +30,6 @@
     <body>
         <?php
 			include 'includes/navigationBar.php';
-		?>
-		
-		<?php
-			if (isset($_SESSION['user_id'])){
-				header("Location: error.php");
-				exit;
-			}
 		?>
 		
         <div class="cover">
