@@ -72,7 +72,7 @@
 									<font color='#ff0000'>
 						";
 						if ($errorCode == 'finalizeError'){
-							echo "<li>You need to declare and select one timeslot & one location to finalize a meeting.</li>";
+							echo "<li>You need to declare and select <u>1 timeslot</u> & <u>1 location</u> to finalize a meeting.</li>";
 						}
 						echo "
 									</font>
