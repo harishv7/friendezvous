@@ -38,15 +38,6 @@
 							</div>
 						';
 					}
-					else if (isset($errorCode) && $errorCode == 'finalizeError'){
-						echo '
-							<div class="col-md-12 text-center text-inverse">
-								<h3>Error: You need to select a timeslot and a location first.</h3>
-								<p>If you do not understand how this error happened, please contact us through the <a href="contactUs.php">contact us form</a>.</p>
-								<p>We will do our best to assist you!</p>
-							</div>
-						';
-					}
 					else {
 						echo '
 							<div class="col-md-12 text-center text-inverse">

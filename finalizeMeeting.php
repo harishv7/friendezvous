@@ -14,7 +14,7 @@
 	$meeting = getMeetingFields($connection, $meeting_id);
 	
 	if (!isset($meeting['date_time']) || !isset($meeting['location'])){
-		header("Location: error.php?errorCode=finalizeError");
+		header("Location: meeting.php?meeting_id=$meeting_id&errorCode=finalizeError");
 		exit;
 	}
 	

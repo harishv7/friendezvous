@@ -61,6 +61,28 @@
 						?>
 					</div>
 				</div>
+				<?php
+					// error handling
+					if (isset($_GET['errorCode'])){
+						$errorCode = mysqli_real_escape_string($connection, $_GET['errorCode']);
+						echo "
+							<div class='row'>
+								<div class='col-md-12'>
+									<ul style='margin-left: 20px'>
+									<font color='#ff0000'>
+						";
+						if ($errorCode == 'finalizeError'){
+							echo "<li>You need to declare and select one timeslot & one location to finalize a meeting.</li>";
+						}
+						echo "
+									</font>
+									</ul>
+									<hr>
+								</div>
+							</div>
+						";
+					}
+				?>
 				<!-- Meeting Preferences -->
 				<div class="row">
 					<div class="col-md-12">
